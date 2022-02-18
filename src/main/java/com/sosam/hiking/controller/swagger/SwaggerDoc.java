@@ -30,7 +30,7 @@ import springfox.documentation.annotations.ApiIgnore;
  */
 @RestController
 @RequestMapping("/v1/api")
-public class SwaggerDocTest1 {  
+public class SwaggerDoc {  
  
 	/*	@RequestParam
 	 * 	- 실제 서비스 시 생략 가능

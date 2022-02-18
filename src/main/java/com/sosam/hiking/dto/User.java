@@ -1,14 +1,15 @@
 package com.sosam.hiking.dto;
 
-import lombok.AllArgsConstructor;
+import javax.persistence.Entity;
+
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Builder
 @Getter
 @Setter
+@Entity(name="user")
 public class User {
 	private String uId;
 	private String uPw;

@@ -1,14 +1,15 @@
 package com.sosam.hiking.dto;
 
-import lombok.AllArgsConstructor;
+import javax.persistence.Entity;
+
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Builder
 @Getter
 @Setter
+@Entity(name="hikeroad")
 public class HikeRoad {
 	private String pmCode;
 	private String mCode;
