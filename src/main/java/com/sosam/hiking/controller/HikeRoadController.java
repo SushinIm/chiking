@@ -8,19 +8,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sosam.hiking.model.Culture;
-import com.sosam.hiking.service.CultureService;
+import com.sosam.hiking.model.HikeRoad;
+import com.sosam.hiking.service.HikeRoadService;
 
 @RestController
-@RequestMapping("/sg/cult")
-public class CultureController {
+@RequestMapping("/sg/road")
+public class HikeRoadController {
 
 	@Autowired
-	CultureService cultureService;
+	HikeRoadService hikeRoadService;
 	
-	@GetMapping("/cultures/${mCode}")
-	public List<Culture> cultLst(@PathVariable String mCode){
-		return cultureService.findBymCode(mCode);
+	@GetMapping("/roads/{mCode}")
+	public List<HikeRoad> roadLst(@PathVariable String mCode) {
+		return hikeRoadService.findBymCode(mCode);
 	}
-	
 }

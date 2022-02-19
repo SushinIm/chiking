@@ -1,7 +1,11 @@
 package com.sosam.hiking.service;
 
-import com.sosam.hiking.model.CultureRepo;
+import java.util.List;
+
+import com.sosam.hiking.model.Culture;
 
 public interface CultureService{
+
+	List<Culture> findBymCode(String mCode);
 
 }

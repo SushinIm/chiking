@@ -20,35 +20,19 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import springfox.documentation.annotations.ApiIgnore;
 
-
-/* class명 대소문자가 doc에 적용되는 명명규칙
- * 
- * 1. 중간 대문자는 '-소문자'로 변경
- * 2. 예시
- * 	 	클래스명 : SwaggerDocTest1 
- * 		doc에 표현되 이름 -> swagger-doc-test-1
- */
 @RestController
-@RequestMapping("/v1/api")
+@RequestMapping("/sg/api")
 public class SwaggerDoc {  
  
-	/*	@RequestParam
-	 * 	- 실제 서비스 시 생략 가능
-	 * 	- 단, swagger doc에는 가급적 설정 권정
-	 * 	- 없을 경우 : try it out 클릭시 @ApiParam의 example 속성이 의미 없음
-	 * 	- 있을 경우 : @ApiParam의 example 속성값이 test 시 적용.
-	 */
-	//@ApiIgnore - 존재 여부 확인 해 보기/없을 경우 Swagger Doc에 표현
-	//각각의 리소스에 제목과 설명 표기
-    @ApiOperation(value = "사원 검색", notes = "API 설명 부분 : 사원 한명 검색")
+    @ApiOperation(value = "산 목록 검색", notes = "산 이름을 통한 산 목록 검색")
     @ApiResponses({
             @ApiResponse(code = 200, message = "OK !!"),
             @ApiResponse(code = 404, message = "404 에러 발생, Not Found !"),
             @ApiResponse(code = 500, message = "500 에러 발생, Internal Server Error !")
     })
-    @GetMapping("/employee")
-    public List<Map<String, String>> selectOneEmployee(@ApiParam(value = "사원 번호", required = false, example = "1") 
-    											 @RequestParam String no) {
+    @GetMapping("/mountains")
+    public List<Map<String, String>> selectOneEmployee(@ApiParam(value = "산 이름") 
+    											 @RequestParam String mName) {
     	List<Map<String,String>> map = new ArrayList<>();
         Map<String, String> result = new HashMap<>(); 
         result.put("사번", "1");

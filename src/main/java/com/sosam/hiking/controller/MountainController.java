@@ -1,6 +1,8 @@
 package com.sosam.hiking.controller;
 
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +27,8 @@ public class MountainController {
 	}
 
 	@GetMapping("/{mCode}")
-	public void mntnDtl(@PathVariable String mCode) {
-		Mountain mntn = mountainService.findBymCode(mCode);
+	public Mountain mntnDtl(@PathVariable String mCode) {
+		return mountainService.findBymCode(mCode);
 	}
 	
 }
