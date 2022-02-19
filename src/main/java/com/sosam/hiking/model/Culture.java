@@ -1,6 +1,7 @@
-package com.sosam.hiking.dto;
+package com.sosam.hiking.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -11,7 +12,9 @@ import lombok.Setter;
 @Setter
 @Entity(name="culture")
 public class Culture {
-	private String mId;
+	@Id
+	private String cId;
+	private String mCode;
 	private String mName;
 	private String cName;
 	private String cLot;
@@ -19,5 +22,4 @@ public class Culture {
 	private String cHeight;
 	private String cDetail;
 	private String cType;
-	private String cId;
 }

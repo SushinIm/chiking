@@ -1,7 +1,13 @@
 package com.sosam.hiking.service;
 
-import com.sosam.hiking.service.impl.MountainImpl;
+import java.util.List;
 
-public class MountainService implements MountainImpl{
+import com.sosam.hiking.model.Mountain;
+
+public interface MountainService {
+
+	List<Mountain> findBymName(String mName);
+
+	Mountain findBymCode(String mCode);
 
 }

@@ -1,6 +1,7 @@
-package com.sosam.hiking.dto;
+package com.sosam.hiking.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -11,6 +12,7 @@ import lombok.Setter;
 @Setter
 @Entity(name="user")
 public class User {
+	@Id
 	private String uId;
 	private String uPw;
 	private String pName;

@@ -1,7 +1,7 @@
 package com.sosam.hiking.service;
 
-import com.sosam.hiking.service.impl.CultureImpl;
+import com.sosam.hiking.model.CultureRepo;
 
-public class CultureService implements CultureImpl{
+public interface CultureService{
 
 }
