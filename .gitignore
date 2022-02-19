@@ -123,5 +123,5 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,eclipse,java
 
 #Custom
-./mrJar/
-./data-preprocessing/
+!mrJar/test.jar
+data-preprocessing/
