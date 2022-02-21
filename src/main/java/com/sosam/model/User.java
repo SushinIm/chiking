@@ -3,19 +3,15 @@ package com.sosam.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Builder
-@Getter
-@Setter
+@Data
 @Entity(name="user")
 public class User {
 	@Id
 	private String uId;
 	private String uPw;
-	private String pName;
+	private String uName;
 	private String uHeight;
 	private String uDiff;
 	private String uLeng;

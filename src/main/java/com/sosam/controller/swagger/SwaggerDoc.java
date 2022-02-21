@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sosam.model.User;
+
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
@@ -47,16 +49,17 @@ public class SwaggerDoc {
      * - 요청시에 json 포멧으로 parameter 전송될 경우 처리하는 애노테이션
      * - swagger doc 개발시에는 생략 금지
      * - DTO 클래스의 각 변수 상단에 선언한 @ApiModelProperty(example=테스트데이터)
-    
+     */
     @ApiOperation(value = "사원 정보 저장", notes = "API 설명 부분 : 사원 한명 저장 또는 수정")
     @ApiResponses({
             @ApiResponse(code = 200, message = "OK !!"),
             @ApiResponse(code = 500, message = "500 에러 발생, Internal Server Error !"),
             @ApiResponse(code = 404, message = "404 에러 발생, Not Found !")
     })
-    @PostMapping("/employee")
-    public String addOneEmployee(@RequestBody Employee emp, @ApiIgnore HttpSession session) {
-    	return "한명의 사원 저장 성공";
+    @PostMapping("/login")
+    public String addOneEmployee(@RequestBody User user, @ApiIgnore HttpSession session) {
+    	System.out.println(user.getUId());
+    	System.out.println(user.getUPw());
+    	return "로그인 기릿";
     }
-     */
 }

@@ -3,13 +3,9 @@ package com.sosam.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Builder
-@Getter
-@Setter
+@Data
 @Entity(name="hikeroad")
 public class HikeRoad {
 	@Id

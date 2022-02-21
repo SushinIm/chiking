@@ -32,7 +32,6 @@ public class MountainController {
 		if(mntn.isPresent()) {
 			return ResponseEntity.ok(mntn);
 		}
-		
 		return ResponseEntity.badRequest().build();
 	}
 	

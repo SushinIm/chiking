@@ -27,7 +27,7 @@ public class SwaggerConfig {
     	//@ApiResponse로 선언된 status에 한해서만 문서에 표현, true로 설정한 경우 401/403 등의 status 값도 문서에 표현됨
         return new Docket(DocumentationType.SWAGGER_2).ignoredParameterTypes(ApiIgnore.class)
         		.apiInfo(swaggerInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("com.mntn.hiking.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.sosam.controller"))
                 .build();
                 //.useDefaultResponseMessages(false); 
     }

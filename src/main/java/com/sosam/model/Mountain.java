@@ -1,20 +1,11 @@
 package com.sosam.model;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Builder
-@Getter
-@Setter
+@Data
 @Entity(name="mountain")
 public class Mountain {
 	private String mReason;

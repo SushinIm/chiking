@@ -1,5 +1,10 @@
 package com.sosam.service.impl;
 
+import java.util.Optional;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -20,22 +25,34 @@ public class UserServiceImpl implements UserService{
 	public UserServiceImpl(UserRepo userRepo) {
 		this.userRepo = userRepo;
 	}
+
+	@Override
+	public String checkId(String uId) {
+		if(this.userRepo.findById(uId).isEmpty()) {
+			return "사용 가능한 아이디입니다.";
+		}
+		return "이미 존재하는 아이디입니다.";
+	}
 	
+	@Override
 	@Transactional
-    public void encryptPassword(String userPw){
-        User user = User.builder().build();
-        String enPw = passwordEncoder.encode(userPw);
-        user.setUPw(enPw);
-        userRepo.save(user);
-    }
+	public User signUp(User user) {
+		String rawPw = user.getUPw();
+		user.setUPw(passwordEncoder.encode(rawPw));
+		return userRepo.save(user);
+	}
 	
-	public Boolean login(String uId, String rawPw){
-		// 이 함수는 user repository에 따로 구현이 되어 있어야 한다. 
-		User user = userRepo.findByuId(uId);
-	    if(passwordEncoder.matches(rawPw, user.getUPw())){
-	    	return true;
-	    } else{
-	    	return false;
-	    }
+	@Override
+	public String signIn(String uId, String uPw, HttpServletRequest req){
+		Optional<User> user = this.userRepo.findById(uId);
+		HttpSession session = req.getSession();		// 세션이 있으면 있는 세션 반환, 없으면 신규 세션을 생성하여 반환
+		if(user.isPresent()) {
+			if(passwordEncoder.matches(uPw, user.get().getUPw())) {
+				// 로그인 성공 처리
+				session.setAttribute("loginUser", user.get());   // 세션에 로그인 회원 정보 보관
+				return "성공";
+			}
+		}
+		return "실패";
 	}
 }

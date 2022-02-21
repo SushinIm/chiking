@@ -28,7 +28,12 @@ public class PagingController {
 	}
 
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
-	public String login(Model model) {
+	public String signIn(Model model) {
 		return "content/login";
+	}
+	
+	@RequestMapping(value = "/useruser", method = RequestMethod.GET)
+	public String signUp(Model model) {
+		return "content/register";
 	}
 }
