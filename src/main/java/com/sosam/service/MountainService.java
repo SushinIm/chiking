@@ -13,4 +13,6 @@ public interface MountainService {
 
 	List<Mountain> findAll();
 
+	List<Mountain> findUseJPQL();
+
 }

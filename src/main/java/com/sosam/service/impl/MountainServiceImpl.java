@@ -33,4 +33,8 @@ public class MountainServiceImpl implements MountainService{
 		return this.mountainRepo.findAll();
 	}
 	
+	@Override
+	public List<Mountain> findUseJPQL(){  
+	    return this.mountainRepo.findUseJPQL(null);  
+	}  
 }

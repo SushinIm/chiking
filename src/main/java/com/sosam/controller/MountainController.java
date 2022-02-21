@@ -25,6 +25,11 @@ public class MountainController {
 	public List<Mountain> search(String mName) {System.out.println(mName);
 		return ("".equals(mName)) ? this.mountainService.findAll() : this.mountainService.findBymNameContains(mName);
 	}
+	
+	@GetMapping("/mountains/")
+	public List<Mountain> findUseJPQL(String mName, String mAddr){
+		return null;
+	}
 
 	@GetMapping("/{mCode}")
 	public ResponseEntity<?> mntnDtl(@PathVariable String mCode) {
