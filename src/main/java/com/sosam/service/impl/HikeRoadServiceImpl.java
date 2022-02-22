@@ -1,6 +1,7 @@
 package com.sosam.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -18,8 +19,8 @@ public class HikeRoadServiceImpl implements HikeRoadService{
 	}
 	
 	@Override
-	public List<HikeRoad> findBymCode(String mCode) {
-		return null;
+	public Optional<List<HikeRoad>> findBymCode(String mCode) {
+		return this.hikeRoadRepo.findBymcode(mCode);
 	}
 	
 }

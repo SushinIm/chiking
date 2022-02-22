@@ -7,14 +7,19 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sosam.model.Like;
 import com.sosam.model.User;
+import com.sosam.service.impl.LikeServiceImpl;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -25,7 +30,10 @@ import springfox.documentation.annotations.ApiIgnore;
 @RestController
 @RequestMapping("/sg/api")
 public class SwaggerDoc {  
- 
+
+	@Autowired
+	LikeServiceImpl likeService;
+	
     @ApiOperation(value = "산 목록 검색", notes = "산 이름을 통한 산 목록 검색")
     @ApiResponses({
             @ApiResponse(code = 200, message = "OK !!"),
@@ -43,7 +51,17 @@ public class SwaggerDoc {
         map.add(result);
         return map; //JSON 포멧으로 응답
     }
-    
+
+    @ApiOperation(value = "좋아요 테스트", notes = "API 설명 부분 : 좋아요 테스트")
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "OK !!"),
+            @ApiResponse(code = 500, message = "500 에러 발생, Internal Server Error !"),
+            @ApiResponse(code = 404, message = "404 에러 발생, Not Found !")
+    })
+	@GetMapping("/like/{mCode}/{uId}")
+	public ResponseEntity<Like> likeClick(@PathVariable String mCode, @PathVariable String uId, String flag) {
+		return ResponseEntity.ok(likeService.likeClick(mCode, uId, flag));
+	}
     
     /* @RequestBody
      * - 요청시에 json 포멧으로 parameter 전송될 경우 처리하는 애노테이션
@@ -58,8 +76,8 @@ public class SwaggerDoc {
     })
     @PostMapping("/login")
     public String addOneEmployee(@RequestBody User user, @ApiIgnore HttpSession session) {
-    	System.out.println(user.getUId());
-    	System.out.println(user.getUPw());
+    	System.out.println(user.getUid());
+    	System.out.println(user.getUpw());
     	return "로그인 기릿";
     }
 }

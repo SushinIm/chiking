@@ -5,25 +5,28 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity(name="mountain")
 public class Mountain {
 	@Id
-	private String mCode;
-	private String mName;
-	private String sName;
-	private String mReason;
-	private String mAddr;
-	private String mDetail;
-	private String mCourse;
-	private String mHeight;
-
-	@OneToMany(mappedBy = "mountain", fetch=FetchType.LAZY)
-	private List<HikeRoad> hikeRoadList = new LinkedList<>();
- 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private String mcode;
+	private String mname;
+	private String sname;
+	private String mreason;
+	private String maddr;
+	private String mdetail;
+	private String mcourse;
+	private String mheight;
 }

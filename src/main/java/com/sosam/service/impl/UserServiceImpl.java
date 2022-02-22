@@ -37,8 +37,8 @@ public class UserServiceImpl implements UserService{
 	@Override
 	@Transactional
 	public User signUp(User user) {
-		String rawPw = user.getUPw();
-		user.setUPw(passwordEncoder.encode(rawPw));
+		String rawPw = user.getUpw();
+		user.setUpw(passwordEncoder.encode(rawPw));
 		return userRepo.save(user);
 	}
 	
@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService{
 		Optional<User> user = this.userRepo.findById(uId);
 		HttpSession session = req.getSession();		// 세션이 있으면 있는 세션 반환, 없으면 신규 세션을 생성하여 반환
 		if(user.isPresent()) {
-			if(passwordEncoder.matches(uPw, user.get().getUPw())) {
+			if(passwordEncoder.matches(uPw, user.get().getUpw())) {
 				// 로그인 성공 처리
 				session.setAttribute("loginUser", user.get());   // 세션에 로그인 회원 정보 보관
 				return "성공";
@@ -55,4 +55,5 @@ public class UserServiceImpl implements UserService{
 		}
 		return "실패";
 	}
+	
 }

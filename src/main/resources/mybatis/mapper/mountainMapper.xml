@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sosam.model.mapper.MountainMapper">
+    <select id="mntnFilter" resultType="Mountain" parameterType="MountainJoin">
+        SELECT	*
+        FROM	MOUNTAIN M
+        INNER JOIN HIKEROAD R
+        ON M.MCODE = R.MCODE INNER JOIN (SELECT MCODE, COUNT(*) AS CULT FROM CULTURE GROUP BY MCODE) C
+        	ON M.MCODE = C.MCODE
+        	WHERE M.MNAME LIKE CONCAT('%',#{mname},'%')
+        	<if test='maddr != null'>
+        		AND M.MADDR LIKE CONCAT('%',#{maddr},'%')
+        	</if>
+        		<if test='mheight != null'>
+        			<![CDATA[ AND M.MHEIGHT < #{mheight} ]]>
+        		</if>
+        			<if test='mdiff != null'>
+        				AND R.PMDIFF = #{mdiff}
+       				</if>
+       					<if test='mtime != null'>
+       						<![CDATA[ AND (R.PMUP + R.PMDOWN) <= #{mtime} ]]>
+       					</if>
+    </select>
+</mapper>

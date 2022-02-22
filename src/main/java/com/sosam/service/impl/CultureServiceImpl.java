@@ -1,6 +1,7 @@
 package com.sosam.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -18,8 +19,8 @@ public class CultureServiceImpl implements CultureService {
 	}
 	
 	@Override
-	public List<Culture> findBymCode(String mCode) {
-		return null;
+	public Optional<List<Culture>> findBymCode(String mCode) {
+		return cultureRepo.findBymcode(mCode);
 	}
 
 }

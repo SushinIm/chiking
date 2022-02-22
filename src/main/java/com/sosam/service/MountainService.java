@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.sosam.model.Mountain;
+import com.sosam.model.MountainJoin;
 
 public interface MountainService {
 
@@ -13,6 +14,6 @@ public interface MountainService {
 
 	List<Mountain> findAll();
 
-	List<Mountain> findUseJPQL();
+	Optional<List<Mountain>> mntnFilter(MountainJoin mj) throws Exception;
 
 }
