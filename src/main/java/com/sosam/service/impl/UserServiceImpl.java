@@ -50,7 +50,7 @@ public class UserServiceImpl implements UserService{
 			if(passwordEncoder.matches(uPw, user.get().getUpw())) {
 				// 로그인 성공 처리
 				user.get().setUpw("");
-				session.setAttribute("loginUser", user.get());   // 세션에 로그인 회원 정보 보관
+				session.setAttribute("ssui", user.get());   // 세션에 로그인 회원 정보 보관
 				return "성공";
 			}
 		}

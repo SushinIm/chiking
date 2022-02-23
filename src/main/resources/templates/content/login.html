@@ -2,13 +2,32 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
+<link th:href="@{/css/headerstyle.css}" rel="stylesheet">
+<link th:href="@{/css/footerstyle.css}" rel="stylesheet">
+<link th:href="@{/css/login.css}" rel="stylesheet">
+
 <script type="text/javascript" th:src="@{/js/common.js}"></script>
 <script type="text/javascript" th:src="@{/js/login.js}"></script>
 <title>로그인 해주세용</title>
 </head>
 <body>
-		<input type="text" id="uId" />
-		<input type="password" id="uPw" />
-		<button id="submit">로그인</button>
+	<div th:replace="fragments/header"></div>
+	<div id="wrap">
+	    <div id="contents">
+	        <div class="login_title">
+	            <h2>LOGIN</h2>
+	        </div>
+	        <div class="login_box">
+	            <form method="post" class="loginForm" name="login" action="/login">
+	                <input type="text" class="stuId" name="stuId" placeholder="학번">
+	                <input type="password" class="stuPw"  name="stuPw" placeholder="비밀번호">
+	                <input type="submit" class="btn" value="로그인" onclick="return buttonClick()">
+	                <div class="login_line"></div>
+	                <a href="findInfo.jsp">학번 / 비밀번호 찾기</a>
+	            </form>
+	       </div>
+	    </div>
+	</div>
+	<div th:replace="fragments/footer"></div>
 </body>
 </html>

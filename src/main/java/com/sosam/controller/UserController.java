@@ -52,8 +52,8 @@ public class UserController {
 	//비밀번호 변경
 	@PutMapping("/pwd")
 	public ResponseEntity<User> changePw(HttpSession session, String uPw) {
-		if(session.getAttribute("loginUser") != null) {
-			User user = userService.changePw((User)session.getAttribute("loginUser"), uPw);
+		if(session.getAttribute("ssui") != null) {
+			User user = userService.changePw((User)session.getAttribute("ssui"), uPw);
 			return ResponseEntity.ok(user);
 		}else {
 			return ResponseEntity.badRequest().build();
@@ -73,7 +73,7 @@ public class UserController {
 	//회원정보 수정
 	@DeleteMapping("/user")
 	public ResponseEntity<String> delUser(HttpSession session) {
-		boolean isDelete = userService.delUser((User)session.getAttribute("loginUser"));
+		boolean isDelete = userService.delUser((User)session.getAttribute("ssui"));
 		if(isDelete) {
 			return ResponseEntity.ok("회원 탈퇴 되었습니다.");
 		}

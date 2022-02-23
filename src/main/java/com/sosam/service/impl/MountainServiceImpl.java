@@ -41,7 +41,7 @@ public class MountainServiceImpl implements MountainService{
 	}
 	
 	@Override
-	public Optional<List<Mountain>> mntnFilter(MountainJoin mj) throws Exception{  
+	public Optional<List<MountainJoin>> mntnFilter(MountainJoin mj) throws Exception{  
 		return this.mountainMapper.mntnFilter(mj);
 	}  
 }

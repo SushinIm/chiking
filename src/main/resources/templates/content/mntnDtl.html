@@ -7,6 +7,38 @@
 <title>산 상세 페이지 이즈 히얼</title>
 </head>
 <body>
-	
+	<div>
+		<p th:text="${mntn.mcode}"></p>
+		<p th:text="${mntn.mname}"></p>
+		<p th:text="${mntn.sname}"></p>
+		<p th:text="${mntn.mreason}"></p>
+		<p th:text="${mntn.maddr}"></p>
+		<p th:text="${mntn.mdetail}"></p>
+		<p th:text="${mntn.mcourse}"></p>
+		<p th:text="${mntn.mheight}"></p>
+	</div>
+	<br/>
+	<div th:each="road : ${rList}">
+		<p th:text="${road.pmcode}"></p>
+		<p th:text="${road.mcode}"></p>
+		<p th:text="${road.mname}"></p>    
+		<p th:text="${road.pmname}"></p>
+		<p th:text="${road.pmleng}"></p>
+		<p th:text="${road.pmdiff}"></p>
+		<p th:text="${road.pmup}"></p>
+		<p th:text="${road.pmdown}"></p>
+	</div>
+	<br/>
+	<div th:each="culture : ${cList}">
+		<p th:text="${culture.cid}"></p>
+		<p th:text="${culture.mcode}"></p>
+		<p th:text="${culture.mname}"></p>
+		<p th:text="${culture.cname}"></p>
+		<p th:text="${culture.clot}"></p>
+		<p th:text="${culture.clat}"></p>
+		<p th:text="${culture.cheight}"></p>
+		<p th:text="${culture.cdetail}"></p>
+		<p th:text="${culture.ctype}"></p>
+	</div>
 </body>
 </html>

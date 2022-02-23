@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sosam.model.mapper.MountainMapper">
-    <select id="mntnFilter" resultType="Mountain" parameterType="MountainJoin">
-        SELECT	*
+    <select id="mntnFilter" resultType="MountainJoin" parameterType="MountainJoin">
+        SELECT	M.*, R.PMUP, R.PMDOWN, R.PMDIFF, C.CULT
         FROM	MOUNTAIN M
-        INNER JOIN HIKEROAD R
+        INNER JOIN (SELECT MCODE, ROUND(AVG(PMUP)) AS PMUP, ROUND(AVG(PMDOWN)) AS PMDOWN, PMDIFF FROM HIKEROAD GROUP BY MCODE) R
         ON M.MCODE = R.MCODE INNER JOIN (SELECT MCODE, COUNT(*) AS CULT FROM CULTURE GROUP BY MCODE) C
         	ON M.MCODE = C.MCODE
         	WHERE M.MNAME LIKE CONCAT('%',#{mname},'%')
         	<if test='maddr != null'>
         		AND M.MADDR LIKE CONCAT('%',#{maddr},'%')
         	</if>
-        		<if test='mheight != null'>
-        			<![CDATA[ AND M.MHEIGHT < #{mheight} ]]>
+        		<if test='mheight1 != null and mheight2 != null'>
+					AND M.MHEIGHT BETWEEN #{mheight1} AND #{mheight2}
         		</if>
         			<if test='mdiff != null'>
         				AND R.PMDIFF = #{mdiff}
        				</if>
-       					<if test='mtime != null'>
-       						<![CDATA[ AND (R.PMUP + R.PMDOWN) <= #{mtime} ]]>
+       					<if test='mtime1 != null and mtime2 != null'>
+       						AND (R.PMUP + R.PMDOWN) BETWEEN #{mtime1} AND #{mtime2}
        					</if>
     </select>
 </mapper>

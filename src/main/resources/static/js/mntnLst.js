@@ -1,11 +1,20 @@
 function mntns(mName){
 	var url = "/sg/mntn/mountains?mName=" + mName;
 	getAjax(url, function(){
-		var result = coverTag(elem.mname, "p");
-		var child = document.createElement("div");
-		child.innerHTML = result;
-		document.getElementById("mntns").appendChild(child);
-	})
+		var data = JSON.parse(this.response);
+		console.log(data.mcode);
+		console.log(data.mname);
+		console.log(data.sname);
+		console.log(data.mreason);
+		console.log(data.maddr);
+		console.log(data.mdetail);
+		console.log(data.mcourse);
+		console.log(data.mheight);
+		console.log(data.pmup);
+		console.log(data.pmdown);
+		console.log(data.pmdiff);
+		console.log(data.cult);
+	});
 }
 
 window.onload = function(){

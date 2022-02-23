@@ -24,8 +24,8 @@ public class MountainController {
 	MountainService mountainService;
 	
 	@GetMapping("/mountains")
-	public ResponseEntity<Optional<List<Mountain>>> mntnFilter(MountainJoin mj) throws Exception {
-		Optional<List<Mountain>> mntnList = this.mountainService.mntnFilter(mj);
+	public ResponseEntity<Optional<List<MountainJoin>>> mntnFilter(MountainJoin mj) throws Exception {
+		Optional<List<MountainJoin>> mntnList = this.mountainService.mntnFilter(mj);
 		if(mntnList != null) {
 			return ResponseEntity.ok(mntnList);
 		}
