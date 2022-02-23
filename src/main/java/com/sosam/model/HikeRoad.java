@@ -20,7 +20,6 @@ import lombok.NoArgsConstructor;
 @Entity(name="hikeroad")
 public class HikeRoad {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String pmcode;
 	private String mcode;
 	private String mname;

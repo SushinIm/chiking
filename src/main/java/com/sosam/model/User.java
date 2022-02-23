@@ -12,10 +12,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="user")
+@Entity(name="users")
 public class User {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String uid;
 	private String upw;
 	private String uname;

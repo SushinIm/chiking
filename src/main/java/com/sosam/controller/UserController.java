@@ -1,5 +1,7 @@
 package com.sosam.controller;
 
+import java.util.Optional;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +31,19 @@ public class UserController {
 	public String checkId(@PathVariable String uId) {
 		return userService.checkId(uId);
 	}
-	/*
-	 * @GetMapping("/id") public
-	 */
+	
+	@GetMapping("/id")
+	public String findId(String uName) {
+		return userService.findId(uName);
+	}
+
+	@GetMapping("/pwd")
+	public String findPw(String uId) {
+		if(userService.findPw(uId)) {
+			return "새로운 비밀번호를 입력하세요.";
+		}
+		return "해당 아이디가 존재하지 않습니다.";
+	}
 	
 	@GetMapping("/dib/{mCode}/{uId}")
 	public ResponseEntity<Like> likeClick(@PathVariable String mCode, @PathVariable String uId, String flag) {

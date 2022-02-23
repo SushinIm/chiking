@@ -20,7 +20,6 @@ import lombok.NoArgsConstructor;
 @Entity(name="mountain")
 public class Mountain {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String mcode;
 	private String mname;
 	private String sname;

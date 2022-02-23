@@ -15,7 +15,6 @@ import lombok.NoArgsConstructor;
 @Entity(name="culture")
 public class Culture {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String cid;
 	private String mcode;
 	private String mname;
