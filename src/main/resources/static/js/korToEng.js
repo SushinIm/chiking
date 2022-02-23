@@ -40,28 +40,28 @@ function makeKor(src) {
     result.compKor = src;
     break;
   case 1: // case 1,2
-    result.compKor = convert영한(src);
+    result.compKor = convertEK(src);
     break;
   case 2: // case 3,4,5
     var ch1 = src.charAt(0), ch2 = src.charAt(1);
     // 3. 자음 + 자음 : ㄺ
-    if (is자음(ch1) && is자음(ch2)) {
-      var 결합자음 = 자음결합하기(convert영한(ch1), convert영한(ch2));
-      if (결합자음) {
-        result.compKor = 결합자음;
+    if (isSon(ch1) && isSon(ch2)) {
+      var fusionSon = sonFusion(convertEK(ch1), convertEK(ch2));
+      if (fusionSon) {
+        result.compKor = fusionSon;
       } else {
         result = makeKor(src.substring(1, 2));
       }
     }
     // 4. 자음 + 모음 : 가
-    else if (is자음(ch1) && is모음(ch2)) {
-      result.compKor = combine한글(convert영한(ch1), convert영한(ch2));
+    else if (isSon(ch1) && isMom(ch2)) {
+      result.compKor = combineK(convertEK(ch1), convertEK(ch2));
     }
     // 5. 모음 + 모음 : ㅚ
-    else if (is모음(ch1) && is모음(ch2)) {
-      var 결합모음 = 모음결합하기(convert영한(ch1), convert영한(ch2));
-      if (결합모음) {
-        result.compKor = 결합모음;
+    else if (isMom(ch1) && isMom(ch2)) {
+      var fusionMom = momFusion(convertEK(ch1), convertEK(ch2));
+      if (fusionMom) {
+        result.compKor = fusionMom;
       } else {
         result = makeKor(src.substring(1, 2));
       }
@@ -72,14 +72,14 @@ function makeKor(src) {
   case 3:// case 6, 7
     var ch1 = src.charAt(0), ch2 = src.charAt(1), ch3 = src.charAt(2);
     // 6. 자음 + 모음 + 자음 : 간
-    if (is자음(ch1) && is모음(ch2) && is자음(ch3)) {
-      result.compKor = combine한글(convert영한(ch1), convert영한(ch2), convert영한(ch3));
+    if (isSon(ch1) && isMom(ch2) && isSon(ch3)) {
+      result.compKor = combineK(convertEK(ch1), convertEK(ch2), convertEK(ch3));
     }
     // 7. 자음 + 모음 + 모음 : 과
-    else if (is자음(ch1) && is모음(ch2) && is모음(ch3)) {
-      var 결합모음 = 모음결합하기(convert영한(ch2), convert영한(ch3));
-      if (결합모음) {
-        result.compKor = combine한글(convert영한(ch1), 결합모음);
+    else if (isSon(ch1) && isMom(ch2) && isMom(ch3)) {
+      var fusionMom = momFusion(convertEK(ch2), convertEK(ch3));
+      if (fusionMom) {
+        result.compKor = combineK(convertEK(ch1), fusionMom);
       } else {
         result = makeKor(src.substring(1, 3));
       }
@@ -90,19 +90,19 @@ function makeKor(src) {
   case 4:// 
     var ch1 = src.charAt(0), ch2 = src.charAt(1), ch3 = src.charAt(2), ch4 = src.charAt(3);
     // 8. 자음 + 모음 + 자음 + 자음 : 닭
-    if (is자음(ch1) && is모음(ch2) && is자음(ch3) && is자음(ch4)) {
-      var 결합자음 = 자음결합하기(convert영한(ch3), convert영한(ch4));
-      if (결합자음) {
-        result.compKor = combine한글(convert영한(ch1), convert영한(ch2), 결합자음);
+    if (isSon(ch1) && isMom(ch2) && isSon(ch3) && isSon(ch4)) {
+      var fusionSon = sonFusion(convertEK(ch3), convertEK(ch4));
+      if (fusionSon) {
+        result.compKor = combineK(convertEK(ch1), convertEK(ch2), fusionSon);
       } else {
         result = makeKor(src.substring(1, 4));
       }
     }
     // 9. 자음 + 모음 + 모음 + 자음 : 관
-    else if (is자음(ch1) && is모음(ch2) && is모음(ch3) && is자음(ch4)) {
-      var 결합모음 = 모음결합하기(convert영한(ch2), convert영한(ch3));
-      if (결합모음) {
-        result.compKor = combine한글(convert영한(ch1), 결합모음, convert영한(ch4));
+    else if (isSon(ch1) && isMom(ch2) && isMom(ch3) && isSon(ch4)) {
+      var fusionMom = momFusion(convertEK(ch2), convertEK(ch3));
+      if (fusionMom) {
+        result.compKor = combineK(convertEK(ch1), fusionMom, convertEK(ch4));
       } else {
         result = makeKor(src.substring(1, 4));
       }
@@ -113,11 +113,11 @@ function makeKor(src) {
   case 5:// 
     var ch1 = src.charAt(0), ch2 = src.charAt(1), ch3 = src.charAt(2), ch4 = src.charAt(3), ch5 = src.charAt(4);
     // 자음 + 모음 + 모음 + 자음 + 자음 : 괅
-    if (is자음(ch1) && is모음(ch2) && is모음(ch3) && is자음(ch4) && is자음(ch5)) {
-      var 결합모음 = 모음결합하기(convert영한(ch2), convert영한(ch3));
-      var 결합자음 = 자음결합하기(convert영한(ch4), convert영한(ch5));
-      if (결합모음 && 결합자음) {
-        result.compKor = combine한글(convert영한(ch1), 결합모음, 결합자음);
+    if (isSon(ch1) && isMom(ch2) && isMom(ch3) && isSon(ch4) && isSon(ch5)) {
+      var fusionMom = momFusion(convertEK(ch2), convertEK(ch3));
+      var fusionSon = sonFusion(convertEK(ch4), convertEK(ch5));
+      if (fusionMom && fusionSon) {
+        result.compKor = combineK(convertEK(ch1), fusionMom, fusionSon);
       } else {
         result = makeKor(src.substring(1, 5));
       }
@@ -138,40 +138,40 @@ function korToEng(src) {
     var ch = src.charAt(i);
     var nCode = ch.charCodeAt(0);
     var result = '';
-    var 초성, 중성, 종성;
+    var chosung, jungshung, jongsung;
     if (44032 <= nCode && nCode <= 55203) {
       nCode -= 44032;
-      초성 = chosungs.charAt(Math.floor(nCode / (21 * 28)));
-      중성 = jungsungs.charAt(Math.floor(nCode / 28) % 21);
-      종성 = jongsungs.charAt(nCode % 28 - 1);
-      res += convert한영(초성);
-      var 모음분해 = 모음분해하기(중성);
-      if (모음분해) {
-        res += convert한영(모음분해);
+      chosung = chosungs.charAt(Math.floor(nCode / (21 * 28)));
+      jungsung = jungsungs.charAt(Math.floor(nCode / 28) % 21);
+      jongsung = jongsungs.charAt(nCode % 28 - 1);
+      res += convertKE(chosung);
+      var momSlice = doMomSlice(jungsung);
+      if (momSlice) {
+        res += convertKE(momSlice);
       } else {
-        res += convert한영(중성);
+        res += convertKE(jungsung);
       }
-      var 자음분해 = 자음분해하기(종성);
-      if (자음분해) {
-        res += convert한영(자음분해);
+      var sonSlice = doSonSlice(jongsung);
+      if (sonSlice) {
+        res += convertKE(sonSlice);
       } else {
-        res += convert한영(종성);
+        res += convertKE(jongsung);
       }
     } else if (chosungs.indexOf(ch) > -1) {
-      res += convert한영(ch);
+      res += convertKE(ch);
     } else if (jungsungs.indexOf(ch) > -1) {
-      var 모음분해 = 모음분해하기(ch);
-      if (모음분해) {
-        res += convert한영(모음분해);
+      var momSlice = doMomSlice(ch);
+      if (momSlice) {
+        res += convertKE(momSlice);
       } else {
-        res += convert한영(ch);
+        res += convertKE(ch);
       }
     } else if (jongsungs.indexOf(ch) > -1) {
-      var 자음분해 = 자음분해하기(ch);
-      if (자음분해) {
-        res += convert한영(자음분해);
+      var sonSlice = doSonSlice(ch);
+      if (sonSlice) {
+        res += convertKE(sonSlice);
       } else {
-        res += convert한영(ch);
+        res += convertKE(ch);
       }
     } else {
       res += ch;
@@ -181,7 +181,7 @@ function korToEng(src) {
   return res;
 }
 
-function convert영한(src) {
+function convertEK(src) {
   var result = '';
   for (var i = 0; i < src.length; i++) {
     var ch = src.charAt(i);
@@ -194,7 +194,7 @@ function convert영한(src) {
   }
   return result;
 }
-function convert한영(src) {
+function convertKE(src) {
   var result = '';
   for (var i = 0; i < src.length; i++) {
     var ch = src.charAt(i);
@@ -210,17 +210,17 @@ function convert한영(src) {
 function isengType(ch) {
   return engType.indexOf(ch) >= 0;
 }
-function is모음(ch) {
+function isMom(ch) {
   return engType.indexOf(ch) >= 19;
 }
-function is자음(ch) {
+function isSon(ch) {
   return engType.indexOf(ch) < 19 && engType.indexOf(ch) >= 0;
 }
 function engToKor(src) {
   var res = "";
   if (src.length == 0)
     return res;
-  var 초성위치 = -1, 중성위치 = -1, 종성위치 = -1; // 초성, 중성, 종성
+  var chosungPos = -1, jungsungPos = -1, jongsungPos = -1; // chosung, jungsung, jongsung
   for (var i = 0; i < src.length; i++) {
     var result = makeKor(src.slice(Math.max(src.length - 5 - i, 0), src.length - i));
     // console.log(result);
@@ -230,10 +230,10 @@ function engToKor(src) {
   return res;
 }
 
-function combine한글(초성, 중성, 종성) {
-  return String.fromCharCode(44032 + chosungs.indexOf(초성) * 21 * 28 + jungsungs.indexOf(중성) * 28 + jongsungs.indexOf(종성) + 1);
+function combineK(chosung, jungsung, jongsung) {
+  return String.fromCharCode(44032 + chosungs.indexOf(chosung) * 21 * 28 + jungsungs.indexOf(jungsung) * 28 + jongsungs.indexOf(jongsung) + 1);
 }
-function 모음결합하기(ch1, ch2) {
+function momFusion(ch1, ch2) {
   var result = null;
   if (ch1 == 'ㅗ' && ch2 == 'ㅏ') { // ㅘ
     result = 'ㅘ';
@@ -252,7 +252,7 @@ function 모음결합하기(ch1, ch2) {
   }
   return result;
 }
-function 모음분해하기(ch) {
+function doMomSlice(ch) {
   switch (ch) {
   case 'ㅘ':
     return 'ㅗㅏ';
@@ -271,7 +271,7 @@ function 모음분해하기(ch) {
   }
   return null;
 }
-function 자음결합하기(ch1, ch2) {
+function sonFusion(ch1, ch2) {
   var result = null;
   if (ch1 == 'ㄱ' && ch2 == 'ㅅ') { // ㄳ
     result = 'ㄳ';
@@ -298,7 +298,7 @@ function 자음결합하기(ch1, ch2) {
   }
   return result;
 }
-function 자음분해하기(ch) {
+function doSonSlice(ch) {
   switch (ch) {
   case 'ㄳ':
     return 'ㄱㅅ';

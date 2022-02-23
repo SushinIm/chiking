@@ -19,14 +19,10 @@ public class CultureController {
 
 	@Autowired
 	CultureService cultureService;
-	
-	@GetMapping("/{mCode}")
-	public ResponseEntity<Optional<List<Culture>>> cultLst(@PathVariable String mCode){
-		Optional<List<Culture>> cList = cultureService.findBymCode(mCode);
-		if(cList.isPresent()) {
-			return ResponseEntity.ok(cList);
-		}
-		return ResponseEntity.badRequest().build();
-	}
-	
+	/*
+	 * @GetMapping("/{mCode}") public ResponseEntity<Optional<List<Culture>>>
+	 * cultLst(@PathVariable String mCode){ Optional<List<Culture>> cList =
+	 * cultureService.findBymCode(mCode); if(cList.isPresent()) { return
+	 * ResponseEntity.ok(cList); } return ResponseEntity.badRequest().build(); }
+	 */
 }

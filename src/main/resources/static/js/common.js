@@ -13,6 +13,6 @@ function postAjax(url, data, callBack){
 	xhttp.send(data);
 }
 
-function coverTag(value, tagName){
-	return "<" + tagName + ">" + value + "</" + tagName + ">";
+function likeClick(){
+	
 }

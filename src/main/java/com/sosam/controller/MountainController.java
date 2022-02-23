@@ -24,26 +24,18 @@ public class MountainController {
 	MountainService mountainService;
 	
 	@GetMapping("/mountains")
-	public List<Mountain> search(String mName) {
-		return ("".equals(mName)) ? this.mountainService.findAll() : this.mountainService.findBymNameContains(mName);
-	}
-	
-	@GetMapping("/filter")
 	public ResponseEntity<Optional<List<Mountain>>> mntnFilter(MountainJoin mj) throws Exception {
 		Optional<List<Mountain>> mntnList = this.mountainService.mntnFilter(mj);
 		if(mntnList != null) {
 			return ResponseEntity.ok(mntnList);
 		}
-		return ResponseEntity.badRequest().build();
-	}
-
-	@GetMapping("/{mCode}")
-	public ResponseEntity<Optional<Mountain>> mntnDtl(@PathVariable String mCode) {
-		Optional<Mountain> mntn = this.mountainService.findById(mCode);
-		if(mntn.isPresent()) {
-			return ResponseEntity.ok(mntn);
-		}
-		return ResponseEntity.badRequest().build();
+		return ResponseEntity.notFound().build();
 	}
 	
+	/*
+	 * @GetMapping("/{mCode}") public ResponseEntity<Optional<Mountain>>
+	 * mntnDtl(@PathVariable String mCode) { Optional<Mountain> mntn =
+	 * this.mountainService.findById(mCode); if(mntn.isPresent()) { return
+	 * ResponseEntity.ok(mntn); } return ResponseEntity.badRequest().build(); }
+	 */
 }

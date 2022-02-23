@@ -18,4 +18,8 @@ public interface UserService {
 
 	boolean findPw(String uId);
 
+	User changePw(User user, String uPw);
+
+	boolean delUser(User user);
+
 }

@@ -39,7 +39,6 @@ public class UserServiceImpl implements UserService{
 	public User signUp(User user) {
 		String rawPw = user.getUpw();
 		user.setUpw(passwordEncoder.encode(rawPw));
-		System.out.println(user.getUpw());
 		return userRepo.save(user);
 	}
 	
@@ -50,6 +49,7 @@ public class UserServiceImpl implements UserService{
 		if(user.isPresent()) {
 			if(passwordEncoder.matches(uPw, user.get().getUpw())) {
 				// 로그인 성공 처리
+				user.get().setUpw("");
 				session.setAttribute("loginUser", user.get());   // 세션에 로그인 회원 정보 보관
 				return "성공";
 			}
@@ -65,6 +65,21 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public boolean findPw(String uId) {
 		return userRepo.findById(uId).isPresent();
+	}
+
+	@Override
+	public User changePw(User user, String uPw) {
+		user.setUpw(passwordEncoder.encode(uPw));
+		return userRepo.save(user);
+	}
+
+	@Override
+	public boolean delUser(User user) {
+		if(user != null) {
+			userRepo.delete(user);
+			return true;
+		}
+		return false;
 	}
 	
 }

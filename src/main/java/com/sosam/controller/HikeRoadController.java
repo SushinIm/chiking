@@ -20,13 +20,10 @@ public class HikeRoadController {
 
 	@Autowired
 	HikeRoadService hikeRoadService;
-	
-	@GetMapping("/{mCode}")
-	public ResponseEntity<Optional<List<HikeRoad>>> roadLst(@PathVariable String mCode) {
-		Optional<List<HikeRoad>> rList = hikeRoadService.findBymCode(mCode);
-		if(rList.isPresent()) {
-			return ResponseEntity.ok(rList);
-		}
-		return ResponseEntity.badRequest().build();
-	}
+	/*
+	 * @GetMapping("/{mCode}") public ResponseEntity<Optional<List<HikeRoad>>>
+	 * roadLst(@PathVariable String mCode) { Optional<List<HikeRoad>> rList =
+	 * hikeRoadService.findBymCode(mCode); if(rList.isPresent()) { return
+	 * ResponseEntity.ok(rList); } return ResponseEntity.badRequest().build(); }
+	 */
 }
