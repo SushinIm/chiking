@@ -2,43 +2,58 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
+
+<link th:href="@{/css/common.css}" rel="stylesheet">
+<link th:href="@{/css/headerstyle.css}" rel="stylesheet">
+<link th:href="@{/css/footerstyle.css}" rel="stylesheet">
+
 <script type="text/javascript" th:src="@{/js/common.js}"></script>
 <script type="text/javascript" th:src="@{/js/mntnDtl.js}"></script>
-<title>산 상세 페이지 이즈 히얼</title>
+<title>CHiking</title>
 </head>
 <body>
-	<div>
-		<p th:text="${mntn.mcode}"></p>
-		<p th:text="${mntn.mname}"></p>
-		<p th:text="${mntn.sname}"></p>
-		<p th:text="${mntn.mreason}"></p>
-		<p th:text="${mntn.maddr}"></p>
-		<p th:text="${mntn.mdetail}"></p>
-		<p th:text="${mntn.mcourse}"></p>
-		<p th:text="${mntn.mheight}"></p>
+	<div th:replace="fragments/header"></div>
+	<div id="wrap">
+		<table>
+			<tr>
+				<td th:text="${mntn.mcode}">1</td>
+				<td th:text="${mntn.mname}">2</td>
+				<td th:text="${mntn.sname}">3</td>
+				<td th:text="${mntn.mreason}">4</td>
+				<td th:text="${mntn.maddr}">5</td>
+				<td th:text="${mntn.mdetail}">6</td>
+				<td th:text="${mntn.mcourse}">7</td>
+				<td th:text="${mntn.mheight}">8</td>
+			</tr>
+		</table>
+		<br/>
+		<table>
+			<tr th:each="road : ${rList}">
+				<td th:text="${road.pmcode}"></td>
+				<td th:text="${road.mcode}"></td>
+				<td th:text="${road.mname}"></td>    
+				<td th:text="${road.pmname}"></td>
+				<td th:text="${road.pmleng}"></td>
+				<td th:text="${road.pmdiff}"></td>
+				<td th:text="${road.pmup}"></td>
+				<td th:text="${road.pmdown}"></td>
+			</tr>
+		</table>
+		<br/>
+		<table>
+			<tr th:each="culture : ${cList}">
+				<td th:text="${culture.cid}"></td>
+				<td th:text="${culture.mcode}"></td>
+				<td th:text="${culture.mname}"></td>
+				<td th:text="${culture.cname}"></td>
+				<td th:text="${culture.clot}"></td>
+				<td th:text="${culture.clat}"></td>
+				<td th:text="${culture.cheight}"></td>
+				<td th:text="${culture.cdetail}"></td>
+				<td th:text="${culture.ctype}"></td>
+			</tr>
+		</table>
 	</div>
-	<br/>
-	<div th:each="road : ${rList}">
-		<p th:text="${road.pmcode}"></p>
-		<p th:text="${road.mcode}"></p>
-		<p th:text="${road.mname}"></p>    
-		<p th:text="${road.pmname}"></p>
-		<p th:text="${road.pmleng}"></p>
-		<p th:text="${road.pmdiff}"></p>
-		<p th:text="${road.pmup}"></p>
-		<p th:text="${road.pmdown}"></p>
-	</div>
-	<br/>
-	<div th:each="culture : ${cList}">
-		<p th:text="${culture.cid}"></p>
-		<p th:text="${culture.mcode}"></p>
-		<p th:text="${culture.mname}"></p>
-		<p th:text="${culture.cname}"></p>
-		<p th:text="${culture.clot}"></p>
-		<p th:text="${culture.clat}"></p>
-		<p th:text="${culture.cheight}"></p>
-		<p th:text="${culture.cdetail}"></p>
-		<p th:text="${culture.ctype}"></p>
-	</div>
+	<div th:replace="fragments/footer"></div>
 </body>
 </html>

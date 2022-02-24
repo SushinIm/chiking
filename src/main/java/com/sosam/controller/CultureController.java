@@ -14,7 +14,7 @@ import com.sosam.model.Culture;
 import com.sosam.service.CultureService;
 
 @RestController
-@RequestMapping("/sg/cult")
+@RequestMapping("/ch/cult")
 public class CultureController {
 
 	@Autowired

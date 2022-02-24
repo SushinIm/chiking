@@ -2,8 +2,11 @@ package com.sosam.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class MountainJoin {
 	private String mcode;
 	private String mname;

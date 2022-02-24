@@ -2,16 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<!-- [외부 css 스타일 지정] 
-<link th:href="@{/css/kwon.css}" rel="stylesheet">
--->
-<!-- [외부 js 파일 경로 지정] -->
+
+<link th:href="@{/css/common.css}" rel="stylesheet">
+<link th:href="@{/css/headerstyle.css}" rel="stylesheet">
+<link th:href="@{/css/footerstyle.css}" rel="stylesheet">
+
 <script type="text/javascript" th:src="@{/js/common.js}"></script>
 <script type="text/javascript" th:src="@{/js/mntnLst.js}"></script>
-<title>산 목록입니다</title>
+<title>CHiking</title>
 </head>
 <body>
-	<input type="text" th:value="${mName}" id="mName" />
-	<div id="mntns"></div>
+	<div th:replace="fragments/header"></div>
+	<div id="wrap">
+		<input type="text" th:value="${mName}" id="mName" />
+		<div id="mntns"></div>
+	</div>
+	<div th:replace="fragments/footer"></div>
 </body>
 </html>

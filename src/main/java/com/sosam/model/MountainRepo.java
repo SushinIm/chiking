@@ -10,6 +10,4 @@ import org.springframework.data.repository.query.Param;
 public interface MountainRepo extends JpaRepository<Mountain, String>{
 
 	List<Mountain> findBymnameContains(String mName);
-
-	Optional<Mountain> findBymcode(String mCode);
 }

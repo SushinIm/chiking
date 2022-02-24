@@ -14,6 +14,6 @@ public interface MountainService {
 
 	List<Mountain> findAll();
 
-	Optional<List<MountainJoin>> mntnFilter(MountainJoin mj) throws Exception;
+	List<MountainJoin> mntnFilter(MountainJoin mj) throws Exception;
 
 }

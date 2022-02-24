@@ -17,15 +17,15 @@ import com.sosam.model.MountainJoin;
 import com.sosam.service.MountainService;
 
 @RestController
-@RequestMapping("/sg/mntn")
+@RequestMapping("/ch/mntn")
 public class MountainController {
 	
 	@Autowired
 	MountainService mountainService;
 	
 	@GetMapping("/mountains")
-	public ResponseEntity<Optional<List<MountainJoin>>> mntnFilter(MountainJoin mj) throws Exception {
-		Optional<List<MountainJoin>> mntnList = this.mountainService.mntnFilter(mj);
+	public ResponseEntity<List<MountainJoin>> mntnFilter(MountainJoin mj) throws Exception {
+		List<MountainJoin> mntnList = this.mountainService.mntnFilter(mj);
 		if(mntnList != null) {
 			return ResponseEntity.ok(mntnList);
 		}

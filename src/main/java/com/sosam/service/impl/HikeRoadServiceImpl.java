@@ -19,8 +19,8 @@ public class HikeRoadServiceImpl implements HikeRoadService{
 	}
 	
 	@Override
-	public Optional<List<HikeRoad>> findBymCode(String mCode) {
-		return this.hikeRoadRepo.findBymcode(mCode);
+	public Optional<List<HikeRoad>> findAllBymcode(String mCode) {
+		return this.hikeRoadRepo.findAllBymcode(mCode, "-");
 	}
 	
 }

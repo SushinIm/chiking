@@ -1,5 +1,5 @@
 function mntns(mName){
-	var url = "/sg/mntn/mountains?mName=" + mName;
+	var url = "/ch/mntn/mountains?mName=" + mName;
 	getAjax(url, function(){
 		var data = JSON.parse(this.response);
 		console.log(data.mcode);

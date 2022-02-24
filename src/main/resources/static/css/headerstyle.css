@@ -40,32 +40,6 @@ input:focus{
     padding: 35px 0;
     position: relative;
 }
-.search_bar{
-    border: 1px solid #cccccc;
-    width: 327px;
-    height: 43px;
-    position: absolute;
-}
-.search_bar .search_text{
-    border: none;
-    height: 43px;
-    width: 268px;
-    padding: 0 0 0 15px;
-}
-.search_bar .search_text::placeholder{
-    color: #ccc;
-}
-.search_bar .search_icon{
-    position: absolute;
-    right: 0px;
-    width: 43px;
-    height: 43px;
-    border: none;
-    border-left: 1px solid #ccc;
-    background: url(/img/ico-search.png) no-repeat center;
-    cursor: pointer;
-    background-color: white;
-}
 .logo{
     position: relative;
     width: 205px;

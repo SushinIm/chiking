@@ -27,19 +27,27 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public String checkId(String uId) {
+	public boolean checkId(String uId) {
 		if(this.userRepo.findById(uId).isEmpty()) {
-			return "사용 가능한 아이디입니다.";
+			return true;
 		}
-		return "이미 존재하는 아이디입니다.";
+		return false;
 	}
 	
 	@Override
 	@Transactional
-	public User signUp(User user) {
+	public boolean signUp(User user) {
+		String uId = user.getUid();
+		if(userRepo.findById(uId).isPresent()) {
+			return false;
+		}
 		String rawPw = user.getUpw();
 		user.setUpw(passwordEncoder.encode(rawPw));
-		return userRepo.save(user);
+		User resultUser = userRepo.save(user);
+		if(resultUser != null) {
+			return true;
+		}
+		return false;
 	}
 	
 	@Override

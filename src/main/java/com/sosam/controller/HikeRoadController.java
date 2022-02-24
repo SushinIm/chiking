@@ -15,7 +15,7 @@ import com.sosam.model.HikeRoad;
 import com.sosam.service.HikeRoadService;
 
 @RestController
-@RequestMapping("/sg/road")
+@RequestMapping("/ch/road")
 public class HikeRoadController {
 
 	@Autowired

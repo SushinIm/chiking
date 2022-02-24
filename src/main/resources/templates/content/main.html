@@ -8,12 +8,21 @@
 <link th:href="@{/css/footerstyle.css}" rel="stylesheet">
 
 <script type="text/javascript" th:src="@{/js/common.js}"></script>
-<script type="text/javascript" th:src="@{/js/myPage.js}"></script>
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
 <title>CHiking</title>
 </head>
 <body>
 	<div th:replace="fragments/header"></div>
 	<div id="wrap">
+		<div id="contents">
+	       <div class="login_title">
+	           <h1>MAIN</h1>
+	       </div>
+	       <div class="search_bar">
+	           <input class="search_text" type="text" placeholder="산 이름을 입력하세요.">
+	           <button id="search" class="search_icon"></button>
+	       </div>
+	   </div>
 	</div>
 	<div th:replace="fragments/footer"></div>
 </body>

@@ -19,7 +19,7 @@ import com.sosam.service.LikeService;
 import com.sosam.service.UserService;
 
 @RestController
-@RequestMapping("/sg/users")
+@RequestMapping("/ch/users")
 public class UserController {
 
 	@Autowired
@@ -30,8 +30,12 @@ public class UserController {
 
 	//아이디 중복체크
 	@GetMapping("/{uId}")
-	public String checkId(@PathVariable String uId) {
-		return userService.checkId(uId);
+	public ResponseEntity<String> checkId(@PathVariable String uId) {
+		if(userService.checkId(uId)) {
+			return ResponseEntity.ok("s");
+		}else {
+			return ResponseEntity.badRequest().body("f");
+		}
 	}
 	
 	//아이디 찾기
@@ -42,11 +46,12 @@ public class UserController {
 
 	//비밀번호 찾기
 	@GetMapping("/pwd")
-	public String findPw(String uId) {
+	public ResponseEntity<String> findPw(String uId) {
 		if(userService.findPw(uId)) {
-			return "새로운 비밀번호를 입력하세요.";
+			return ResponseEntity.ok("s");
+		}else {
+			return ResponseEntity.badRequest().body("f");
 		}
-		return "해당 아이디가 존재하지 않습니다.";
 	}
 	
 	//비밀번호 변경
@@ -62,22 +67,20 @@ public class UserController {
 
 	//회원정보 수정
 	@PutMapping("/user")
-	public ResponseEntity<User> changeInfo(User newUser) {
-		User user = userService.signUp(newUser);
-		if(user != null) {
-			return ResponseEntity.ok(user);
+	public ResponseEntity<String> changeInfo(User newUser) {
+		if(userService.signUp(newUser)) {
+			return ResponseEntity.ok("s");
 		}
-		return ResponseEntity.badRequest().build();
+		return ResponseEntity.badRequest().body("f");
 	}
 
-	//회원정보 수정
+	//회원정보 삭제
 	@DeleteMapping("/user")
 	public ResponseEntity<String> delUser(HttpSession session) {
-		boolean isDelete = userService.delUser((User)session.getAttribute("ssui"));
-		if(isDelete) {
-			return ResponseEntity.ok("회원 탈퇴 되었습니다.");
+		if(userService.delUser((User)session.getAttribute("ssui"))) {
+			return ResponseEntity.ok("s");
 		}
-		return ResponseEntity.badRequest().body("로그인 후 이용바랍니다.");
+		return ResponseEntity.badRequest().body("f");
 	}
 	
 	//좋아요 클릭
@@ -92,12 +95,12 @@ public class UserController {
 	
 	//회원가입
 	@PostMapping("/newcomer")
-	public ResponseEntity<User> signUp(User user) {
-		User result = userService.signUp(user);
-		if(result != null) {
-			return ResponseEntity.ok(result);
+	public ResponseEntity<String> signUp(User user) {
+		if(userService.signUp(user)) {
+			return ResponseEntity.ok("s");
+		}else {
+			return ResponseEntity.badRequest().body("f");	
 		}
-		return ResponseEntity.badRequest().build();
 	}
 
 	//로그인
@@ -107,8 +110,9 @@ public class UserController {
 	}
 
 	//로그아웃
-	@GetMapping("/users/x")
-	public String logOut(HttpSession session) {
+	@GetMapping("/x")
+	public String logOut(HttpServletRequest req) {
+		HttpSession session = req.getSession();
 		session.invalidate();
 		return "로그아웃 되었습니다.";
 	}

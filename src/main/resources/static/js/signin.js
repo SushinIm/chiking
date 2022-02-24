@@ -1,16 +1,16 @@
 window.onload = function(){
-	document.getElementById("submit").addEventListener("click", function(){
+	document.getElementById("signin").addEventListener("click", function(){
 		var uId = document.getElementById("uId").value;
 		var uPw = document.getElementById("uPw").value;
 		
 		if(uId.length > 0 && uId != undefined){
 			if(uPw.length > 0 && uPw != undefined){
-				var url = "/sg/users/user/" + uId;
+				var url = "/ch/users/user/" + uId;
 				var data = "uPw="+uPw;
 				postAjax(url, data, function(){
 					if(this.response == "성공"){
 						alert("로그인에 성공하셨습니다.");
-						location.href = "/sg";
+						location.href = "/ch";
 					}else{
 						alert("아이디, 혹은 비밀번호가 틀렸습니다.");
 					}

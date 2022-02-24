@@ -3,12 +3,11 @@ package com.sosam.model.mapper;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
-import com.sosam.model.Mountain;
 import com.sosam.model.MountainJoin;
 
-@Repository
+@Mapper
 public interface MountainMapper {
-    public Optional<List<MountainJoin>> mntnFilter(MountainJoin mj) throws Exception;
+    public List<MountainJoin> mntnFilter(MountainJoin mj) throws Exception;
 }

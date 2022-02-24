@@ -7,6 +7,6 @@ import com.sosam.model.HikeRoad;
 
 public interface HikeRoadService {
 
-	Optional<List<HikeRoad>> findBymCode(String mCode);
+	Optional<List<HikeRoad>> findAllBymcode(String mCode);
 
 }

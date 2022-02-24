@@ -10,9 +10,9 @@ public interface UserService {
 	
 	String signIn(String uId, String uPw, HttpServletRequest req);
 
-	User signUp(User user);
+	boolean signUp(User user);
 
-	String checkId(String uId);
+	boolean checkId(String uId);
 
 	String findId(String uName);
 
