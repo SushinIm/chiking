@@ -76,7 +76,8 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public User changePw(User user, String upw) {
+	public User changePw(String uid, String upw) {
+		User user = userRepo.findById(uid).get();
 		user.setUpw(passwordEncoder.encode(upw));
 		return userRepo.save(user);
 	}

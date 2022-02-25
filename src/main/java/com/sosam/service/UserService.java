@@ -18,7 +18,7 @@ public interface UserService {
 
 	boolean findPw(String uid, String uname);
 
-	User changePw(User user, String upw);
+	User changePw(String uid, String upw);
 
 	boolean delUser(User user);
 

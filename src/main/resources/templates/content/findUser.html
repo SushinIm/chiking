@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 
-<link th:href="@{/css/findInfo.css}" rel="stylesheet">
 <link th:href="@{/css/common.css}" rel="stylesheet">
 <link th:href="@{/css/headerstyle.css}" rel="stylesheet">
 <link th:href="@{/css/footerstyle.css}" rel="stylesheet">
@@ -35,17 +34,16 @@
 			        <input type="text" id="pwname" placeholder="이름"/>
 			        <button id="pwBtn" class="btn">확인</button>
 				</div>
-            </div>    
-            <div class="page_title none">
-				<div id="newPw">
+				<div id="newPw" class="none">
 				    <h3 class="id_title">비밀번호 변경</h3>
 	            	<div class="page_line"></div>
 			        <input type="password" id="upw" placeholder="새 비밀번호"/>
 			        <input type="password" id="upwChk" placeholder="새 비밀번호 확인"/>
+					<p id="upwChkP"></p>
 			        <button id="ccBtn" class="hBtn">취소</button>
 			        <button id="npBtn" class="hBtn">확인</button>
 				</div>
-            </div> 
+            </div>    
         </div>
     </div>
 	<div th:replace="fragments/footer"></div>

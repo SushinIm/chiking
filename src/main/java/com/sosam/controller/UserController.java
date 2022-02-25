@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -61,13 +62,18 @@ public class UserController {
 	}
 	
 	//비밀번호 변경
-	@PutMapping("/pwd")
-	public ResponseEntity<String> changePw(HttpSession session, String upw) {
-		if(session.getAttribute("ssui") != null) {
-			userService.changePw((User)session.getAttribute("ssui"), upw);
-			return ResponseEntity.ok("s");
+	@PostMapping("/pwd")
+	public ResponseEntity<String> changePw(String uid, String upw) {
+		boolean exist = userService.checkId(uid);
+		if(!exist) {
+			User user = userService.changePw(uid, upw);
+			if(user.getUname() != null) {
+				return ResponseEntity.ok("s");
+			}else {
+				return ResponseEntity.badRequest().body("f");
+			}
 		}else {
-			return ResponseEntity.badRequest().body("f");
+			return ResponseEntity.badRequest().body("e");
 		}
 	}
 
