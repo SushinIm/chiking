@@ -11,8 +11,10 @@ window.onload = function(){
 					if(this.response == "s"){
 						alert("로그인에 성공하셨습니다");
 						location.href = "/ch";
-					}else{
+					}else if(this.response == "f"){
 						alert("아이디, 혹은 비밀번호가 틀렸습니다");
+					}else{
+						alert("해당 아이디가 존재하지 않습니다");
 					}
 				});
 			}else{

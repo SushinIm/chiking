@@ -61,8 +61,15 @@ public class UserController {
 		}
 	}
 	
-	//비밀번호 변경
+	//비밀번호 확인
 	@PostMapping("/pwd")
+	public boolean checkPw(String uid, String upw) {
+		boolean exist = userService.checkPw(uid, upw);
+		return exist;
+	}
+	
+	//비밀번호 변경
+	@PostMapping("/newpwd")
 	public ResponseEntity<String> changePw(String uid, String upw) {
 		boolean exist = userService.checkId(uid);
 		if(!exist) {
@@ -79,8 +86,8 @@ public class UserController {
 
 	//회원정보 수정
 	@PutMapping("/user")
-	public ResponseEntity<String> changeInfo(User newUser) {
-		if(userService.signUp(newUser)) {
+	public ResponseEntity<String> changeInfo(HttpSession session, User newUser) {
+		if(userService.userUpdate(session, newUser)) {
 			return ResponseEntity.ok("s");
 		}
 		return ResponseEntity.badRequest().body("f");
@@ -90,6 +97,7 @@ public class UserController {
 	@DeleteMapping("/user")
 	public ResponseEntity<String> delUser(HttpSession session) {
 		if(userService.delUser((User)session.getAttribute("ssui"))) {
+			session.invalidate();
 			return ResponseEntity.ok("s");
 		}
 		return ResponseEntity.badRequest().body("f");

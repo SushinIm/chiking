@@ -35,6 +35,17 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	@Override
+	public boolean checkPw(String uid, String upw) {
+		Optional<User> user = this.userRepo.findById(uid);
+		if(user.isPresent()) {
+			if(passwordEncoder.matches(upw, user.get().getUpw())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	@Override
 	@Transactional
 	public boolean signUp(User user) {
 		String uid = user.getUid();
@@ -49,6 +60,27 @@ public class UserServiceImpl implements UserService{
 		}
 		return false;
 	}
+
+	@Override
+	@Transactional
+	public boolean userUpdate(HttpSession session, User user) {
+		String uid = user.getUid();
+		Optional<User> before = userRepo.findById(uid);
+		if(before.isPresent()) {
+			if(user.getUpw() == null) {
+				user.setUpw(before.get().getUpw());
+			}else {
+				user.setUpw(passwordEncoder.encode(user.getUpw()));
+			}
+			User resultUser = userRepo.save(user);
+			if(resultUser != null) {
+				session.removeAttribute("ssui");
+				session.setAttribute("ssui", resultUser);
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	@Override
 	public String signIn(String uid, String upw, HttpServletRequest req){
@@ -60,9 +92,12 @@ public class UserServiceImpl implements UserService{
 				user.get().setUpw("");
 				session.setAttribute("ssui", user.get());   // 세션에 로그인 회원 정보 보관
 				return "s";
+			}else {
+				return "f";
 			}
+		}else {
+			return "e";
 		}
-		return "f";
 	}
 
 	@Override
@@ -90,5 +125,5 @@ public class UserServiceImpl implements UserService{
 		}
 		return false;
 	}
-	
+
 }

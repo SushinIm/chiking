@@ -8,10 +8,6 @@
     list-style: none;
     border-collapse: collapse;
 }
-.none{
-	display:none;
-}
-
 #wrap{
     width: 100%;
     position: relative;
@@ -60,7 +56,6 @@
 input[type=text], input[type=password] {
     width: 445px;
     height: 58px;
-    display: block;
     border: 1px solid #ccc;
     margin-bottom: 8px;
     padding-left: 15px;
@@ -94,20 +89,37 @@ select{
 	border-radius:1px;
 }
 
-.heightArrow {
+.su.heightArrow {
 	top :388px;
 	right: 15px;
 }
-.diffArrow {
+.su.diffArrow {
 	top :454px;
 	right: 15px;
 }
-.timeArrow {
+.su.timeArrow {
 	top :520px;
 	right: 15px;
 }
-.locArrow {
+.su.locArrow {
 	top :586px;
+	right: 15px;
+}
+
+.ui.heightArrow {
+	top :158px;
+	right: 15px;
+}
+.ui.diffArrow {
+	top :224px;
+	right: 15px;
+}
+.ui.timeArrow {
+	top :290px;
+	right: 15px;
+}
+.ui.locArrow {
+	top :356px;
 	right: 15px;
 }
 
@@ -156,12 +168,9 @@ select{
     line-height: 32px;
 }
 
-
-
-
-
-
-
+.none{
+	display:none;
+}
 
 .search_bar{
     border: 1px solid #cccccc;

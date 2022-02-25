@@ -68,7 +68,7 @@ window.onload = function(){
 		
 		if(upw.length > 0 && upw != undefined){
 			if(upw == upwChk){
-				var url = "/ch/users/pwd";
+				var url = "/ch/users/newpwd";
 				var data = "uid=" + pwid + "&upw="+upw;
 				postAjax(url, data, function(){
 					if(this.response == "s"){

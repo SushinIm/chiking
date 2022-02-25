@@ -3,6 +3,7 @@ package com.sosam.service;
 import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import com.sosam.model.User;
 
@@ -21,5 +22,9 @@ public interface UserService {
 	User changePw(String uid, String upw);
 
 	boolean delUser(User user);
+
+	boolean checkPw(String uid, String upw);
+
+	boolean userUpdate(HttpSession session, User newUser);
 
 }

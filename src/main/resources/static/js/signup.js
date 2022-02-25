@@ -23,9 +23,9 @@ window.onload = function(){
 						postAjax(url, data, function(){
 							var res = this.response;
 							if(res == "s"){
+								alert("환영합니다");
 								location.href = "/ch";
 							}
-							console.log(res);
 						});
 					}else{
 						document.getElementById("upw").focus();
@@ -52,11 +52,9 @@ window.onload = function(){
 			getAjax(url, function(){
 				var res = this.response;
 				if(res == "s"){
-					document.getElementById("signup").disabled = false;
 					document.getElementById("idChkFlag").value = 1;
 					alert("사용 가능한 아이디입니다");
 				}else{
-					document.getElementById("signup").disabled = true;
 					document.getElementById("idChkFlag").value = 0;
 					alert("이미 존재하는 아이디입니다");
 				}

@@ -13,11 +13,12 @@ function postAjax(url, data, callBack){
 	xhttp.send(data);
 }
 
-function putAjax(url, callBack){
+function putAjax(url, data, callBack){
 	const xhttp = new XMLHttpRequest();
 	xhttp.onload = callBack;
 	xhttp.open("PUT", url);
-	xhttp.send();
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send(data);
 }
 
 function deleteAjax(url, callBack){
@@ -35,8 +36,8 @@ function logout(){
 }
 
 function likeClick(mcode, uid){
-	var url = "/ch/users/dib/"+mcode+uid;
-	putAjax(url, function(){
+	var url = "/ch/users/dib/"+mcode + "/" + uid;
+	putAjax(url, "", function(){
 		alert("좋아요를 누르셨습니다");
 	})
 }
