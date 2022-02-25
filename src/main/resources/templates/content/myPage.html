@@ -14,6 +14,72 @@
 <body>
 	<div th:replace="fragments/header"></div>
 	<div id="wrap">
+		<div id="contents">
+	        <div class="page_title">
+	            <h2>MY-PAGE</h2>
+	        </div>
+	        <div class="page_box">
+				<input type="text" id="uid" placeholder="* 아이디">
+				<input type="text" id="uname" placeholder="* 이름">
+				<select id="uheight">
+					<option value="">선호 고도</option>
+					<option value="0~500">0~500</option>
+					<option value="501~800">501~800</option>
+					<option value="801~1200">801~1200</option>
+					<option value="1201~1600">1201~1600</option>
+					<option value="1601~2000">1601~2000</option>
+				</select>
+				<div class="arrowDiv heightArrow"></div>
+				<select id="udiff">
+					<option value="">선호 난이도</option>
+					<option value="쉬움">쉬움</option>
+					<option value="보통">보통</option>
+					<option value="어려움">어려움</option>
+				</select>
+				<div class="arrowDiv diffArrow"></div>
+				<select id="utime">
+					<option value="">선호 산행시간</option>
+					<option value="0~30">0~30</option>
+					<option value="31~60">31~60</option>
+					<option value="61~90">61~90</option>
+					<option value="91~120">91~120</option>
+					<option value="121~150">121~150</option>
+					<option value="151~180">151~180</option>
+					<option value="181~210">181~210</option>
+					<option value="211~240">211~240</option>
+					<option value="241~270">241~270</option>
+					<option value="271~300">271~300</option>
+					<option value="301~330">301~330</option>
+					<option value="331~360">331~360</option>
+				</select>
+				<div class="arrowDiv timeArrow"></div>
+				<select id="uloc">
+					<option value="">전국</option>
+					<option value="서울">서울</option>
+					<option value="인천">인천</option>
+					<option value="경기">경기</option>
+					<option value="강원">강원</option>
+					<option value="충북">충북</option>
+					<option value="충남">충남</option>
+					<option value="대전">대전</option>
+					<option value="전북">전북</option>
+					<option value="전남">전남</option>
+					<option value="광주">광주</option>
+					<option value="대구">대구</option>
+					<option value="경북">경북</option>
+					<option value="경남">경남</option>
+					<option value="울산">울산</option>
+					<option value="부산">부산</option>
+					<option value="제주">제주</option>
+				</select>
+				<div class="arrowDiv locArrow"></div>
+				<button class="btn" id="signup" disabled>회원가입</button>
+		        <button class="hBtn" id="uiChg">저장</button>
+		        <button class="hBtn" id="home">메인으로</button>
+	            <div class="page_line"></div>
+	            <a href="#" id="uiDel" class="toRight">회원 탈퇴</a>
+	       </div>
+		</div>
 	
 	</div>
 	<div th:replace="fragments/footer"></div>
