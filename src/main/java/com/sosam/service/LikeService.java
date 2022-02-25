@@ -9,4 +9,6 @@ public interface LikeService {
 
 	Like likeClick(String mCode, String uId, String flag);
 
+	String doILikeIt(String mCode, String uId);
+
 }

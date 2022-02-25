@@ -59,15 +59,15 @@ public class UserServiceImpl implements UserService{
 				// 로그인 성공 처리
 				user.get().setUpw("");
 				session.setAttribute("ssui", user.get());   // 세션에 로그인 회원 정보 보관
-				return "성공";
+				return "s";
 			}
 		}
-		return "실패";
+		return "f";
 	}
 
 	@Override
-	public String findId(String uName) {
-		return userRepo.findByuname(uName);
+	public Optional<User> findId(String uname) {
+		return userRepo.findByuname(uname);
 	}
 
 	@Override

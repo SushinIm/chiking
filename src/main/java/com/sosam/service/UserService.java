@@ -14,7 +14,7 @@ public interface UserService {
 
 	boolean checkId(String uId);
 
-	String findId(String uName);
+	Optional<User> findId(String uname);
 
 	boolean findPw(String uId);
 

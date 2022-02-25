@@ -11,7 +11,7 @@ window.onload = function(){
 		if(uid.length > 0 && uid != undefined){
 			if(document.getElementById("idChkFlag").value != 0){
 				if(upw.length > 0 && upw != undefined){
-					if(upw == document.getElementById("uPwChk").value){
+					if(upw == document.getElementById("upw2").value){
 						var url = "/ch/users/newcomer";
 						var data = "uid=" + uid;
 						data += "&upw=" + upw;
@@ -64,6 +64,17 @@ window.onload = function(){
 		}else{
 			document.getElementById("uid").focus();
 			return alert("아이디 입력을 확인해주세요");
+		}
+	})
+	
+	document.getElementById("upw2").addEventListener("keyup", function(){
+		var pw1 = document.getElementById("upw").value;
+		var pwChk = document.getElementById("pwChk");
+		if(pw1 == this.value){
+			pwChk.style.display = "none";
+		}else{
+			pwChk.innerText = "비밀번호가 같지 않습니다.";
+			pwChk.style.display = "block";
 		}
 	})
 };

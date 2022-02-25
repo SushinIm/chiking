@@ -18,6 +18,15 @@ public class LikeServiceImpl implements LikeService {
 	public LikeServiceImpl(LikeRepo likeRepo) {
 		this.likeRepo = likeRepo;
 	}
+
+	@Override
+	public String doILikeIt(String mCode, String uId) {
+		Optional<Like> like = this.likeRepo.findById(new LikeId(mCode, uId));
+		if(like.isPresent()) {
+			return like.get().getLikeyn();
+		}
+		return "n";
+	}
 	
 	@Override
 	public Like likeClick(String mCode, String uId, String flag) {

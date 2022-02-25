@@ -20,6 +20,8 @@ public class MountainJoin {
 	private String pmdown;
 	private String pmdiff;
 	private String cult;
+	private String uid;
+	private String likeyn;
 	
 	private String mdiff;
 	private String mheight1;

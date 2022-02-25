@@ -1,5 +1,7 @@
 package com.sosam.controller;
 
+import java.util.Optional;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -40,8 +42,12 @@ public class UserController {
 	
 	//아이디 찾기
 	@GetMapping("/id")
-	public String findId(String uName) {
-		return userService.findId(uName);
+	public String findId(String uname) {
+		Optional<User> user = userService.findId(uname);
+		if(user.isPresent()) {
+			return user.get().getUid();
+		}
+		return user.get().getUpw();
 	}
 
 	//비밀번호 찾기

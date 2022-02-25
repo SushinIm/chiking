@@ -2,11 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sosam.model.mapper.MountainMapper">
     <select id="mntnFilter" resultType="MountainJoin" parameterType="MountainJoin">
-        SELECT	M.*, R.PMUP, R.PMDOWN, R.PMDIFF, C.CULT
+        SELECT	M.*, R.PMUP, R.PMDOWN, R.PMDIFF, C.CULT, L.UID, L.LIKEYN
         FROM	MOUNTAIN M
         INNER JOIN (SELECT MCODE, ROUND(AVG(PMUP)) AS PMUP, ROUND(AVG(PMDOWN)) AS PMDOWN, PMDIFF FROM HIKEROAD GROUP BY MCODE) R
         ON M.MCODE = R.MCODE INNER JOIN (SELECT MCODE, COUNT(*) AS CULT FROM CULTURE GROUP BY MCODE) C
         	ON M.MCODE = C.MCODE
+        	<if test='uid != null'>
+        		INNER JOIN LIKE L ON M.MCODE = L.MCODE 
+        	</if>
         	WHERE M.MNAME LIKE CONCAT('%',#{mname},'%')
         	<if test='maddr != null'>
         		AND M.MADDR LIKE CONCAT('%',#{maddr},'%')
