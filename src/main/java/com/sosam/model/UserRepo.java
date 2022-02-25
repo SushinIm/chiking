@@ -9,5 +9,7 @@ import org.springframework.data.repository.query.Param;
 public interface UserRepo extends JpaRepository<User, String>{
 
 	Optional<User> findByuname(String uname);
+
+	Optional<User> findByuidAndUname(String uid, String uname);
 	
 }

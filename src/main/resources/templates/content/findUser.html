@@ -18,8 +18,8 @@
         <div id="contents">
             <div class="page_title">
                 <h2>아이디 / 비밀번호 찾기</h2>
-                <button class="btn" id="tab_id">ID</button>
-                <button class="btn" id="tab_pw">PW</button>
+                <button class="hBtn" id="tab_id">ID</button>
+                <button class="hBtn" id="tab_pw">PW</button>
             </div>
 			<div class="page_box">
                 <div id="findId" class="none">
@@ -36,6 +36,16 @@
 			        <button id="pwBtn" class="btn">확인</button>
 				</div>
             </div>    
+            <div class="page_title none">
+				<div id="newPw">
+				    <h3 class="id_title">비밀번호 변경</h3>
+	            	<div class="page_line"></div>
+			        <input type="password" id="upw" placeholder="새 비밀번호"/>
+			        <input type="password" id="upwChk" placeholder="새 비밀번호 확인"/>
+			        <button id="ccBtn" class="hBtn">취소</button>
+			        <button id="npBtn" class="hBtn">확인</button>
+				</div>
+            </div> 
         </div>
     </div>
 	<div th:replace="fragments/footer"></div>

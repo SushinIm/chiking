@@ -31,9 +31,9 @@ public class UserController {
 	LikeService likeService;
 
 	//아이디 중복체크
-	@GetMapping("/{uId}")
-	public ResponseEntity<String> checkId(@PathVariable String uId) {
-		if(userService.checkId(uId)) {
+	@GetMapping("/{uid}")
+	public ResponseEntity<String> checkId(@PathVariable String uid) {
+		if(userService.checkId(uid)) {
 			return ResponseEntity.ok("s");
 		}else {
 			return ResponseEntity.badRequest().body("f");
@@ -45,15 +45,15 @@ public class UserController {
 	public String findId(String uname) {
 		Optional<User> user = userService.findId(uname);
 		if(user.isPresent()) {
-			return user.get().getUid();
+			return uname + "님의 아이디는 " + user.get().getUid() + "입니다";
 		}
-		return user.get().getUpw();
+		return "해당하는 이름을 가진 유저가 없습니다";
 	}
 
 	//비밀번호 찾기
 	@GetMapping("/pwd")
-	public ResponseEntity<String> findPw(String uId) {
-		if(userService.findPw(uId)) {
+	public ResponseEntity<String> findPw(String uid, String uname) {
+		if(userService.findPw(uid, uname)) {
 			return ResponseEntity.ok("s");
 		}else {
 			return ResponseEntity.badRequest().body("f");
@@ -62,12 +62,12 @@ public class UserController {
 	
 	//비밀번호 변경
 	@PutMapping("/pwd")
-	public ResponseEntity<User> changePw(HttpSession session, String uPw) {
+	public ResponseEntity<String> changePw(HttpSession session, String upw) {
 		if(session.getAttribute("ssui") != null) {
-			User user = userService.changePw((User)session.getAttribute("ssui"), uPw);
-			return ResponseEntity.ok(user);
+			userService.changePw((User)session.getAttribute("ssui"), upw);
+			return ResponseEntity.ok("s");
 		}else {
-			return ResponseEntity.badRequest().build();
+			return ResponseEntity.badRequest().body("f");
 		}
 	}
 
@@ -90,9 +90,9 @@ public class UserController {
 	}
 	
 	//좋아요 클릭
-	@PutMapping("/dib/{mCode}/{uId}")
-	public ResponseEntity<Like> likeClick(@PathVariable String mCode, @PathVariable String uId, String flag) {
-		Like like = likeService.likeClick(mCode, uId, flag);
+	@PutMapping("/dib/{mcode}/{uid}")
+	public ResponseEntity<Like> likeClick(@PathVariable String mcode, @PathVariable String uid, String flag) {
+		Like like = likeService.likeClick(mcode, uid, flag);
 		if(like != null) {
 			return ResponseEntity.ok(like);
 		}
@@ -110,9 +110,9 @@ public class UserController {
 	}
 
 	//로그인
-	@PostMapping("/user/{uId}")
-	public String signIn(@PathVariable String uId, String uPw, HttpServletRequest req) {
-		return userService.signIn(uId, uPw, req);
+	@PostMapping("/user/{uid}")
+	public String signIn(@PathVariable String uid, String upw, HttpServletRequest req) {
+		return userService.signIn(uid, upw, req);
 	}
 
 	//로그아웃

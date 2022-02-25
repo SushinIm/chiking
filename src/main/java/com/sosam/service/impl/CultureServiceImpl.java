@@ -3,7 +3,6 @@ package com.sosam.service.impl;
 import java.util.List;
 import java.util.Optional;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.stereotype.Service;
 
 import com.sosam.model.Culture;

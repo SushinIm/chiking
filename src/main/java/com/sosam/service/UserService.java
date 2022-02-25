@@ -8,17 +8,17 @@ import com.sosam.model.User;
 
 public interface UserService {
 	
-	String signIn(String uId, String uPw, HttpServletRequest req);
+	String signIn(String uid, String upw, HttpServletRequest req);
 
 	boolean signUp(User user);
 
-	boolean checkId(String uId);
+	boolean checkId(String uid);
 
 	Optional<User> findId(String uname);
 
-	boolean findPw(String uId);
+	boolean findPw(String uid, String uname);
 
-	User changePw(User user, String uPw);
+	User changePw(User user, String upw);
 
 	boolean delUser(User user);
 

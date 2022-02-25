@@ -25,16 +25,77 @@ window.onload = function(){
 		var uname = document.getElementById("idname").value;
 		
 		if(uname.length > 0 && uname != undefined){
-				var url = "/ch/users/id?uname" + uname;
+				var url = "/ch/users/id?uname=" + uname;
 				getAjax(url, function(){
-					console.log(JSON.stringify(this.response));
+					alert(this.response);
 				});
 		}else{
-			return alert("아이디 입력을 확인해주세요");
+			return alert("이름 입력을 확인해주세요");
 		}
 	});
 
 	document.getElementById("pwBtn").addEventListener("click", function(){
+		var pwid = document.getElementById("pwid").value;
+		var pwname = document.getElementById("pwname").value;
 		
+		if(pwid.length > 0 && pwid != undefined){
+			if(pwname.length > 0 && pwname != undefined){
+				var url = "/ch/users/pwd?uid=" + pwid + "&uname=" + pwname;
+				getAjax(url, function(){
+					if(this.response == "s"){
+						alert("비밀번호 변경 페이지로 이동합니다.");
+						document.getElementById("findId").style.display = "none";
+						document.getElementById("findPw").style.display = "none";
+						document.getElementById("newPw").style.display = "block";
+					}else{
+						
+					}
+				});
+			}else{
+				document.getElementById("pwname").focus();
+				return alert("이름 입력을 확인해주세요");
+			}
+		}else{
+			document.getElementById("pwid").focus();
+			return alert("아이디 입력을 확인해주세요");
+		}
 	});
+	
+	document.getElementById("npBtn").addEventListener("click", function(){
+		var upw = document.getElementById("upw").value;
+		var upwChk = document.getElementById("upwChk").value;
+		
+		if(pwid.length > 0 && pwid != undefined){
+			if(pwname.length > 0 && pwname != undefined){
+				var url = "/ch/users/pwd?uid=" + pwid + "&uname=" + pwname;
+				getAjax(url, function(){
+					if(this.response == "s"){
+						alert("비밀번호 변경 페이지로 이동합니다.");
+						document.getElementById("findId").style.display = "none";
+						document.getElementById("findPw").style.display = "none";
+						document.getElementById("newPw").style.display = "block";
+					}else{
+						alert("입력하신 아이디 혹은 이름과 일치하는 계정이 없습니다")
+					}
+				});
+			}else{
+				document.getElementById("pwname").focus();
+				return alert("이름 입력을 확인해주세요");
+			}
+		}else{
+			document.getElementById("pwid").focus();
+			return alert("아이디 입력을 확인해주세요");
+		}
+	});
+	
+	document.getElementById("upwChk").addEventListener("keyup", function(){
+		var upw = document.getElementById("upw").value;
+		var upwChkP = document.getElementById("upwChkP");
+		if(upw == this.value){
+			upwChkP.style.display = "none";
+		}else{
+			upwChkP.innerText = "비밀번호가 다릅니다.";
+			upwChkP.style.display = "block";
+		}
+	})
 }

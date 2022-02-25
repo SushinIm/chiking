@@ -30,14 +30,24 @@
     font-size: 28px;
     font-weight: 600;
 }
-.page_title button{
-    margin-top: 10px;
-    width: 220px;
-    height: 50px;
+.hBtn{
+    margin-top: 30px;
+    width: 225px;
+    height: 58px;
+    background-color: #111;
+    border: none;
+    border-radius: 5px;
+    color: #c7c7c7;
+    font-size: 15px;
+    font-weight: 600;
+    cursor:pointer;
+}
+.page_title .hBtn{
+	height: 50px;
     background-color: #ccc;
     color: #666;
 }
-.page_title button:hover{
+.hBtn:hover{
     background-color: #111;
     color: #c7c7c7;
 }
