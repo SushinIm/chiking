@@ -20,7 +20,6 @@ public class User {
 	private String uname;
 	private String uheight;
 	private String udiff;
-	private String uleng;
 	private String utime;
 	private String uloc;
 }

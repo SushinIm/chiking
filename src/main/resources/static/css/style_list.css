@@ -1,0 +1,284 @@
+/* *{
+    border: 1px solid #333;
+} */
+.ic_off_list{
+    display: none;
+}
+#header_list .ic_on_list{
+    text-align: right;
+    line-height: 45px;
+}
+#header_list .ic_on_list a{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+#header_list .ic_off_list{
+    text-align: right;
+    line-height: 45px;
+}
+#header_list .ic_off_list a{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+#header_list{
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    z-index: 999;
+}
+/* 헤더2 */
+.hd_wd{
+    width: 1250px;
+    padding: 30px 0;
+    margin: auto;
+}
+.hd_wd .hd_left h1{
+    display: inline-block;
+    margin-right: 0;
+    line-height: 45px;
+}
+.hd_wd .hd_left h1 a{
+  display: inline-block;
+  vertical-align: middle;
+}
+.hd_wd .hd_left .sc_list{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+.hd_wd .hd_left .sc_list .bar_list{
+    width: 470px;
+    height: 45px;
+    border-radius: 60px;
+    border: 1px solid #ccc;
+    margin-left: 30px;
+    padding-left: 30px;
+    font-size: 15px;
+}
+.hd_wd .hd_left .sc_list .bar_list::placeholder{
+    font-size: 15px;
+    color: #999;
+}
+.hd_wd .hd_left .sc_list .sc_ic_list{
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+.hd_wd .hd_left .sc_list .filter{
+    position: absolute;
+    width: 60px;
+    line-height: 45px;
+    margin-left: 20px;
+    color: #191919;
+}
+.hd_wd .hd_left .sc_list .filter a{
+    display: inline-block;
+}
+.hd_wd .hd_left .sc_list .filter::after{
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 4px solid #333 ;
+    border-left: 4px solid transparent ;
+    border-right: 4px solid transparent ;
+    border-bottom: 4px solid none;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
+/* 컨텐츠 */
+#contents {
+    width: 1250px;
+    margin: auto;
+}
+#contents > p {
+    margin-top: 15px;
+    font-size: 15px;
+}
+#contents > p > strong {
+    color: #63A478;
+}
+/* 필터 */
+.filter_all{
+    width: 802px;
+    margin-top: 15px;
+}
+.filter_title{
+    display: inline-block;
+    width: 100px;
+    height: 45px;
+    background-color: #333;
+}
+.filter_title p {
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    line-height: 45px;
+}
+.filter_ct{
+    width: 700px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+.filter_ct ul li:first-child{
+    margin-left: 15px;
+}
+.filter_ct ul li:last-child{
+   margin-right: 15px;
+}
+.filter_ct ul li{
+    display: inline-block;
+    margin: 5px 0 4px 5px;
+    padding: 8px 10px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 15px;
+}
+.filter_ct ul li.on{
+    color: #fff;
+    background-color: #63A478;
+    border-radius: 20px;
+}
+.filter_ct.time{
+    border-bottom: 1px solid #ccc;
+}
+/* li들 넓이 지정 */
+.filter_ct ul.addr li{
+    width: 30px;
+}
+.filter_ct ul.mtime li{
+    width: 65px;
+}
+.filter_ct ul.mtime li:nth-child(1){
+    width: 40px;
+}
+.filter_ct ul.mtime li:nth-child(2),
+.filter_ct ul.mtime li:nth-child(3){
+    width: 45px;
+}
+.filter_ct ul.mtime li:nth-child(4){
+    width: 50px;
+}
+/* 상품목록 */
+.count{
+    font-size: 18px;
+    margin: 35px 0 20px 0 ;
+}
+.list .mountain{
+    width: 100%;
+}
+.list .mountain > li{
+    width: 400px;
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+.list .mountain > li:nth-child(3n){
+    margin: 0;
+}
+/* 타이틀 영역 */
+.list .mountain .m_name_area{
+    height: 65px;
+    padding: 0 15px;
+}
+.list .mountain .m_name_area ul{
+    height: 60px;
+}
+.list .mountain .m_name_area ul li{
+    display: inline-block;
+    line-height: 65px;
+}
+.list .mountain .m_name_area ul .one{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #FF9D5B;
+    margin: 22px 15px 23px 0;
+}
+.list .mountain .m_name_area ul .m_name{
+    font-size: 25px;
+    font-weight: 600;
+    color: #191919;
+    margin-right: 10px;
+}
+.list .mountain .m_name_area ul .m_name_e{
+    font-size: 15px;
+}
+.list .mountain .m_name_area ul .dot{
+    text-align: right;
+}
+.list .mountain .m_name_area ul .dot img{
+    display: inline-block;
+}
+/* 지도영역 */
+.m_info{
+    padding: 30px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+.m_info .m_info_img img{
+    margin-left: 20px;
+}
+.m_info .m_info_img ul{
+    margin-left: 55px;
+    margin-top: 5px;
+    position: relative;
+}
+.m_info .m_info_img ul::before{
+    content: '';
+    width: 3px;
+    height: 200px;
+    background-color: #191919;
+    position: absolute;
+    left: 10px;
+    z-index: -1;
+}
+.m_info .m_info_img ul li{
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.m_info .m_info_img ul li:last-child{
+    margin: 0;
+}
+.m_info .m_info_img ul li .dot2{
+    width: 18px;
+    height: 18px;
+    background-color: #63A478;
+    border: 3px solid #191919;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+.m_info .m_info_img ul li p{
+    display: inline-block;
+    line-height: 22px;
+}
+.list .mountain .m_info .point{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+}
+/* *{
+    border: 1px solid #666;
+} */
+/* 스크롤 버튼 */
+.scroll_btn{
+    /* display: none; */
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+.scroll_btn li{
+    margin-bottom: 10px;
+}

@@ -1,13 +1,13 @@
 <div id="header">
     <div class="hd_wd">
-        <div class="ic_on">
-            <a href="#"><img src="/ic_/love.png"></a>
-            <a href="#"><img src="/ic_/user.png"></a>
-        </div>
-        <div class="ic_off">
-            <a href="#"><img src="/ic_/love.png"></a>
-            <a href="#"><img src="/ic_/lock.png"></a>
-            <a href="#"><img src="/ic_/user.png"></a>
-        </div>
+		<div th:if="${session.ssui == null}" class="ic_on">
+            <a href="javascript:alert('현재 지원하지 않는 기능입니다');"><img th:src="@{/img/ic_/love.png}"></a>
+            <a href="/ch/users"><img th:src="@{/img/ic_/user.png}"></a>
+		</div>
+		<div th:unless="${session.ssui == null}" class="ic_off">
+            <a href="javascript:alert('현재 지원하지 않는 기능입니다');"><img th:src="@{/img/ic_/love.png}"></a>
+            <a href="#" onclick="logout()"><img th:src="@{/img/ic_/lock.png}"></a>
+            <a href="/ch/my-page"><img th:src="@{/img/ic_/user.png}"></a>
+		</div>
     </div>    
 </div>

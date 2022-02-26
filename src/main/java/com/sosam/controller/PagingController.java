@@ -31,9 +31,9 @@ public class PagingController {
 		return "content/main";
 	}
 	
-	@RequestMapping(value = "/lists/{mName}", method = RequestMethod.GET)
-	public String mntn(Model model, @PathVariable String mName) {
-		model.addAttribute("mName", mName);
+	@RequestMapping(value = "/lists", method = RequestMethod.GET)
+	public String mntn(Model model, String keyword) {
+		model.addAttribute("keyword", keyword);
 		return "content/mntnLst";
 	}
 

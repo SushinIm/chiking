@@ -13,7 +13,7 @@ window.onload = function(){
 				if(upw.length > 0 && upw != undefined){
 					if(upw == document.getElementById("upw2").value){
 						const url = "/ch/users/newcomer";
-						const data = "uid=" + uid;
+						let data = "uid=" + uid;
 						data += "&upw=" + upw;
 						data += "&uname=" + uname;
 						data += "&uheight=" + uheight;
@@ -54,9 +54,12 @@ window.onload = function(){
 				if(res == "s"){
 					document.getElementById("idChkFlag").value = 1;
 					alert("사용 가능한 아이디입니다");
-				}else{
+				}else if(res == "f"){
 					document.getElementById("idChkFlag").value = 0;
 					alert("이미 존재하는 아이디입니다");
+				}else if(res == "x"){
+					document.getElementById("idChkFlag").value = 0;
+					alert("계정 조회에 실패했습니다");
 				}
 			});
 		}else{

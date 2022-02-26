@@ -34,11 +34,13 @@ public class UserController {
 	//아이디 중복체크
 	@GetMapping("/{uid}")
 	public ResponseEntity<String> checkId(@PathVariable String uid) {
-		if(userService.checkId(uid)) {
+		Optional<User> user = userService.checkId(uid);
+		if(user.isEmpty()) {
 			return ResponseEntity.ok("s");
-		}else {
-			return ResponseEntity.badRequest().body("f");
+		}else if(user.isPresent()){
+			return ResponseEntity.ok("f");
 		}
+		return ResponseEntity.badRequest().body("x");
 	}
 	
 	//아이디 찾기
@@ -71,8 +73,7 @@ public class UserController {
 	//비밀번호 변경
 	@PostMapping("/newpwd")
 	public ResponseEntity<String> changePw(String uid, String upw) {
-		boolean exist = userService.checkId(uid);
-		if(!exist) {
+		if(userService.checkId(uid).isPresent()) {
 			User user = userService.changePw(uid, upw);
 			if(user.getUname() != null) {
 				return ResponseEntity.ok("s");

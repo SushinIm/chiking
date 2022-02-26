@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+
 <link th:href="@{/css/common.css}" rel="stylesheet">
-<link th:href="@{/css/headerstyle.css}" rel="stylesheet">
-<link th:href="@{/css/footerstyle.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link th:href="@{/css/style_list.css}" rel="stylesheet">
 
 <script type="text/javascript" th:src="@{/js/common.js}"></script>
 <script type="text/javascript" th:src="@{/js/signin.js}"></script>
@@ -15,16 +17,18 @@
 	<div th:replace="fragments/header"></div>
 	<div id="wrap">
 		<div id="contents">
-	        <div class="page_title">
-	            <h2>SIGN IN</h2>
-	        </div>
-	        <div class="page_box">
-				<input type="text" class="userId" id="uId" placeholder="아이디">
-				<input type="password" class="userPw" id="uPw" placeholder="비밀번호">
-				<button class="btn" id="signin">로그인</button>
-	            <div class="page_line"></div>
-	            <a href="/ch/newcomer" class="toLeft">회원가입</a>
-	            <a href="/ch/id-pw" class="toRight">아이디 / 비밀번호 찾기</a>
+			<div class="main_area">
+		        <div class="page_title">
+		            <h2>SIGN IN</h2>
+		        </div>
+		        <div class="page_box">
+					<input type="text" class="userId" id="uId" placeholder="아이디">
+					<input type="password" class="userPw" id="uPw" placeholder="비밀번호">
+					<button class="btn" id="signin">로그인</button>
+		            <div class="page_line"></div>
+		            <a href="/ch/newcomer" class="toLeft">회원가입</a>
+		            <a href="/ch/id-pw" class="toRight">아이디 / 비밀번호 찾기</a>
+		       </div>
 	       </div>
 		</div>
 	</div>

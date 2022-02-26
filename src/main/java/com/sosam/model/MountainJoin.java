@@ -12,7 +12,6 @@ public class MountainJoin {
 	private String mname;
 	private String sname;
 	private String mreason;
-	private String maddr;
 	private String mdetail;
 	private String mcourse;
 	private String mheight;
@@ -23,6 +22,8 @@ public class MountainJoin {
 	private String uid;
 	private String likeyn;
 	
+	private String keyword;
+	private String maddr;
 	private String mdiff;
 	private String mheight1;
 	private String mheight2;

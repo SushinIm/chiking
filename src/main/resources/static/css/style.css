@@ -25,9 +25,6 @@ img{
 .fleft{
     float: left;
 }
-.ic_off{
-  display: none;
-}
 /* 헤더 */
 #header{
     width: 100%;
@@ -37,6 +34,10 @@ img{
     width: 1620px;
 }
 #header .ic_on{
+    padding: 30px 0;
+    text-align: right;
+}
+#header .ic_off{
     padding: 30px 0;
     text-align: right;
 }
@@ -73,6 +74,7 @@ img{
     padding-left: 30px;
     border-radius: 500px;
     border: 1px solid #ccc;
+    font-size: 16px;
 }
 #contents .sc input::placeholder{
     font-size: 16px;

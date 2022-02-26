@@ -27,11 +27,8 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public boolean checkId(String uid) {
-		if(this.userRepo.findById(uid).isEmpty()) {
-			return true;
-		}
-		return false;
+	public Optional<User> checkId(String uid) {
+		return this.userRepo.findById(uid);
 	}
 	
 	@Override

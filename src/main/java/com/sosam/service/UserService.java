@@ -13,7 +13,7 @@ public interface UserService {
 
 	boolean signUp(User user);
 
-	boolean checkId(String uid);
+	Optional<User> checkId(String uid);
 
 	Optional<User> findId(String uname);
 

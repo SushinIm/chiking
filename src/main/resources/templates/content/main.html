@@ -3,28 +3,34 @@
 <head>
 <meta charset="UTF-8">
 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
 <link th:href="@{/css/common.css}" rel="stylesheet">
-<link th:href="@{/css/headerstyle.css}" rel="stylesheet">
-<link th:href="@{/css/footerstyle.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link th:href="@{/css/style_list.css}" rel="stylesheet">
 
 <script type="text/javascript" th:src="@{/js/common.js}"></script>
 <script type="text/javascript" th:src="@{/js/main.js}"></script>
 <title>CHiking</title>
 </head>
 <body>
-	<div th:replace="fragments/header"></div>
-	<div id="wrap">
-		<div id="contents">
-			<div class="login_title">
-			    <h1>MAIN</h1>
-			</div>
-			<div class="search_bar">
-			    <input class="search_text" type="text" placeholder="산 이름을 입력하세요.">
-			    <button id="search" class="search_icon"></button>
-			</div>
-			<button class="btn">타블로버튼</button>
-	   </div>
-	</div>
-	<div th:replace="fragments/footer"></div>
+	<div id="main">
+		<div th:replace="fragments/mainHeader"></div>
+	    <div class="wrap">
+	        <div id="contents">
+	        	<div class="main_area">
+	                <h1 class="logo"><a href="#"><img th:src="@{/img/ic_/logo.png}"></a></h1>
+	                <div class="sc">
+	                <input type="text" class="bar" id="searchBar" placeholder="입력없이 검색시 전체결과를 볼 수 있습니다.">
+	                <input type="image" class="sc_ic" id="search" th:src="@{/img/ic_/sc.png}">
+	                </div>
+	                <div class="bt">
+	                    <button class="basic_1">내 취향 산찾기 TEST</button>
+	                    <button class="basic_1 tableau">타블로 버튼</button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+		<div th:replace="fragments/footer"></div>
+	</div>    
 </body>
 </html>
