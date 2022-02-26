@@ -1,10 +1,10 @@
 function pwConfirm(){
-	var uid = document.getElementById("uid").value;
-	var upw = prompt("비밀번호를 입력해주십시오", "");
-	var flag = false;
+	const uid = document.getElementById("uid").value;
+	const upw = prompt("비밀번호를 입력해주십시오", "");
+	let flag = false;
 	if(upw != "" && upw != null){
-		var url = "/ch/users/pwd";
-		var data= "uid=" + uid + "&upw=" + upw;
+		const url = "/ch/users/pwd";
+		const data= "uid=" + uid + "&upw=" + upw;
 		postAjax(url, data, function(){
 			flag = this.response;
 		});
@@ -15,7 +15,7 @@ function pwConfirm(){
 window.onload = function(){
 	document.getElementById("uiDel").addEventListener("click", function(){
 		if(confirm("정말 탈퇴하시겠습니까?")){
-			url = "/ch/users/user";
+			const url = "/ch/users/user";
 			deleteAjax(url, function(){
 				if(this.response == "s"){
 					alert("탈퇴처리가 완료되었습니다");
@@ -33,37 +33,37 @@ window.onload = function(){
 	});
 	
 	document.getElementById("uiSav").addEventListener("click", function(){
-		var uid = document.getElementById("uid").value;
-		var uname = document.getElementById("uname").value;
-		var uheight = document.getElementById("uheight").value;
-		var udiff = document.getElementById("udiff").value;
-		var utime = document.getElementById("utime").value;
-		var uloc = document.getElementById("uloc").value;
-		var upw = document.getElementById("upw").value;
+		const uid = document.getElementById("uid").value;
+		const uname = document.getElementById("uname").value;
+		const uheight = document.getElementById("uheight").value;
+		const udiff = document.getElementById("udiff").value;
+		const utime = document.getElementById("utime").value;
+		const uloc = document.getElementById("uloc").value;
+		const upw = document.getElementById("upw");
 		
-		var url = "/ch/users/user";
-		var data = "uid=" + uid;
+		const url = "/ch/users/user";
+		let data = "uid=" + uid;
 		data += "&uname=" + uname;
 		data += "&uheight=" + uheight;
 		data += "&udiff=" + udiff;
 		data += "&utime=" + utime;
 		data += "&uloc=" + uloc;
 		if(document.getElementById("pwChkFlag").value != "0"){
-			if(upw.length > 0 && upw != undefined){
-				if(upw == document.getElementById("upw2").value){
-					data += "&upw=" + upw;
+			if(upw.value.length > 0 && upw.value != undefined){
+				if(upw.value == document.getElementById("upw2").value){
+					data += "&upw=" + upw.value;
 				}else{
-					document.getElementById("upw").focus();
+					upw.focus();
 					return alert("비밀번호가 서로 다릅니다");
 				}
 			}else{
-				document.getElementById("upw").focus();
+				upw.focus();
 				return alert("비밀번호 입력을 확인해주세요");
 			}
 		}
 		
 		putAjax(url, data, function(){
-			var res = this.response;
+			const res = this.response;
 			if(res == "s"){
 				alert("저장되었습니다");
 				location.href = "/ch";

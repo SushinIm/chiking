@@ -22,10 +22,10 @@ window.onload = function(){
 	});
 	
 	document.getElementById("idBtn").addEventListener("click", function(){
-		var uname = document.getElementById("idname").value;
+		const uname = document.getElementById("idname");
 		
-		if(uname.length > 0 && uname != undefined){
-				var url = "/ch/users/id?uname=" + uname;
+		if(uname.value.length > 0 && uname.value != undefined){
+				const url = "/ch/users/id?uname=" + uname.value;
 				getAjax(url, function(){
 					alert(this.response);
 				});
@@ -35,12 +35,12 @@ window.onload = function(){
 	});
 
 	document.getElementById("pwBtn").addEventListener("click", function(){
-		var pwid = document.getElementById("pwid").value;
-		var pwname = document.getElementById("pwname").value;
+		const pwid = document.getElementById("pwid");
+		const pwname = document.getElementById("pwname");
 		
-		if(pwid.length > 0 && pwid != undefined){
-			if(pwname.length > 0 && pwname != undefined){
-				var url = "/ch/users/pwd?uid=" + pwid + "&uname=" + pwname;
+		if(pwid.value.length > 0 && pwid.value != undefined){
+			if(pwname.value.length > 0 && pwname.value != undefined){
+				const url = "/ch/users/pwd?uid=" + pwid.value + "&uname=" + pwname.value;
 				getAjax(url, function(){
 					if(this.response == "s"){
 						alert("비밀번호 변경 페이지로 이동합니다.");
@@ -52,24 +52,24 @@ window.onload = function(){
 					}
 				});
 			}else{
-				document.getElementById("pwname").focus();
+				pwname.focus();
 				return alert("이름 입력을 확인해주세요");
 			}
 		}else{
-			document.getElementById("pwid").focus();
+			pwid.focus();
 			return alert("아이디 입력을 확인해주세요");
 		}
 	});
 	
 	document.getElementById("npBtn").addEventListener("click", function(){
-		var pwid = document.getElementById("pwid").value;
-		var upw = document.getElementById("upw").value;
-		var upwChk = document.getElementById("upwChk").value;
+		const pwid = document.getElementById("pwid");
+		const upw = document.getElementById("upw");
+		const upwChk = document.getElementById("upwChk");
 		
-		if(upw.length > 0 && upw != undefined){
-			if(upw == upwChk){
-				var url = "/ch/users/newpwd";
-				var data = "uid=" + pwid + "&upw="+upw;
+		if(upw.value.length > 0 && upw.value != undefined){
+			if(upw.value == upwChk.value){
+				const url = "/ch/users/newpwd";
+				const data = "uid=" + pwid.value + "&upw="+upw.value;
 				postAjax(url, data, function(){
 					if(this.response == "s"){
 						alert("비밀번호가 변경되었습니다.\n로그인 해주세요");
@@ -81,19 +81,19 @@ window.onload = function(){
 					}
 				});
 			}else{
-				document.getElementById("upwChk").focus();
+				upwChk.focus();
 				return alert("비밀번호값이 서로 다릅니다");
 			}
 		}else{
-			document.getElementById("upw").focus();
+			upw.focus();
 			return alert("아이디 입력을 확인해주세요");
 		}
 	});
 	
 	document.getElementById("upwChk").addEventListener("keyup", function(){
-		var upw = document.getElementById("upw").value;
-		var upwChkP = document.getElementById("upwChkP");
-		if(upw == this.value){
+		const upw = document.getElementById("upw");
+		const upwChkP = document.getElementById("upwChkP");
+		if(upw.value == this.value){
 			upwChkP.style.display = "none";
 		}else{
 			upwChkP.innerText = "비밀번호가 다릅니다.";

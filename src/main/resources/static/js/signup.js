@@ -1,19 +1,19 @@
 window.onload = function(){
 	document.getElementById("signup").addEventListener("click", function(){
-		var uid = document.getElementById("uid").value;
-		var upw = document.getElementById("upw").value;
-		var uname = document.getElementById("uname").value;
-		var uheight = document.getElementById("uheight").value;
-		var udiff = document.getElementById("udiff").value;
-		var utime = document.getElementById("utime").value;
-		var uloc = document.getElementById("uloc").value;
+		const uid = document.getElementById("uid").value;
+		const upw = document.getElementById("upw").value;
+		const uname = document.getElementById("uname").value;
+		const uheight = document.getElementById("uheight").value;
+		const udiff = document.getElementById("udiff").value;
+		const utime = document.getElementById("utime").value;
+		const uloc = document.getElementById("uloc").value;
 		
 		if(uid.length > 0 && uid != undefined){
 			if(document.getElementById("idChkFlag").value != 0){
 				if(upw.length > 0 && upw != undefined){
 					if(upw == document.getElementById("upw2").value){
-						var url = "/ch/users/newcomer";
-						var data = "uid=" + uid;
+						const url = "/ch/users/newcomer";
+						const data = "uid=" + uid;
 						data += "&upw=" + upw;
 						data += "&uname=" + uname;
 						data += "&uheight=" + uheight;
@@ -21,7 +21,7 @@ window.onload = function(){
 						data += "&utime=" + utime;
 						data += "&uloc=" + uloc;
 						postAjax(url, data, function(){
-							var res = this.response;
+							const res = this.response;
 							if(res == "s"){
 								alert("환영합니다");
 								location.href = "/ch";
@@ -46,11 +46,11 @@ window.onload = function(){
 	});
 	
 	document.getElementById("checkId").addEventListener("click", function(){
-		var uid = document.getElementById("uid").value;
-		if(uid.length > 0 && uid != undefined){
-			var url = "/ch/users/" + uid;
+		const uid = document.getElementById("uid");
+		if(uid.value.length > 0 && uid.value != undefined){
+			const url = "/ch/users/" + uid.value;
 			getAjax(url, function(){
-				var res = this.response;
+				const res = this.response;
 				if(res == "s"){
 					document.getElementById("idChkFlag").value = 1;
 					alert("사용 가능한 아이디입니다");
@@ -60,14 +60,14 @@ window.onload = function(){
 				}
 			});
 		}else{
-			document.getElementById("uid").focus();
+			uid.focus();
 			return alert("아이디 입력을 확인해주세요");
 		}
 	})
 	
 	document.getElementById("upw2").addEventListener("keyup", function(){
-		var pw1 = document.getElementById("upw").value;
-		var pwChk = document.getElementById("pwChk");
+		const pw1 = document.getElementById("upw").value;
+		const pwChk = document.getElementById("pwChk");
 		if(pw1 == this.value){
 			pwChk.style.display = "none";
 		}else{

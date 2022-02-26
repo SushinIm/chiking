@@ -1,12 +1,12 @@
 window.onload = function(){
 	document.getElementById("signin").addEventListener("click", function(){
-		var uid = document.getElementById("uId").value;
-		var upw = document.getElementById("uPw").value;
+		const uid = document.getElementById("uId").value;
+		const upw = document.getElementById("uPw").value;
 		
 		if(uid.length > 0 && uid != undefined){
 			if(upw.length > 0 && upw != undefined){
-				var url = "/ch/users/user/" + uid;
-				var data = "upw="+upw;
+				const url = "/ch/users/user/" + uid;
+				const data = "upw="+upw;
 				postAjax(url, data, function(){
 					if(this.response == "s"){
 						alert("로그인에 성공하셨습니다");

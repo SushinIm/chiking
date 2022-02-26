@@ -2,19 +2,26 @@ function mntns(mName){
 	var url = "/ch/mntn/mountains?mName=" + mName;
 	getAjax(url, function(){
 		var data = JSON.parse(this.response);
-		console.log(data.mcode);
-		console.log(data.mname);
-		console.log(data.sname);
-		console.log(data.mreason);
-		console.log(data.maddr);
-		console.log(data.mdetail);
-		console.log(data.mcourse);
-		console.log(data.mheight);
-		console.log(data.pmup);
-		console.log(data.pmdown);
-		console.log(data.pmdiff);
-		console.log(data.cult);
 	});
+}
+
+function search(){
+	let dataArr = [];
+	const mname = document.getElementById("mname").value;
+	document.getElementsByName("maddr").checked
+	
+	data.filter
+	
+	dataArr.push()
+	
+	
+	data.maddr = document.getElementById("maddr").value;
+	
+	data.mheight1 = document.getElementById("mheight").value;
+	data.mheight2 = document.getElementById("mheight").value;
+	data.mdiff = document.getElementById("mdiff").value;
+	data.mtime1 = document.getElementById("mtime1").value;
+	data.mtime2 = document.getElementById("mtime2").value;
 }
 
 window.onload = function(){

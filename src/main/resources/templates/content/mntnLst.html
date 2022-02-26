@@ -14,6 +14,13 @@
 <body>
 	<div th:replace="fragments/header"></div>
 	<div id="wrap">
+		<input type="hidden" name="maddr" id="maddr" />
+		<input type="hidden" name="mdiff" id="mdiff" />
+		<input type="hidden" name="mheight1" id="mheight1" />
+		<input type="hidden" name="mheight2" id="mheight2" />
+		<input type="hidden" name="mtime1" id="mtime1" />
+		<input type="hidden" name="mtime2" id="mtime2" />
+		<input type="hidden" name="mheight" id="mheight" />
 		<input type="text" th:value="${mName}" id="mName" />
 		<div id="mntns"></div>
 	</div>
