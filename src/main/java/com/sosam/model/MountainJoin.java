@@ -25,8 +25,8 @@ public class MountainJoin {
 	private String keyword;
 	private String maddr;
 	private String mdiff;
-	private String mheight1;
-	private String mheight2;
-	private String mtime1;
-	private String mtime2;
+	private int mheight1;
+	private int mheight2;
+	private int mtime1;
+	private int mtime2;
 }

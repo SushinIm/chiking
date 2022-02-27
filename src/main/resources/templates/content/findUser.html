@@ -14,40 +14,42 @@
 <title>CHiking</title>
 </head>
 <body>
-	<div th:replace="fragments/header"></div>
-	<div id="wrap">
-        <div id="contents">
-            <div class="page_title">
-                <h2>아이디 / 비밀번호 찾기</h2>
-                <button class="hBtn" id="tab_id">ID</button>
-                <button class="hBtn" id="tab_pw">PW</button>
-            </div>
-			<div class="page_box">
-                <div id="findId" class="none">
-				    <h3 class="id_title">아이디 찾기</h3>
-	            	<div class="page_line"></div>
-			        <input type="text" id="idname" placeholder="이름"/>
-			        <button id="idBtn" class="btn">확인</button>
-				</div>
-				<div id="findPw" class="none">
-				    <h3 class="id_title">비밀번호 찾기</h3>
-	            	<div class="page_line"></div>
-			        <input type="text" id="pwid" placeholder="아이디"/>
-			        <input type="text" id="pwname" placeholder="이름"/>
-			        <button id="pwBtn" class="btn">확인</button>
-				</div>
-				<div id="newPw" class="none">
-				    <h3 class="id_title">비밀번호 변경</h3>
-	            	<div class="page_line"></div>
-			        <input type="password" id="upw" placeholder="새 비밀번호"/>
-			        <input type="password" id="upwChk" placeholder="새 비밀번호 확인"/>
-					<p id="upwChkP"></p>
-			        <button id="ccBtn" class="hBtn">취소</button>
-			        <button id="npBtn" class="hBtn">확인</button>
-				</div>
-            </div>    
-        </div>
-    </div>
-	<div th:replace="fragments/footer"></div>
+	<div id="main">
+		<div th:replace="fragments/header"></div>
+		<div id="wrap">
+	        <div id="contents">
+	            <div class="page_title">
+	                <h2>아이디 / 비밀번호 찾기</h2>
+	                <button class="hBtn" id="tab_id">ID</button>
+	                <button class="hBtn" id="tab_pw">PW</button>
+	            </div>
+				<div class="page_box">
+	                <div id="findId" class="none">
+					    <h3 class="id_title">아이디 찾기</h3>
+		            	<div class="page_line"></div>
+				        <input type="text" id="idname" placeholder="이름"/>
+				        <button id="idBtn" class="btn">확인</button>
+					</div>
+					<div id="findPw" class="none">
+					    <h3 class="id_title">비밀번호 찾기</h3>
+		            	<div class="page_line"></div>
+				        <input type="text" id="pwid" placeholder="아이디"/>
+				        <input type="text" id="pwname" placeholder="이름"/>
+				        <button id="pwBtn" class="btn">확인</button>
+					</div>
+					<div id="newPw" class="none">
+					    <h3 class="id_title">비밀번호 변경</h3>
+		            	<div class="page_line"></div>
+				        <input type="password" id="upw" placeholder="새 비밀번호"/>
+				        <input type="password" id="upwChk" placeholder="새 비밀번호 확인"/>
+						<p id="upwChkP"></p>
+				        <button id="ccBtn" class="hBtn">취소</button>
+				        <button id="npBtn" class="hBtn">확인</button>
+					</div>
+	            </div>    
+	        </div>
+	    </div>
+		<div th:replace="fragments/footer"></div>
+	</div>
 </body>
 </html>

@@ -6,6 +6,7 @@
     list-style: none;
     border-collapse: collapse;
     font-family: 'pretendard', sans-serif;
+    color: #191919;
 }
 a{
     color: #555;
@@ -25,6 +26,29 @@ img{
 .fleft{
     float: left;
 }
+.ic_off{
+  display: none;
+}
+ul{
+    font-size: 0;
+}
+.G{
+    background-color: #63A478;
+}
+.R{
+    background-color: #FF4848;
+}
+.O{
+    background-color: #FF9D5B;
+}
+#main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+#wrap{
+    padding: 108px 0 250px 0;
+}
 /* 헤더 */
 #header{
     width: 100%;
@@ -37,14 +61,14 @@ img{
     padding: 30px 0;
     text-align: right;
 }
-#header .ic_off{
-    padding: 30px 0;
-    text-align: right;
-}
 #header .ic_on a{
     display: inline-block;
     vertical-align: middle;
     margin-left: 30px;
+}
+#header .ic_off{
+    padding: 30px 0;
+    text-align: right;
 }
 #header .ic_off a{
     display: inline-block;
@@ -74,7 +98,6 @@ img{
     padding-left: 30px;
     border-radius: 500px;
     border: 1px solid #ccc;
-    font-size: 16px;
 }
 #contents .sc input::placeholder{
     font-size: 16px;
@@ -107,7 +130,8 @@ img{
     width: 100%;
     background-color: #333;
     padding: 40px 0;
-    margin-top: 265px;
+    position: absolute;
+    bottom: 0;
 }
 #footer .ft_wd{
     width: 1620px;

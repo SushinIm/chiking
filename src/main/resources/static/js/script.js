@@ -16,7 +16,6 @@ window.onload = function(){
     // 맨위에서는 버튼 사라지고 내려오면 생김
     document.addEventListener("scroll", function(){
         let scTop = this.documentElement.scrollTop;
-        let intervalID = 0;
         if(scTop > 0){
             this.getElementById("header_list").style.backgroundColor = "rgb(255,255,255,0.8)";
             this.getElementsByClassName("scroll_btn")[0].style.display = "block";

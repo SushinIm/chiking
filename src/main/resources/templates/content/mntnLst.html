@@ -25,7 +25,7 @@
 			    	<strong th:text="${keyword}" id="keyword"></strong> 에 대한 검색 결과입니다.
 		    	</p>
 		    	<p th:unless="${keyword} != ''">
-			    	<strong>전체</strong> 검색 결과입니다.
+			    	<strong id="keyword">전체</strong> 검색 결과입니다.
 		    	</p>
 			    <div class="filter_all">
 			        <div class="clear">
@@ -59,7 +59,7 @@
 			            </div> 
 			            <div class="filter_ct fright"> 
 			                <ul class="height">
-			                    <li>0-500</li>
+			                    <li>1-500</li>
 			                    <li>501-800</li>
 			                    <li>801-1200</li>
 			                    <li>1201-1600</li>
@@ -74,7 +74,7 @@
 			            <div class="filter_ct fright">
 			                <ul class="diff">
 			                    <li>쉬움</li>
-			                    <li>보통</li>
+			                    <li>중간</li>
 			                    <li>어려움</li>
 			                </ul>
 			            </div>
@@ -85,7 +85,7 @@
 			            </div> 
 			            <div class="filter_ct swiper-container fright time">
 			                <ul class="swiper-wrapper mtime">
-			                    <li class="swiper-slide">0~30</li>
+			                    <li class="swiper-slide">1~30</li>
 			                    <li class="swiper-slide">31~60</li>
 			                    <li class="swiper-slide">61~90</li>
 			                    <li class="swiper-slide">91~120</li>

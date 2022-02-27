@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface CultureRepo extends JpaRepository<Culture, String> {
 	Optional<List<Culture>> findBymcode(String mCode);
 
-	Optional<List<Culture>> findAllBymcode(String mCode);
+	Optional<List<Culture>> findAllBymcodeAndCdetailNotLike(String mcode, String cdetail);
 }

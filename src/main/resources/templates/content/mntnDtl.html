@@ -3,57 +3,143 @@
 <head>
 <meta charset="UTF-8">
 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
 <link th:href="@{/css/common.css}" rel="stylesheet">
 <link th:href="@{/css/style.css}" rel="stylesheet">
 <link th:href="@{/css/style_list.css}" rel="stylesheet">
+<link th:href="@{/css/style_detail.css}" rel="stylesheet">
 
 <script type="text/javascript" th:src="@{/js/common.js}"></script>
 <script type="text/javascript" th:src="@{/js/mntnDtl.js}"></script>
+<script type="text/javascript" th:src="@{/js/kroman.js}"></script>
 <title>CHiking</title>
 </head>
 <body>
-	<div th:replace="fragments/header"></div>
-	<div id="wrap">
-		<table>
-			<tr>
-				<td th:text="${mntn.mcode}">1</td>
-				<td th:text="${mntn.mname}">2</td>
-				<td th:text="${mntn.sname}">3</td>
-				<td th:text="${mntn.mreason}">4</td>
-				<td th:text="${mntn.maddr}">5</td>
-				<td th:text="${mntn.mdetail}">6</td>
-				<td th:text="${mntn.mcourse}">7</td>
-				<td th:text="${mntn.mheight}">8</td>
-			</tr>
-		</table>
-		<br/>
-		<table>
-			<tr th:each="road : ${rList}">
-				<td th:text="${road.pmcode}"></td>
-				<td th:text="${road.mcode}"></td>
-				<td th:text="${road.mname}"></td>    
-				<td th:text="${road.pmname}"></td>
-				<td th:text="${road.pmleng}"></td>
-				<td th:text="${road.pmdiff}"></td>
-				<td th:text="${road.pmup}"></td>
-				<td th:text="${road.pmdown}"></td>
-			</tr>
-		</table>
-		<br/>
-		<table>
-			<tr th:each="culture : ${cList}">
-				<td th:text="${culture.cid}"></td>
-				<td th:text="${culture.mcode}"></td>
-				<td th:text="${culture.mname}"></td>
-				<td th:text="${culture.cname}"></td>
-				<td th:text="${culture.clot}"></td>
-				<td th:text="${culture.clat}"></td>
-				<td th:text="${culture.cheight}"></td>
-				<td th:text="${culture.cdetail}"></td>
-				<td th:text="${culture.ctype}"></td>
-			</tr>
-		</table>
+	<div id="main">
+		<div th:replace="fragments/header"></div>
+		<div id="wrap">
+       		<div id="contents">
+            	<div class="detail clear">
+                	<div class="detail_left fleft">
+                    	<div class="m_info">
+                        	<div class="m_info_img clear">
+                            	<img class="fleft m_detail_img">
+                            	<ul class="fleft">
+	                                <li class="clear">
+	                                    <div class="dot2 fleft"></div>
+	                                    <p class="maddrPos"></p>
+	                                </li>
+	                                <li class="clear">
+	                                    <div class="dot2 fleft"></div>
+	                                    <p th:text="|${#numbers.formatInteger(mntn.mheight,3,'COMMA')}m|">산 고도</p>
+	                                </li>
+	                                <li class="clear">
+	                                    <div class="dot2 fleft"></div>
+	                                    <p class="mdiffPos"></p>
+	                                </li>
+	                                <li class="clear">
+	                                    <div class="dot2 fleft"></div>
+	                                    <p class="mtimePos"></p>
+	                                </li>
+	                                <li class="clear">
+	                                    <div class="dot2 fleft"></div>
+	                                    <p th:text="|관광지 ${#lists.size(cList)}개|">관광지 개수</p>
+	                                </li>
+                             	</ul>
+                             	<a href="#" class="d_love" id="d_love"><img th:src="@{/img/ic_/love.png}"></a>
+                         	</div>
+                     	</div>
+                 	</div>
+                 	<div class="detail_right fright">
+                     	<div class="m_detail_info">
+                         	<div class="detail_title">
+                             	<p id="enm"></p>
+                             	<h3 class="detail_name" th:text="${mntn.mname}">산이름</h3>
+                         	</div>
+                         	<div class="detail_ct">
+	                            <strong th:text="|#${mntn.sname}|">#산 별명</strong>
+	                            <p class="ct" th:text="${mntn.mdetail ne '-'} ? ${mntn.mdetail}:${mntn.mreason}">산 설명</p>
+	                            <p><strong>위치 : </strong><span th:text="${mntn.maddr}">산 위치</span></p>
+	                            <p><strong>고도 : </strong><span th:text="|${#numbers.formatInteger(mntn.mheight,3,'COMMA')}m|">산 고도</span></p>
+	                            <p><strong>난이도 : </strong><span class="mdiffPos"></span></p>
+	                            <p><strong>등산시간 : </strong><span class="mtimePos"></span></p>
+	                            <p><strong>관광지 : </strong><span th:text="|${#lists.size(cList)}개|">행 개수</span></p>
+                         	</div>
+                     	</div>
+                 	</div>
+             	</div>
+             	<div class="route">
+               		<h3 class="detail_name"><strong th:text="${mntn.mname}">산이름</strong> 등산로</h3>
+                	<div class="swiper-container">
+                    	<ul class="route_ct swiper-wrapper">
+                        	<li class="swiper-slide" th:each="road : ${rList}">
+	                        	<div th:if="${road.pmdiff.equals('쉬움')}" class="dot3 G" th:text="${road.pmdiff}"></div>
+	                         	<div th:if="${road.pmdiff.equals('중간')}" class="dot3 O" th:text="${road.pmdiff}"></div>
+	                         	<div th:if="${road.pmdiff.equals('어려움')}" class="dot3 R" th:text="${road.pmdiff}"></div>
+                           		<h4 th:text="${road.pmname}">등산로 구간명</h4>
+                            	<p><strong>등산로 길이 : </strong><span th:text="|${road.pmleng}km|"></span></p>
+                             	<p><strong>상행시간 : </strong><span th:text="|${#numbers.formatDecimal(road.pmup,0,0)}분|"></span></p>
+                             	<p><strong>하행시간 : </strong><span th:text="|${#numbers.formatDecimal(road.pmdown,0,0)}분|"></span></p>
+                         	</li>
+                     	</ul>
+                 	</div>
+             	</div>
+             	<div class="view">
+                	<h3 class="detail_name"><strong th:text="${mntn.mname}">산이름</strong> 관광지</h3>
+                	<div>
+	                    <ul class="view_ct">
+	                    	<li th:each="culture : ${cList}">
+	                        	<h4 th:text="${culture.cname}">관광지 이름</h4>
+	                            <p th:text="${culture.cdetail}">관광지 설명</p>
+	                        </li>
+	                   	</ul>
+                 	</div>
+             	</div>
+        	</div>
+		</div>
+        <div class="scroll_btn">
+            <ul>
+                <li id="top_btn"><a><img th:src="@{/img/ic_/top.png}"></a></li>
+                <li id="bottom_btn"><a><img th:src="@{/img/ic_/bottom.png}"></a></li>
+            </ul>
+        </div>
+		<div th:replace="fragments/footer"></div>
 	</div>
-	<div th:replace="fragments/footer"></div>
+	<script th:inline="javascript">
+	/*<![CDATA[*/
+		let maddr = [[ ${mntn.maddr} ]];
+		let mname = [[${mntn.mname}]];
+		let roads = [[${rList}]];
+		let img = mapImg(fakeAddr(maddr.substring(0,4))) + "_B.png";
+		let pmup = 0;
+		let pmdown = 0;
+		
+		document.getElementsByClassName("m_detail_img")[0].setAttribute("src", img);
+		Array.from(document.getElementsByClassName("maddrPos")).forEach(tag =>{
+			tag.innerText = fakeAddr(maddr.substring(0,4));
+		});
+		document.getElementById("enm").innerText = kroman.parse(mname).split("-").join('').toUpperCase();
+		
+		roads.forEach(road => {
+			pmup += road.pmup * 1;
+			pmdown += road.pmdown * 1;
+		});
+		pmup /= roads.length;
+		pmdown /= roads.length;
+		console.log(pmup);
+		console.log(pmdown);
+		Array.from(document.getElementsByClassName("mtimePos")).forEach(times =>{
+			times.innerText = parseInt(pmup+pmdown) + "분";
+		});
+		
+		Array.from(document.getElementsByClassName("mdiffPos")).forEach(diffs =>{
+			diffs.innerText = roads[0].pmdiff;
+		});
+		
+	/*]]>*/
+	</script>
 </body>
 </html>

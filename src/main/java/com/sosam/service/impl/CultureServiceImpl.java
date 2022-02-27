@@ -21,7 +21,7 @@ public class CultureServiceImpl implements CultureService {
 	
 	@Override
 	public Optional<List<Culture>> findAllBymcode(String mCode) {
-		return cultureRepo.findAllBymcode(mCode);
+		return cultureRepo.findAllBymcodeAndCdetailNotLike(mCode, "-");
 	}
 
 }

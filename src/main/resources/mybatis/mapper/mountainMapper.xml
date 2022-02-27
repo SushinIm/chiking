@@ -9,7 +9,7 @@
         	ON M.MCODE = C.MCODE LEFT OUTER JOIN LIKETBL L 
         		ON M.MCODE = L.MCODE 
 				<choose>
-					<when test='keyword != null'>
+					<when test='keyword != null and keyword != ""'>
 			        	WHERE M.MNAME LIKE CONCAT('%',#{keyword},'%')
 					</when>
 					<otherwise>
@@ -19,13 +19,13 @@
 	        	<if test='maddr != null'>
 	        		AND M.MADDR LIKE CONCAT('%',#{maddr},'%')
 	        	</if>
-	        		<if test='mheight1 != null and mheight2 != null'>
+	        		<if test='mheight1 != 0 and mheight2 != 0'>
 						AND M.MHEIGHT BETWEEN #{mheight1} AND #{mheight2}
 	        		</if>
 	        			<if test='mdiff != null'>
 	        				AND R.PMDIFF = #{mdiff}
 	       				</if>
-	       					<if test='mtime1 != null and mtime2 != null'>
+	       					<if test='mtime1 != 0 and mtime2 != 0'>
 	       						AND (R.PMUP + R.PMDOWN) BETWEEN #{mtime1} AND #{mtime2}
 	       					</if>
 	       						GROUP BY R.MCODE

@@ -1,9 +1,6 @@
 /* *{
     border: 1px solid #333;
 } */
-.ic_off_list{
-    display: none;
-}
 #header_list .ic_on_list{
     text-align: right;
     line-height: 45px;
@@ -68,7 +65,7 @@
     top: 10px;
     right: 25px;
 }
-.hd_wd .hd_left .sc_list .filter{
+/* .hd_wd .hd_left .sc_list .filter{
     position: absolute;
     width: 60px;
     line-height: 45px;
@@ -89,7 +86,7 @@
     position: absolute;
     top: 20px;
     left: 60px;
-}
+} */
 /* 컨텐츠 */
 #contents {
     width: 1250px;
@@ -199,7 +196,6 @@
     height: 20px;
     border-radius: 20px;
     border: none;
-    background-color: #FF9D5B;
     margin: 22px 15px 23px 0;
 }
 .list .mountain .m_name_area ul .m_name{
@@ -210,6 +206,8 @@
 }
 .list .mountain .m_name_area ul .m_name_e{
     font-size: 15px;
+    width:137px;
+    overflow:hidden;
 }
 .list .mountain .m_name_area ul .dot{
     text-align: right;
@@ -222,6 +220,7 @@
     padding: 30px 20px;
     border: 1px solid #ccc;
     border-radius: 20px;
+    position: relative;
 }
 .m_info .m_info_img img{
     margin-left: 20px;
@@ -234,10 +233,10 @@
 .m_info .m_info_img ul::before{
     content: '';
     width: 3px;
-    height: 200px;
+    height: 180px;
     background-color: #191919;
     position: absolute;
-    left: 10px;
+    left: 9px;
     z-index: -1;
 }
 .m_info .m_info_img ul li{
@@ -250,8 +249,8 @@
     margin: 0;
 }
 .m_info .m_info_img ul li .dot2{
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     background-color: #63A478;
     border: 3px solid #191919;
     border-radius: 30px;
@@ -266,6 +265,11 @@
     font-weight: 500;
     text-align: center;
     margin-top: 20px;
+}
+.list .mountain .m_info .love{
+    position: absolute;
+    top: 25px;
+    right: 25px;
 }
 /* *{
     border: 1px solid #666;
