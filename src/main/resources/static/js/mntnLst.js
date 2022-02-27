@@ -1,9 +1,10 @@
 function formatter(result) {
 	const jsonData = JSON.parse(result);
-	console.log(jsonData);
 	document.getElementsByClassName("mountain")[0].innerHTML = "";
 	if(document.getElementById("searchBar").value != ''){
 		document.getElementById("keyword").innerText = document.getElementById("searchBar").value;
+	}else{
+		document.getElementById("keyword").innerText = "전체";
 	}
 	document.getElementById("cnt").innerText = jsonData.length;
 	if(jsonData.length > 0){
@@ -87,8 +88,6 @@ function search(){
 		url += "&mtime1=" + mtimes[0];
 		url += "&mtime2=" + mtimes[1];
 	}
-
-	console.log(url);
 
 	getAjax(url, function(){
 		if(this.status == 200){

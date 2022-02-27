@@ -42,7 +42,6 @@ public class MountainServiceImpl implements MountainService{
 	
 	@Override
 	public List<MountainJoin> mntnFilter(MountainJoin mj) throws Exception{
-		System.out.println(mj.toString());
 		List<MountainJoin> mntnList = this.mountainMapper.mntnFilter(mj);
 		return mntnList;
 	}  

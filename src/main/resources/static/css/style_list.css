@@ -214,6 +214,7 @@
 }
 .list .mountain .m_name_area ul .dot img{
     display: inline-block;
+    cursor : pointer;
 }
 /* 지도영역 */
 .m_info{
@@ -221,6 +222,7 @@
     border: 1px solid #ccc;
     border-radius: 20px;
     position: relative;
+    cursor: pointer;
 }
 .m_info .m_info_img img{
     margin-left: 20px;

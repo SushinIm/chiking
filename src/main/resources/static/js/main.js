@@ -18,5 +18,11 @@ window.onload = function(){
 		url += (keyword != undefined) ? keyword : "";
 		
 		location.href = url;
-	})
+	});
+	
+	Array.from(document.getElementsByClassName("basic_1")).forEach(btn => {
+		btn.addEventListener("click", function(){
+			alert("현재 지원하지 않는 기능입니다.");
+		})
+	});
 }
