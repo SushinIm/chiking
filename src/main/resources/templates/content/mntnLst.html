@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+<link th:href="@{/css/common.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link th:href="@{/css/style_list.css}" rel="stylesheet">
+
+<script type="text/javascript" th:src="@{/js/common.js}"></script>
+<script type="text/javascript" th:src="@{/js/mntnLst.js}"></script>
+<script type="text/javascript" th:src="@{/js/kroman.js}"></script>
+<title>CHiking</title>
+</head>
+<body>
+	<div id="main">
+		<div th:replace="fragments/header"></div>
+		<div id="wrap">
+			<div id="contents">
+			    <p th:if="${keyword} != ''">
+			    	<strong th:text="${keyword}" id="keyword"></strong> 에 대한 검색 결과입니다.
+		    	</p>
+		    	<p th:unless="${keyword} != ''">
+			    	<strong id="keyword">전체</strong> 에 대한 검색 결과입니다.
+		    	</p>
+			    <div class="filter_all">
+			        <div class="clear">
+			            <div class="filter_title fleft">
+			                <p>지역</p>
+			            </div>    
+			            <div class="filter_ct swiper-container fright">
+			                <ul class="swiper-wrapper addr">
+			                    <li class="swiper-slide">서울</li>
+			                    <li class="swiper-slide">인천</li>
+			                    <li class="swiper-slide">경기</li>
+			                    <li class="swiper-slide">강원</li>
+			                    <li class="swiper-slide">충북</li>
+			                    <li class="swiper-slide">충남</li>
+			                    <li class="swiper-slide">대전</li>
+			                    <li class="swiper-slide">전북</li>
+			                    <li class="swiper-slide">전남</li>
+			                    <li class="swiper-slide">광주</li>
+			                    <li class="swiper-slide">대구</li>
+			                    <li class="swiper-slide">경북</li>
+			                    <li class="swiper-slide">경남</li>
+			                    <li class="swiper-slide">울산</li>
+			                    <li class="swiper-slide">부산</li>
+			                    <li class="swiper-slide">제주</li>
+			                </ul>
+			            </div>
+			        </div>
+			        <div class="clear">
+			            <div class="filter_title fleft">
+			                <p>높이</p>
+			            </div> 
+			            <div class="filter_ct fright"> 
+			                <ul class="height">
+			                    <li>1-500</li>
+			                    <li>501-800</li>
+			                    <li>801-1200</li>
+			                    <li>1201-1600</li>
+			                    <li>1601-2000</li>
+			                </ul>
+			            </div>
+			        </div>
+			        <div class="clear">
+			            <div class="filter_title fleft">
+			                <p>난이도</p>
+			            </div> 
+			            <div class="filter_ct fright">
+			                <ul class="diff">
+			                    <li>쉬움</li>
+			                    <li>중간</li>
+			                    <li>어려움</li>
+			                </ul>
+			            </div>
+			        </div>
+			        <div class="clear">
+			            <div class="filter_title fleft">
+			                <p>산행시간</p>
+			            </div> 
+			            <div class="filter_ct swiper-container fright time">
+			                <ul class="swiper-wrapper mtime">
+			                    <li class="swiper-slide">1~30</li>
+			                    <li class="swiper-slide">31~60</li>
+			                    <li class="swiper-slide">61~90</li>
+			                    <li class="swiper-slide">91~120</li>
+			                    <li class="swiper-slide">121~150</li>
+			                    <li class="swiper-slide">151~180</li>
+			                    <li class="swiper-slide">181~210</li>
+			                    <li class="swiper-slide">211~240</li>
+			                    <li class="swiper-slide">241~270</li>
+			                    <li class="swiper-slide">271~300</li>
+			                    <li class="swiper-slide">301~330</li>
+			                    <li class="swiper-slide">331~360</li>
+			                </ul>   
+			            </div>
+			        </div>
+			    </div>
+			    <div class="count">
+			        <p><strong id="cnt">0</strong> MOUNTAIN.</p>
+			    </div>
+			    <div class="list">
+			        <ul class="mountain">
+			        </ul>
+			    </div>
+			</div>
+		</div>
+	    <div class="scroll_btn">
+	        <ul>
+	            <li id="top_btn"><a><img th:src="@{/img/ic_/top.png}"></a></li>
+	            <li id="bottom_btn"><a><img th:src="@{/img/ic_/bottom.png}"></a></li>
+	        </ul>
+	    </div>
+		<div th:replace="fragments/footer"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* 공통 */
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-collapse: collapse;
+    font-family: 'pretendard', sans-serif;
+    color: #191919;
+}
+a{
+    color: #555;
+    display: inline-block;
+}
+img{
+    display: block;
+}
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.fright{
+    float: right;
+}
+.fleft{
+    float: left;
+}
+.ic_off{
+  display: none;
+}
+ul{
+    font-size: 0;
+}
+.G{
+    background-color: #63A478;
+}
+.R{
+    background-color: #FF4848;
+}
+.O{
+    background-color: #FF9D5B;
+}
+#main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+#wrap{
+    padding: 117px 0 250px 0;
+}
+/* 헤더 */
+#header{
+    width: 100%;
+}
+.hd_wd{
+    margin: auto;
+    width: 1620px;
+}
+#header .ic_on{
+    padding: 30px 0;
+    text-align: right;
+}
+#header .ic_on a{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+#header .ic_off{
+    padding: 30px 0;
+    text-align: right;
+}
+#header .ic_off a{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+/* 컨텐츠 */
+#contents .main_area{
+    text-align: center;
+}
+#contents .logo {
+    display: inline-block;
+    margin-top: 200px;
+}
+#contents .logo img {
+    max-width: 320px;
+}
+#contents .sc {
+    position: relative;
+    margin: 40px auto;
+    width: 670px;
+    height: 50px;
+}
+#contents .sc .bar{
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    border-radius: 500px;
+    border: 1px solid #ccc;
+}
+#contents .sc input::placeholder{
+    font-size: 16px;
+    color: #999;
+    text-align: left;
+}
+#contents .sc .sc_ic{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+/* 버튼 */
+#contents .bt{
+    font-size: 0;
+    margin: auto;
+}
+.basic_1 {
+    padding: 10px 20px;
+    background-color: #F5F5F5;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 20px;
+}
+#contents .bt .tableau{
+    margin: 0;
+}
+/* 푸터 */
+#footer{
+    width: 100%;
+    background-color: #333;
+    padding: 40px 0;
+    position: absolute;
+    bottom: 0;
+}
+#footer .ft_wd{
+    width: 1620px;
+    margin: auto;
+}
+#footer .ft_wd .ft_text{
+    margin-bottom: 20px;
+}
+#footer .ft_wd .ft_text img{
+    margin-right: 10px;
+}
+#footer .ft_wd .ft_text ul li{
+    float: left;
+    margin: 0 15px;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    color: #999;
+}
+#footer .ft_wd .ft_text ul li:after{
+    content: '';
+    width: 1px;
+    height: 10px;
+    background-color: #999;
+    position: absolute;
+    right: -14px;
+    top: 5px;
+}
+#footer .ft_wd .ft_text ul li:last-child:after{
+    display: none;
+}
+#footer .ft_wd .ft_text2 p{
+    font-size: 14px;
+    color: #999;
+}
+#footer .ft_wd .ft_text2 .copyright{
+    margin-top: 3px;
+    color: #666;
+}
