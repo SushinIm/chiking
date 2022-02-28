@@ -4,7 +4,7 @@ window.onload = function(){
 	headerFix();
 	remoteBtn();
 	
-	document.getElementById("d_love").addEventListener("click", function(){
+	document.getElementById("dont").addEventListener("click", function(){
 		alert("현재 지원하지 않는 기능입니다.");
 	})
 };

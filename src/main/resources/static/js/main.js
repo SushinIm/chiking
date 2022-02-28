@@ -20,7 +20,7 @@ window.onload = function(){
 		location.href = url;
 	});
 	
-	Array.from(document.getElementsByClassName("basic_1")).forEach(btn => {
+	Array.from(document.getElementsByClassName("dont")).forEach(btn => {
 		btn.addEventListener("click", function(){
 			alert("현재 지원하지 않는 기능입니다.");
 		})

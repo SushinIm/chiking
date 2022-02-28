@@ -26,9 +26,6 @@ img{
 .fleft{
     float: left;
 }
-.ic_off{
-  display: none;
-}
 ul{
     font-size: 0;
 }
