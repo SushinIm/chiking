@@ -7,7 +7,7 @@ function showHundred(){
 //탭 이동으로 보이기
 function openTab(evt, topic) {
   var i, tabcontent, tablinks;
-  document.getElementById("hundredbox").style.height = "1250px";
+  document.getElementById("hundredbox").style.height = "1300px";
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
