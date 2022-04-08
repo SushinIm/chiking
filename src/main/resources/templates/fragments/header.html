@@ -7,16 +7,16 @@
             <div class="sc_list">
                 <input type="text" class="bar_list" onkeydown="enterKey(event)" id="searchBar" th:value="${keyword}" placeholder="입력없이 검색시 전체결과를 볼 수 있습니다.">
                 <input type="image" class="sc_ic_list" onclick="headerSearch()" id="search" th:src="@{/img/ic_/sc_mini.png}">
-                <!-- <a href="#" class="filter">상세필터</a> -->
+                <!-- <a href="#" class="filter">�긽�꽭�븘�꽣</a> -->
             </div>
         </div>
         <div class="hd_right fright">
 			<div th:if="${session.ssui == null}" class="ic_on_list">
-	            <a href="javascript:alert('현재 지원하지 않는 기능입니다');"><img th:src="@{/img/ic_/love.png}"></a>
+	            <a href="javascript:alert('현재 지원하지 않는 기능입니다.');"><img th:src="@{/img/ic_/love.png}"></a>
 	            <a href="/ch/users"><img th:src="@{/img/ic_/user.png}"></a>
 			</div>
 			<div th:unless="${session.ssui == null}" class="ic_off_list">
-	            <a href="javascript:alert('현재 지원하지 않는 기능입니다');"><img th:src="@{/img/ic_/love.png}"></a>
+	            <a href="javascript:alert('현재 지원하지 않는 기능입니다.');"><img th:src="@{/img/ic_/love.png}"></a>
 	            <a href="#" onclick="logout()"><img th:src="@{/img/ic_/lock.png}"></a>
 	            <a href="/ch/my-page"><img th:src="@{/img/ic_/user.png}"></a>
 			</div>

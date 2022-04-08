@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+<link th:href="@{/css/common.css}" rel="stylesheet">
+<link th:href="@{/css/headerstyle.css}" rel="stylesheet">
+<link th:href="@{/css/footerstyle.css}" rel="stylesheet">
+
+<script type="text/javascript" th:src="@{/js/common.js}"></script>
+<script type="text/javascript" th:src="@{/js/signin.js}"></script>
+<title>CHiking</title>
+</head>
+<body>
+	<div id="main">
+		<div th:replace="fragments/header"></div>
+		<div id="wrap">
+	        <div id="contents">
+	        	<h1 th:text="${msg}">메시지</h1>
+	        </div>
+        </div>
+		<div th:replace="fragments/footer"></div>
+	</div>
+</body>
+</html>

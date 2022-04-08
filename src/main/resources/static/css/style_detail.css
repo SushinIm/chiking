@@ -1,7 +1,7 @@
 /* *{
     border: 1px solid #333;
 } */
-/* 공통 */
+/* 怨듯넻 */
 strong{
     font-weight: 600;
 }
@@ -10,17 +10,18 @@ strong{
     font-weight: 600;
     margin-top: 5px;
 }
-/* 상품정보 */
+/* �긽�뭹�젙蹂� */
 .detail{
   margin-top: 80px;
 }
 .detail_left{
-    width: 500px;
-    height: 500px;
+    width: 575px;
+    height: 360px;
     position: relative;
 }
 .detail_left .m_info{
-    padding: 43px 20px ;
+    padding: 43px 20px;
+    height: 100%;
 }
 .detail_left .m_info .m_info_img .m_detail_img {
 	margin-left: 10px;
@@ -33,7 +34,7 @@ strong{
     top: 30px;
     right: 35px;
 }
-/* 오른쪽 설명 */
+/* �삤瑜몄そ �꽕紐� */
 .detail_right{
     width: 625px;
     border-top: 2px solid #191919;
@@ -56,9 +57,13 @@ strong{
 .detail_right .detail_ct .ct{
     line-height: 25px;
     margin-bottom: 30px;
+    /*
+    max-height:125px;
+    overflow:hidden;
+    */
     color: #888;
 }
-/* 등산로 */
+/* �벑�궛濡� */
 .route,
 .view{
     margin-top: 80px;
@@ -107,7 +112,7 @@ strong{
 /* *{
     border: 1px solid #333;
 } */
-/* 관광지 */
+/* 愿�愿묒� */
 .view{
     margin-bottom: 50px;
 }

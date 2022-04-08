@@ -26,12 +26,22 @@ public class UserServiceImpl implements UserService{
 		this.userRepo = userRepo;
 	}
 
-	@Override
+	@Override	//아이디 유뮤 확인
 	public Optional<User> checkId(String uid) {
 		return this.userRepo.findById(uid);
 	}
+
+	@Override	//아이디 찾기
+	public Optional<User> findId(String uname) {
+		return userRepo.findByuname(uname);
+	}
+
+	@Override	//비밀번호 찾기
+	public boolean findPw(String uid, String uname) {
+		return userRepo.findByuidAndUname(uid, uname).isPresent();
+	}
 	
-	@Override
+	@Override	//비밀번호 일치 확인
 	public boolean checkPw(String uid, String upw) {
 		Optional<User> user = this.userRepo.findById(uid);
 		if(user.isPresent()) {
@@ -41,25 +51,16 @@ public class UserServiceImpl implements UserService{
 		}
 		return false;
 	}
-	
-	@Override
-	@Transactional
-	public boolean signUp(User user) {
-		String uid = user.getUid();
-		if(userRepo.findById(uid).isPresent()) {
-			return false;
-		}
-		String rawPw = user.getUpw();
-		user.setUpw(passwordEncoder.encode(rawPw));
-		User resultUser = userRepo.save(user);
-		if(resultUser != null) {
-			return true;
-		}
-		return false;
+
+	@Override	//비밀번호 변경
+	public User changePw(String uid, String upw) {
+		User user = userRepo.findById(uid).get();
+		user.setUpw(passwordEncoder.encode(upw));
+		return userRepo.save(user);
 	}
 
 	@Override
-	@Transactional
+	@Transactional	//회원정보 수정
 	public boolean userUpdate(HttpSession session, User user) {
 		String uid = user.getUid();
 		Optional<User> before = userRepo.findById(uid);
@@ -78,8 +79,33 @@ public class UserServiceImpl implements UserService{
 		}
 		return false;
 	}
+
+	@Override	//회원탈퇴
+	public boolean delUser(User user) {
+		if(user != null) {
+			userRepo.delete(user);
+			return true;
+		}
+		return false;
+	}
 	
 	@Override
+	@Transactional	//회원가입
+	public boolean signUp(User user) {
+		String uid = user.getUid();
+		if(userRepo.findById(uid).isPresent()) {
+			return false;
+		}
+		String rawPw = user.getUpw();
+		user.setUpw(passwordEncoder.encode(rawPw));
+		User resultUser = userRepo.save(user);
+		if(resultUser != null) {
+			return true;
+		}
+		return false;
+	}
+	
+	@Override	//로그인
 	public String signIn(String uid, String upw, HttpServletRequest req){
 		Optional<User> user = this.userRepo.findById(uid);
 		HttpSession session = req.getSession();		// 세션이 있으면 있는 세션 반환, 없으면 신규 세션을 생성하여 반환
@@ -95,32 +121,6 @@ public class UserServiceImpl implements UserService{
 		}else {
 			return "e";
 		}
-	}
-
-	@Override
-	public Optional<User> findId(String uname) {
-		return userRepo.findByuname(uname);
-	}
-
-	@Override
-	public boolean findPw(String uid, String uname) {
-		return userRepo.findByuidAndUname(uid, uname).isPresent();
-	}
-
-	@Override
-	public User changePw(String uid, String upw) {
-		User user = userRepo.findById(uid).get();
-		user.setUpw(passwordEncoder.encode(upw));
-		return userRepo.save(user);
-	}
-
-	@Override
-	public boolean delUser(User user) {
-		if(user != null) {
-			userRepo.delete(user);
-			return true;
-		}
-		return false;
 	}
 
 }

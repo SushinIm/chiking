@@ -15,6 +15,8 @@
 <script type="text/javascript" th:src="@{/js/common.js}"></script>
 <script type="text/javascript" th:src="@{/js/mntnDtl.js}"></script>
 <script type="text/javascript" th:src="@{/js/kroman.js}"></script>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=11e9b46356e4b7e983e494d69bf53056"></script>
 <title>CHiking</title>
 </head>
 <body>
@@ -24,71 +26,45 @@
        		<div id="contents">
             	<div class="detail clear">
                 	<div class="detail_left fleft">
-                    	<div class="m_info">
-                        	<div class="m_info_img clear">
-                            	<img class="fleft m_detail_img">
-                            	<ul class="fleft">
-	                                <li class="clear">
-	                                    <div class="dot2 fleft"></div>
-	                                    <p class="maddrPos"></p>
-	                                </li>
-	                                <li class="clear">
-	                                    <div class="dot2 fleft"></div>
-	                                    <p th:text="|${#numbers.formatInteger(mntn.mheight,3,'COMMA')}m|">산 고도</p>
-	                                </li>
-	                                <li class="clear">
-	                                    <div class="dot2 fleft"></div>
-	                                    <p class="mdiffPos"></p>
-	                                </li>
-	                                <li class="clear">
-	                                    <div class="dot2 fleft"></div>
-	                                    <p class="mtimePos"></p>
-	                                </li>
-	                                <li class="clear">
-	                                    <div class="dot2 fleft"></div>
-	                                    <p th:text="|관광지 ${#lists.size(cList)}개|">관광지 개수</p>
-	                                </li>
-                             	</ul>
-                             	<a href="#" class="d_love dont" id="d_love"><img th:src="@{/img/ic_/love.png}"></a>
-                         	</div>
+                    	<div class="m_info" id="map">
                      	</div>
                  	</div>
                  	<div class="detail_right fright">
                      	<div class="m_detail_info">
                          	<div class="detail_title">
                              	<p id="enm"></p>
-                             	<h3 class="detail_name" th:text="${mntn.mname}">산이름</h3>
+                             	<h3 class="detail_name" th:text="${mntn.mntnname}">산이름</h3>
                          	</div>
                          	<div class="detail_ct">
-	                            <strong th:text="|#${mntn.sname}|">#산 별명</strong>
-	                            <p class="ct" th:text="${mntn.mdetail ne '-'} ? ${mntn.mdetail}:${mntn.mreason}">산 설명</p>
-	                            <p><strong>위치 : </strong><span th:text="${mntn.maddr}">산 위치</span></p>
-	                            <p><strong>고도 : </strong><span th:text="|${#numbers.formatInteger(mntn.mheight,3,'COMMA')}m|">산 고도</span></p>
-	                            <p><strong>난이도 : </strong><span class="mdiffPos"></span></p>
-	                            <p><strong>등산시간 : </strong><span class="mtimePos"></span></p>
-	                            <p><strong>관광지 : </strong><span th:text="|${#lists.size(cList)}개|">행 개수</span></p>
+	                            <strong th:text="|#${mntn.mntnsname}|">#산 별명</strong>
+	                            <p class="ct" th:text="${mntn.mntidetail ne '-'} ? ${mntn.mntidetail}:${mntn.reason}">산 설명</p>
+	                            <p><strong>위치 : </strong><span th:text="${mntn.mntnaddr}">산 위치</span></p>
+	                            <p><strong>고도 : </strong><span th:text="|${#numbers.formatInteger(mntn.mntnhigh,3,'COMMA')}m|">산 고도</span></p>
+	                            <p><strong>관리지자체 : </strong><span th:text="${mntn.mntnadmin}"></span></p>
+	                            <p><strong>연락처 : </strong><span th:text="${mntn.mntnadmnum}"></span></p>
                          	</div>
                      	</div>
                  	</div>
              	</div>
              	<div class="route">
-               		<h3 class="detail_name"><strong th:text="${mntn.mname}">산이름</strong> 등산로</h3>
+               		<h3 class="detail_name"><strong th:text="${mntn.mntnname}">산이름</strong> 등산로</h3>
                 	<div class="swiper-container">
                     	<ul class="route_ct swiper-wrapper">
-                        	<li class="swiper-slide" th:each="road : ${rList}">
+                        	<li class="swiper-slide routes" th:each="road : ${mntn.mrmappings}" th:data-routeid="${road.routeid}">
+	                        	<div class="dot3 G">ㅋㅋ</div>
+	                         	<!--
 	                        	<div th:if="${road.pmdiff.equals('쉬움')}" class="dot3 G" th:text="${road.pmdiff}"></div>
 	                         	<div th:if="${road.pmdiff.equals('중간')}" class="dot3 O" th:text="${road.pmdiff}"></div>
 	                         	<div th:if="${road.pmdiff.equals('어려움')}" class="dot3 R" th:text="${road.pmdiff}"></div>
-                           		<h4 th:text="${road.pmname}">등산로 구간명</h4>
-                            	<p><strong>등산로 길이 : </strong><span th:text="|${road.pmleng}km|"></span></p>
-                             	<p><strong>상행시간 : </strong><span th:text="|${#numbers.formatDecimal(road.pmup,0,0)}분|"></span></p>
-                             	<p><strong>하행시간 : </strong><span th:text="|${#numbers.formatDecimal(road.pmdown,0,0)}분|"></span></p>
+	                         	-->
+                           		<h4 th:text="|${road.routename}길|">등산로 구간명</h4>
                          	</li>
                      	</ul>
                  	</div>
              	</div>
+                		<!-- 
              	<div class="view">
-                	<h3 class="detail_name"><strong th:text="${mntn.mname}">산이름</strong> 관광지</h3>
+                	<h3 class="detail_name"><strong th:text="${mntn.mntnname}">산이름</strong> 마커</h3>
                 	<div>
 	                    <ul class="view_ct">
 	                    	<li th:each="culture : ${cList}">
@@ -98,6 +74,7 @@
 	                   	</ul>
                  	</div>
              	</div>
+                   	 	-->
         	</div>
 		</div>
         <div class="scroll_btn">
@@ -110,36 +87,18 @@
 	</div>
 	<script th:inline="javascript">
 	/*<![CDATA[*/
-		let maddr = [[ ${mntn.maddr} ]];
-		let mname = [[${mntn.mname}]];
-		let roads = [[${rList}]];
-		let img = mapImg(fakeAddr(maddr.substring(0,4))) + "_B.png";
-		let pmup = 0;
-		let pmdown = 0;
-		
-		document.getElementsByClassName("m_detail_img")[0].setAttribute("src", img);
-		Array.from(document.getElementsByClassName("maddrPos")).forEach(tag =>{
-			tag.innerText = fakeAddr(maddr.substring(0,4));
-		});
+		let mname = [[${mntn.mntnname}]];
 		document.getElementById("enm").innerText = kroman.parse(mname).split("-").join('').toUpperCase();
-		
-		roads.forEach(road => {
-			pmup += road.pmup * 1;
-			pmdown += road.pmdown * 1;
-		});
-		pmup /= roads.length;
-		pmdown /= roads.length;
-		console.log(pmup);
-		console.log(pmdown);
-		Array.from(document.getElementsByClassName("mtimePos")).forEach(times =>{
-			times.innerText = parseInt(pmup+pmdown) + "분";
-		});
-		
-		Array.from(document.getElementsByClassName("mdiffPos")).forEach(diffs =>{
-			diffs.innerText = roads[0].pmdiff;
-		});
-		
 	/*]]>*/
+		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+		var options = { //지도를 생성할 때 필요한 기본 옵션
+			center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+			level: 4 //지도의 레벨(확대, 축소 정도)
+		};
+		
+		var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+		
+		map.addOverlayMapTypeId(kakao.maps.MapTypeId.TERRAIN);  
 	</script>
 </body>
 </html>

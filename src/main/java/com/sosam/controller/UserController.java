@@ -8,133 +8,52 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sosam.model.Like;
 import com.sosam.model.User;
-import com.sosam.service.LikeService;
 import com.sosam.service.UserService;
 
-@RestController
-@RequestMapping("/ch/users")
+@Controller
+@RequestMapping("/ch")
 public class UserController {
 
-	@Autowired
-	UserService userService;
-	
-	@Autowired
-	LikeService likeService;
-
-	//아이디 중복체크
-	@GetMapping("/{uid}")
-	public ResponseEntity<String> checkId(@PathVariable String uid) {
-		Optional<User> user = userService.checkId(uid);
-		if(user.isEmpty()) {
-			return ResponseEntity.ok("s");
-		}else if(user.isPresent()){
-			return ResponseEntity.ok("f");
+	@RequestMapping(value = "/users", method = RequestMethod.GET)
+	public String signIn(HttpSession session) {
+		if(session.getAttribute("ssui") != null){
+			return "redirect:/ch/my-page";
 		}
-		return ResponseEntity.badRequest().body("x");
-	}
-	
-	//아이디 찾기
-	@GetMapping("/id")
-	public String findId(String uname) {
-		Optional<User> user = userService.findId(uname);
-		if(user.isPresent()) {
-			return uname + "님의 아이디는 " + user.get().getUid() + "입니다";
-		}
-		return "해당하는 이름을 가진 유저가 없습니다";
+		return "content/signin";
 	}
 
-	//비밀번호 찾기
-	@GetMapping("/pwd")
-	public ResponseEntity<String> findPw(String uid, String uname) {
-		if(userService.findPw(uid, uname)) {
-			return ResponseEntity.ok("s");
-		}else {
-			return ResponseEntity.badRequest().body("f");
+	@RequestMapping(value = "/id-pw", method = RequestMethod.GET)
+	public String findPage(HttpSession session) {
+		if(session.getAttribute("ssui") != null){
+			return "redirect:/ch/my-page";
 		}
-	}
-	
-	//비밀번호 확인
-	@PostMapping("/pwd")
-	public boolean checkPw(String uid, String upw) {
-		boolean exist = userService.checkPw(uid, upw);
-		return exist;
-	}
-	
-	//비밀번호 변경
-	@PostMapping("/newpwd")
-	public ResponseEntity<String> changePw(String uid, String upw) {
-		if(userService.checkId(uid).isPresent()) {
-			User user = userService.changePw(uid, upw);
-			if(user.getUname() != null) {
-				return ResponseEntity.ok("s");
-			}else {
-				return ResponseEntity.badRequest().body("f");
-			}
-		}else {
-			return ResponseEntity.badRequest().body("e");
-		}
+		return "content/findUser";
 	}
 
-	//회원정보 수정
-	@PutMapping("/user")
-	public ResponseEntity<String> changeInfo(HttpSession session, User newUser) {
-		if(userService.userUpdate(session, newUser)) {
-			return ResponseEntity.ok("s");
+	@RequestMapping(value = "/my-page", method = RequestMethod.GET)
+	public String myPage(HttpSession session) {
+		if(session.getAttribute("ssui") == null){
+			return "redirect:/ch/users";
 		}
-		return ResponseEntity.badRequest().body("f");
+		return "content/myPage";
 	}
 
-	//회원정보 삭제
-	@DeleteMapping("/user")
-	public ResponseEntity<String> delUser(HttpSession session) {
-		if(userService.delUser((User)session.getAttribute("ssui"))) {
-			session.invalidate();
-			return ResponseEntity.ok("s");
+	@RequestMapping(value = "/newcomer", method = RequestMethod.GET)
+	public String newComer(HttpSession session) {
+		if(session.getAttribute("ssui") != null){
+			return "redirect:/ch/my-page";
 		}
-		return ResponseEntity.badRequest().body("f");
-	}
-	
-	//좋아요 클릭
-	@PutMapping("/dib/{mcode}/{uid}")
-	public ResponseEntity<Like> likeClick(@PathVariable String mcode, @PathVariable String uid, String flag) {
-		Like like = likeService.likeClick(mcode, uid, flag);
-		if(like != null) {
-			return ResponseEntity.ok(like);
-		}
-		return ResponseEntity.badRequest().build();
-	}
-	
-	//회원가입
-	@PostMapping("/newcomer")
-	public ResponseEntity<String> signUp(User user) {
-		if(userService.signUp(user)) {
-			return ResponseEntity.ok("s");
-		}else {
-			return ResponseEntity.badRequest().body("f");	
-		}
-	}
-
-	//로그인
-	@PostMapping("/user/{uid}")
-	public String signIn(@PathVariable String uid, String upw, HttpServletRequest req) {
-		return userService.signIn(uid, upw, req);
-	}
-
-	//로그아웃
-	@GetMapping("/x")
-	public String logOut(HttpServletRequest req) {
-		HttpSession session = req.getSession();
-		session.invalidate();
-		return "로그아웃 되었습니다.";
+		return "content/signup";
 	}
 }

@@ -27,7 +27,7 @@
     top: 0;
     z-index: 999;
 }
-/* 헤더2 */
+/* �뿤�뜑2 */
 .hd_wd{
     width: 1250px;
     padding: 30px 0;
@@ -87,7 +87,7 @@
     top: 20px;
     left: 60px;
 } */
-/* 컨텐츠 */
+/* 而⑦뀗痢� */
 #contents {
     width: 1250px;
     margin: auto;
@@ -99,7 +99,7 @@
 #contents > p > strong {
     color: #63A478;
 }
-/* 필터 */
+/* �븘�꽣 */
 .filter_all{
     width: 802px;
     margin-top: 15px;
@@ -145,7 +145,7 @@
 .filter_ct.time{
     border-bottom: 1px solid #ccc;
 }
-/* li들 넓이 지정 */
+/* li�뱾 �꼻�씠 吏��젙 */
 .filter_ct ul.addr li{
     width: 30px;
 }
@@ -162,7 +162,7 @@
 .filter_ct ul.mtime li:nth-child(4){
     width: 50px;
 }
-/* 상품목록 */
+/* �긽�뭹紐⑸줉 */
 .count{
     font-size: 18px;
     margin: 35px 0 20px 0 ;
@@ -179,7 +179,7 @@
 .list .mountain > li:nth-child(3n){
     margin: 0;
 }
-/* 타이틀 영역 */
+/* ���씠�� �쁺�뿭 */
 .list .mountain .m_name_area{
     height: 65px;
     padding: 0 15px;
@@ -216,7 +216,7 @@
     display: inline-block;
     cursor : pointer;
 }
-/* 지도영역 */
+/* 吏��룄�쁺�뿭 */
 .m_info{
     padding: 30px 20px;
     border: 1px solid #ccc;
@@ -245,7 +245,7 @@
     font-size: 16px;
     font-weight: 500;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 31px;
 }
 .m_info .m_info_img ul li:last-child{
     margin: 0;
@@ -276,7 +276,7 @@
 /* *{
     border: 1px solid #666;
 } */
-/* 스크롤 버튼 */
+/* �뒪�겕濡� 踰꾪듉 */
 .scroll_btn{
     /* display: none; */
     position: fixed;
