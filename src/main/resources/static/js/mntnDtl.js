@@ -7,6 +7,10 @@ window.onload = function(){
 	document.querySelectorAll(".routes").forEach(route => route.addEventListener("click", function(){
 		loadMap(this);
 	}));
+	
+	document.querySelector(".routes").click();
+	
+	document.querySelector(".ct").addEventListener("click", detailToggle);
 };
 
 function loadMap(route){
@@ -15,6 +19,9 @@ function loadMap(route){
 	
 	getAjax(url, function(){
 		if(this.status == 200){
+			Array.from(document.querySelectorAll(".routes")).map(index => index.classList.remove("clicked"));
+			route.classList.add("clicked");
+			
 			let data = JSON.parse(this.response);
 			let from = new kakao.maps.LatLng(data[0].lat, data[0].lon)
 			let linePath = [];
@@ -25,7 +32,7 @@ function loadMap(route){
 				level: 7 //지도의 레벨(확대, 축소 정도)
 			}
 			
-			map = new kakao.maps.Map(mapContainer, mapOption); //지도 생성 및 객체 리턴
+			let map = new kakao.maps.Map(mapContainer, mapOption); //지도 생성 및 객체 리턴
 			
 			//map.panTo(from);
 			
@@ -33,10 +40,6 @@ function loadMap(route){
 		    	position: from
 			});
 			
-			let test = new kakao.maps.Marker({
-				position : new kakao.maps.LatLng(37.864410, 127.984306)
-			});
-			test.setMap(map);
 			marker.setMap(map);
 			
 			data.forEach(el => {
@@ -56,4 +59,12 @@ function loadMap(route){
 			alert(this.status + "에러가 발생했습니다");
 		}
 	});
+}
+
+function detailToggle(e){
+	if(e.target.classList.contains("hide")){
+		e.target.classList.remove("hide");
+	}else{
+		e.target.classList.add("hide");
+	}
 }

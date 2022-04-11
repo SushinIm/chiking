@@ -22,5 +22,7 @@ public class MRMapping {
     @JoinColumn(name="mntnid")  
     @JsonBackReference  
 	@ToString.Exclude
-    private Mountain mountain; 
+    private Mountain mountain;
+    
+    private float distance;
 }

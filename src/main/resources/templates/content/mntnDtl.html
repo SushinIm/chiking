@@ -37,7 +37,7 @@
                          	</div>
                          	<div class="detail_ct">
 	                            <strong th:text="|#${mntn.mntnsname}|">#산 별명</strong>
-	                            <p class="ct" th:text="${mntn.mntidetail ne '-'} ? ${mntn.mntidetail}:${mntn.reason}">산 설명</p>
+	                            <p class="ct hide" th:text="${mntn.mntidetail ne '-'} ? ${mntn.mntidetail}:${mntn.reason}">산 설명</p>
 	                            <p><strong>위치 : </strong><span th:text="${mntn.mntnaddr}">산 위치</span></p>
 	                            <p><strong>고도 : </strong><span th:text="|${#numbers.formatInteger(mntn.mntnhigh,3,'COMMA')}m|">산 고도</span></p>
 	                            <p><strong>관리지자체 : </strong><span th:text="${mntn.mntnadmin}"></span></p>
@@ -51,12 +51,7 @@
                 	<div class="swiper-container">
                     	<ul class="route_ct swiper-wrapper">
                         	<li class="swiper-slide routes" th:each="road : ${mntn.mrmappings}" th:data-routeid="${road.routeid}">
-	                        	<div class="dot3 G">ㅋㅋ</div>
-	                         	<!--
-	                        	<div th:if="${road.pmdiff.equals('쉬움')}" class="dot3 G" th:text="${road.pmdiff}"></div>
-	                         	<div th:if="${road.pmdiff.equals('중간')}" class="dot3 O" th:text="${road.pmdiff}"></div>
-	                         	<div th:if="${road.pmdiff.equals('어려움')}" class="dot3 R" th:text="${road.pmdiff}"></div>
-	                         	-->
+	                        	<div class="dot3 G" th:text="|${road.distance}km|"></div>
                            		<h4 th:text="|${road.routename}길|">등산로 구간명</h4>
                          	</li>
                      	</ul>
@@ -88,17 +83,9 @@
 	<script th:inline="javascript">
 	/*<![CDATA[*/
 		let mname = [[${mntn.mntnname}]];
-		document.getElementById("enm").innerText = kroman.parse(mname).split("-").join('').toUpperCase();
 	/*]]>*/
-	
-		let mapContainer = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-		let mapOption = { //지도를 생성할 때 필요한 기본 옵션
-			center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-			level: 7 //지도의 레벨(확대, 축소 정도)
-		};
-		
-		let map = new kakao.maps.Map(mapContainer, mapOption); //지도 생성 및 객체 리턴
-		
+		document.getElementById("enm").innerText = kroman.parse(mname).split("-").join('').toUpperCase();
+		let mapContainer = document.getElementById('map');
 		//map.addOverlayMapTypeId(kakao.maps.MapTypeId.TERRAIN);  
 	</script>
 </body>

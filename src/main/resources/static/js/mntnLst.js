@@ -102,7 +102,7 @@ window.onload = function(){
 	
 	addr.addEventListener("click", function(e){
 		if(e.target.classList.contains("on")){
-			Array.from(addr.getElementsByTagName("li")).map(index => index.classList.remove("on"));
+			e.target.classList.remove("on");
 		}else{
 			Array.from(addr.getElementsByTagName("li")).map(index => index.classList.remove("on"));
 			e.target.classList.add("on");
@@ -110,7 +110,7 @@ window.onload = function(){
 	});
 	height.addEventListener("click", function(e){
 		if(e.target.classList.contains("on")){
-			Array.from(height.getElementsByTagName("li")).map(index => index.classList.remove("on"));
+			e.target.classList.remove("on");
 		}else{
 			Array.from(height.getElementsByTagName("li")).map(index => index.classList.remove("on"));
 			e.target.classList.add("on");
@@ -118,7 +118,7 @@ window.onload = function(){
 	});
 	routes.addEventListener("click", function(e){
 		if(e.target.classList.contains("on")){
-			Array.from(routes.getElementsByTagName("li")).map(index => index.classList.remove("on"));
+			e.target.classList.remove("on");
 		}else{
 			Array.from(routes.getElementsByTagName("li")).map(index => index.classList.remove("on"));
 			e.target.classList.add("on");
