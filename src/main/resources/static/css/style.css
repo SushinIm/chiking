@@ -168,3 +168,10 @@ ul{
     margin-top: 3px;
     color: #666;
 }
+
+.noData{
+	width: 100%;
+	padding-top: 150px;
+	text-align: center;
+	vertical-align: middle;
+}

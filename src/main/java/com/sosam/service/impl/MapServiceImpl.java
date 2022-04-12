@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.sosam.model.Marker;
+import com.sosam.model.MarkerRepo;
 import com.sosam.model.Mountain;
 import com.sosam.model.MountainRepo;
 import com.sosam.model.Route;
@@ -17,19 +19,26 @@ public class MapServiceImpl implements com.sosam.service.MapService {
 	
 	private RouteRepo routeRepo;
 	
-	public MapServiceImpl(MountainRepo mountainRepo, RouteRepo routeRepo){
+	private MarkerRepo markerRepo;
+	
+	public MapServiceImpl(MountainRepo mountainRepo, MarkerRepo markerRepo, RouteRepo routeRepo){
 		this.mountainRepo = mountainRepo;
+		this.markerRepo = markerRepo;
 		this.routeRepo = routeRepo;
 	}
 
 	@Override
 	public Optional<Mountain> findMountain(String mntnid) {
-		return this.mountainRepo.findById(mntnid);
+		return mountainRepo.findById(mntnid);
 	}
 
 	@Override
 	public Optional<List<Route>> findRoute(String routeid) {
-		return this.routeRepo.findAllByrouteid(routeid);
+		return routeRepo.findAllByrouteid(routeid);
 	}
 
+	@Override
+	public Optional<List<Marker>> findMarker(String routeid) {
+		return markerRepo.findAllByrouteid(routeid);
+	}
 }

@@ -30,5 +30,5 @@ public class Mountain {
 
 	@ToString.Exclude
     @OneToMany(mappedBy = "mountain", fetch=FetchType.LAZY)  
-    private List<MRMapping> mrmappings = new LinkedList<>(); 
+    private List<MRMapping> mrmappings = new LinkedList<>();
 }

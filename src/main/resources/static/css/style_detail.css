@@ -107,7 +107,8 @@ strong{
     font-size: 16px;
 }
 
-.route .route_ct li.clicked{
+.route .route_ct li.clicked,
+.view .view_ct li.clicked{
 	background-color: #F5F5F5;
 }
 
@@ -145,6 +146,7 @@ strong{
     margin-right: 25px;
     margin-bottom: 25px;
     vertical-align: top;
+    cursor: pointer;
 }
 .view .view_ct li:nth-child(3n){
     margin-right: 0;

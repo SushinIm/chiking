@@ -57,19 +57,17 @@
                      	</ul>
                  	</div>
              	</div>
-                		<!-- 
              	<div class="view">
                 	<h3 class="detail_name"><strong th:text="${mntn.mntnname}">산이름</strong> 마커</h3>
-                	<div>
+                	<div class="">
 	                    <ul class="view_ct">
-	                    	<li th:each="culture : ${cList}">
-	                        	<h4 th:text="${culture.cname}">관광지 이름</h4>
-	                            <p th:text="${culture.cdetail}">관광지 설명</p>
+	                    	<li class="markers" th:each="marker : ${markers}" th:data-lat="${marker.lat}" th:data-lon="${marker.lon}" th:data-info="${marker.info}">
+	                        	<h4 th:text="${marker.category}">마커 카테고리</h4>
+	                            <p th:text="${marker.placename}">마커 이름</p>
 	                        </li>
 	                   	</ul>
                  	</div>
              	</div>
-                   	 	-->
         	</div>
 		</div>
         <div class="scroll_btn">
@@ -86,6 +84,7 @@
 	/*]]>*/
 		document.getElementById("enm").innerText = kroman.parse(mname).split("-").join('').toUpperCase();
 		let mapContainer = document.getElementById('map');
+		let map;
 		//map.addOverlayMapTypeId(kakao.maps.MapTypeId.TERRAIN);  
 	</script>
 </body>

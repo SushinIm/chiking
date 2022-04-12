@@ -48,7 +48,7 @@ function formatter(result) {
 			document.getElementsByClassName("mountain")[0].appendChild(li);
 		});
 	}else{
-		alert("검색 결과가 없습니다");
+		document.querySelector(".list").innerHTML = noData();
 	}
 	
 }

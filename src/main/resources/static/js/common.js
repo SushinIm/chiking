@@ -169,3 +169,10 @@ function mapImg(str){
 	}
 	return img;
 }
+
+function noData(){
+	let result = "<div class='noData'>";
+	result += "<h1>검색 결과가 없습니다</h1></div>";
+	
+	return result;
+}
