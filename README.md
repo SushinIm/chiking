@@ -1,2 +1,2 @@
-# SojuAndSGS
-SGS == SamGyeopSal
+# Chiking
+playdata final project
