@@ -26,35 +26,37 @@ function loadMap(route){
 			let data = JSON.parse(this.response);
 			let from = new kakao.maps.LatLng(data[0].lat, data[0].lon)
 			let linePath = [];
-			
-			mapContainer.innerHTML = "";
-			let mapOption = {
-				center: from, //지도의 중심좌표.
-				level: 7 //지도의 레벨(확대, 축소 정도)
+
+			if(polyLine != undefined && markers.length > 0){
+				polyLine.setMap(null);
+				markers.forEach(mk =>{
+					mk.setMap(null);
+				});
 			}
 			
-			map = new kakao.maps.Map(mapContainer, mapOption); //지도 생성 및 객체 리턴
+			markers = [];
+			map.setCenter(from);
+			map.setLevel(7);
 			
 			let marker = new kakao.maps.Marker({
 		    	position: from
 			});
 			
-			marker.setMap(map);
-			
 			data.forEach(el => {
 				linePath.push(new kakao.maps.LatLng(el.lat, el.lon));
 			});
 			
-			let polyline = new kakao.maps.Polyline({
-				path: linePath, // 선을 구성하는 좌표배열 입니다
+			polyLine = new kakao.maps.Polyline({
+				path: linePath,
 			    strokeWeight: 5, // 선의 두께 입니다
 			    strokeColor: '#FF4848', // 선의 색깔입니다
 			    strokeOpacity: 1, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
 			    strokeStyle: 'solid' // 선의 스타일입니다
-			})
+			});
 			
-			polyline.setMap(map);
-			
+			marker.setMap(map);
+			polyLine.setMap(map);
+			markers.push(marker);
 			
 		}else{
 			alert(this.status + "에러가 발생했습니다");
@@ -97,32 +99,32 @@ function loadMark(mark){
 }
 
 function marking(e){
-	
 	if(e.target.classList.contains("clicked")){
 		e.target.classList.remove("clicked");
-		document.querySelector(".clicked").click();
-		selected = document.querySelectorAll(".markers.clicked");
-		selected.forEach(tag =>{
-		    let mk = new kakao.maps.Marker({
-		        map: map,
-		        position: new kakao.maps.LatLng(tag.dataset.lat, tag.dataset.lon),
-		        title : tag.lastChild.innerText
-		    });
+		for(let i=1;i<markers.length;i++){
+			markers[i].setMap(null);
+		}
+		markers.slice(0,0);
+		Array.from(document.querySelectorAll(".markers.clicked")).map(action => {
+			let marker = new kakao.maps.Marker({
+		    	position: new kakao.maps.LatLng(action.dataset.lat, action.dataset.lon),
+				title: e.target.lastChild.innerText
+			});
+			
+			marker.setMap(map);
+			markers.push(marker);
 		});
 	}else{
 		e.target.classList.add("clicked");
 		let point = new kakao.maps.LatLng(e.target.dataset.lat, e.target.dataset.lon);
-		
-		mapOption = {
-			center: point, //지도의 중심좌표.
-			level: 7 //지도의 레벨(확대, 축소 정도)
-		}
 	
 		let marker = new kakao.maps.Marker({
-			map: map,
 	    	position: point,
 			title: e.target.lastChild.innerText
 		});
+		
+		marker.setMap(map);
+		markers.push(marker);
 	}
 	
 	

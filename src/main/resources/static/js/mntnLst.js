@@ -1,23 +1,28 @@
 function formatter(result) {
 	const jsonData = JSON.parse(result);
-	document.getElementsByClassName("mountain")[0].innerHTML = "";
 	if(document.getElementById("searchBar").value != ''){
 		document.getElementById("keyword").innerText = document.getElementById("searchBar").value;
 	}else{
 		document.getElementById("keyword").innerText = "전체";
 	}
 	document.getElementById("cnt").innerText = jsonData.length;
+	document.querySelector(".list").innerHTML = "";
 	if(jsonData.length > 0){
+		mntnUl = document.createElement("ul");
+		mntnUl.classList.add("mountain");
 		jsonData.forEach(data => {
 			let img = mapImg(fakeAddr(data.mntnaddr.substring(0,4)));
-			//let enm = kroman.parse(data.mname).split("-").map(s => s.charAt(0).toUpperCase() + s.slice(1)).join('');
 			let enm = kroman.parse(data.mntnname).split("-").join('').toUpperCase();
 			let li = document.createElement("li");
 			let dataBox = '<div class="m_name_area">';
 			dataBox += '<ul class="clear">';
-			dataBox += '<li class="one fleft G"></li>';
-			//dataBox += '<li class="one fleft O"></li>';
-			//dataBox += '<li class="one fleft R"></li>';
+			if(data.mntnhigh <= 800){
+				dataBox += '<li class="one fleft G"></li>';
+			}else if(data.mntnhigh > 800 && data.mntnhigh <= 1200){
+				dataBox += '<li class="one fleft O"></li>';
+			}else if(data.mntnhigh > 1200){
+				dataBox += '<li class="one fleft R"></li>';
+			}
 			dataBox += '<li class="m_name fleft">' + data.mntnname + '</li>';
 			dataBox += '<li class="m_name_e fleft">' + enm + '</li>';
 			dataBox += '<li class="dot fright"><img src="/img/ic_/dot.png"></li></ul></div>';
@@ -45,8 +50,9 @@ function formatter(result) {
 				location.href = "/ch/detail/" + data.mntnid;
 			});
 			
-			document.getElementsByClassName("mountain")[0].appendChild(li);
+			mntnUl.appendChild(li);
 		});
+		document.querySelector(".list").appendChild(mntnUl);
 	}else{
 		document.querySelector(".list").innerHTML = noData();
 	}

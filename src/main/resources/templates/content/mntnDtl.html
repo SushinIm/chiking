@@ -51,7 +51,9 @@
                 	<div class="swiper-container">
                     	<ul class="route_ct swiper-wrapper">
                         	<li class="swiper-slide routes" th:each="road : ${mntn.mrmappings}" th:data-routeid="${road.routeid}">
-	                        	<div class="dot3 G" th:text="|${road.distance}km|"></div>
+	                        	<div th:if="${road.distance le 5}" class="dot3 G" th:text="|${road.distance}km|"></div>
+	                        	<div th:if="${road.distance gt 5 and road.distance le 10}" class="dot3 O" th:text="|${road.distance}km|"></div>
+	                        	<div th:if="${road.distance gt 10}" class="dot3 R" th:text="|${road.distance}km|"></div>
                            		<h4 th:text="|${road.routename}길|">등산로 구간명</h4>
                          	</li>
                      	</ul>
@@ -84,7 +86,13 @@
 	/*]]>*/
 		document.getElementById("enm").innerText = kroman.parse(mname).split("-").join('').toUpperCase();
 		let mapContainer = document.getElementById('map');
-		let map;
+		let mapOption = {
+			center: new kakao.maps.LatLng(37.4864987317089, 127.020663860591), //지도의 중심좌표.
+			level: 7 //지도의 레벨(확대, 축소 정도)
+		}
+		let map = new kakao.maps.Map(mapContainer, mapOption);
+		let polyLine;
+		let markers = [];
 		//map.addOverlayMapTypeId(kakao.maps.MapTypeId.TERRAIN);  
 	</script>
 </body>
