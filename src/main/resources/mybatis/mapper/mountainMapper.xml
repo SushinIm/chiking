@@ -3,8 +3,8 @@
 <mapper namespace="com.sosam.model.mapper.MountainMapper">
     <select id="mntnFilter" resultType="MountainJoin" parameterType="FilterVo">
         SELECT	M.*, R.ROUTES
-        FROM	MOUNTAIN M INNER JOIN
-        (SELECT MNTNID, COUNT(*) AS ROUTES FROM MRMAPPING GROUP BY MNTNID) AS R
+        FROM	mountain M INNER JOIN
+        (SELECT MNTNID, COUNT(*) AS ROUTES FROM mrmapping GROUP BY MNTNID) AS R
 	        ON M.MNTNID = R.MNTNID
 	        	WHERE M.MNTNNAME LIKE CONCAT('%',#{keyword},'%')
 		       	<if test='mntnaddr != null'>
