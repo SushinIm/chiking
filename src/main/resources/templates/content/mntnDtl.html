@@ -37,7 +37,7 @@
                          	</div>
                          	<div class="detail_ct">
 	                            <strong th:text="|#${mntn.mntnsname}|">#산 별명</strong>
-	                            <p class="ct hide" th:text="${mntn.mntidetail ne '-'} ? ${mntn.mntidetail}:${mntn.reason}">산 설명</p>
+	                            <p class="ct hide" title="더보기" th:text="${mntn.mntidetail ne '-'} ? ${mntn.mntidetail}:${mntn.reason}">산 설명</p>
 	                            <p><strong>위치 : </strong><span th:text="${mntn.mntnaddr}">산 위치</span></p>
 	                            <p><strong>고도 : </strong><span th:text="|${#numbers.formatInteger(mntn.mntnhigh,3,'COMMA')}m|">산 고도</span></p>
 	                            <p><strong>관리지자체 : </strong><span th:text="${mntn.mntnadmin}"></span></p>

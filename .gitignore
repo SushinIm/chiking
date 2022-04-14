@@ -131,4 +131,4 @@ data-preprocessing/
 .project
 mvnw
 mvnw.cmd
-!mrJAR/test.jar
+*application.properties
