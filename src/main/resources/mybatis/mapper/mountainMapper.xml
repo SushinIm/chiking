@@ -13,17 +13,10 @@
 	       		<if test='mntnhigh1 != 0 and mntnhigh2 != 0'>
 					AND M.MNTNHIGH BETWEEN #{mntnhigh1} AND #{mntnhigh2}
 	       		</if>
-  				<choose>
-  					<when test="routes != 0">
-	       				<![CDATA[
-	       					AND R.ROUTES >= #{routes}
-	       				]]>
-   					</when>
-   					<when test="route1 != 0 and route2 !=0">
-	       				<![CDATA[
-	       					AND R.ROUTES BETWEEN #{route1} AND #{route2}
-	       				]]>
-   					</when>
-   				</choose>
+ 				<if test="route1 != 0">
+       				<![CDATA[
+       					AND R.ROUTES BETWEEN #{route1} AND #{route2}
+       				]]>
+   				</if>
     </select>
 </mapper>

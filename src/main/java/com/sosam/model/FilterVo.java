@@ -4,11 +4,10 @@ import lombok.Data;
 
 @Data
 public class FilterVo {
-	private String keyword;
-	private String mntnaddr;
-	private int mntnhigh1;
-	private int mntnhigh2;
-	private int routes;
-	private int route1;
-	private int route2;
+	private String keyword = null;
+	private String mntnaddr = null;
+	private int mntnhigh1 = 0;
+	private int mntnhigh2 = 0;
+	private int route1 = 0;
+	private int route2 = 50;
 }

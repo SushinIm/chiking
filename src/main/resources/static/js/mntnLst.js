@@ -77,10 +77,10 @@ function search(){
 		url += "&mntnhigh2=" + mheights[1];
 	}
 	if(routes != undefined){
-		if(routes.parentElement.lastElementChild == routes){
-			url += "&routes=" + routes.innerText.replace(/[\D]/g, "");
+		let route = routes.innerText.split(" ~ ");
+		if(route.length == 1){
+			url += "&route1=" + route[0].replace(/[\D]/g, "");
 		}else{
-			let route = routes.innerText.split(" ~ ");
 			url += "&route1=" + route[0].replace(/[\D]/g, "");
 			url += "&route2=" + route[1].replace(/[\D]/g, "");
 		}
@@ -143,4 +143,4 @@ window.onload = function(){
 	document.getElementById("search").addEventListener("click", search);
 	
 	search();
-};
+}
