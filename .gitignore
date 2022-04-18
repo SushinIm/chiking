@@ -37,4 +37,8 @@ out/
 .vscode/
 
 ### custom ###
+gradlew
+gradlew.bat
+gradle/wrapper
+src/test
 *application.properties
