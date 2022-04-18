@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+<link th:href="@{/css/common.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link th:href="@{/css/style_list.css}" rel="stylesheet">
+<link th:href="@{/css/style_detail.css}" rel="stylesheet">
+
+<script type="text/javascript" th:src="@{/js/common.js}"></script>
+<script type="text/javascript" th:src="@{/js/mntnDtl.js}"></script>
+<script type="text/javascript" th:src="@{/js/kroman.js}"></script>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=11e9b46356e4b7e983e494d69bf53056"></script>
+<title>CHiking</title>
+</head>
+<body>
+	<div id="main">
+		<div th:replace="fragments/header"></div>
+		<div id="wrap">
+       		<div id="contents">
+            	<div class="detail clear">
+                	<div class="detail_left fleft">
+                    	<div class="m_info" id="map">
+                     	</div>
+                 	</div>
+                 	<div class="detail_right fright">
+                     	<div class="m_detail_info">
+                         	<div class="detail_title">
+                             	<p id="enm"></p>
+                             	<h3 class="detail_name" th:text="${mntn.mntnname}">산이름</h3>
+                         	</div>
+                         	<div class="detail_ct">
+	                            <strong th:text="|#${mntn.mntnsname}|">#산 별명</strong>
+	                            <p class="ct hide" title="더보기" th:text="${mntn.mntidetail ne '-'} ? ${mntn.mntidetail}:${mntn.reason}">산 설명</p>
+	                            <p><strong>위치 : </strong><span th:text="${mntn.mntnaddr}">산 위치</span></p>
+	                            <p><strong>고도 : </strong><span th:text="|${#numbers.formatInteger(mntn.mntnhigh,3,'COMMA')}m|">산 고도</span></p>
+	                            <p><strong>관리지자체 : </strong><span th:text="${mntn.mntnadmin}"></span></p>
+	                            <p><strong>연락처 : </strong><span th:text="${mntn.mntnadmnum}"></span></p>
+                         	</div>
+                     	</div>
+                 	</div>
+             	</div>
+             	<div class="route">
+               		<h3 class="detail_name"><strong th:text="${mntn.mntnname}">산이름</strong> 등산로</h3>
+                	<div class="swiper-container">
+                    	<ul class="route_ct swiper-wrapper">
+                        	<li class="swiper-slide routes" th:each="road : ${mntn.mrmappings}" th:data-routeid="${road.routeid}">
+	                        	<div th:if="${road.distance le 5}" class="dot3 G" th:text="|${road.distance}km|"></div>
+	                        	<div th:if="${road.distance gt 5 and road.distance le 10}" class="dot3 O" th:text="|${road.distance}km|"></div>
+	                        	<div th:if="${road.distance gt 10}" class="dot3 R" th:text="|${road.distance}km|"></div>
+                           		<h4 th:text="|${road.routename}길|">등산로 구간명</h4>
+                         	</li>
+                     	</ul>
+                 	</div>
+             	</div>
+             	<div class="view">
+                	<h3 class="detail_name"><strong th:text="${mntn.mntnname}">산이름</strong> 마커</h3>
+                	<div class="">
+	                    <ul class="view_ct">
+	                    	<li class="markers" th:each="marker : ${markers}" th:data-lat="${marker.lat}" th:data-lon="${marker.lon}" th:data-info="${marker.info}">
+	                        	<h4 th:text="${marker.category}">마커 카테고리</h4>
+	                            <p th:text="${marker.placename}">마커 이름</p>
+	                        </li>
+	                   	</ul>
+                 	</div>
+             	</div>
+        	</div>
+		</div>
+        <div class="scroll_btn">
+            <ul>
+                <li id="top_btn"><a><img th:src="@{/img/ic_/top.png}"></a></li>
+                <li id="bottom_btn"><a><img th:src="@{/img/ic_/bottom.png}"></a></li>
+            </ul>
+        </div>
+		<div th:replace="fragments/footer"></div>
+	</div>
+	<script th:inline="javascript">
+	/*<![CDATA[*/
+		let mname = [[${mntn.mntnname}]];
+	/*]]>*/
+		document.getElementById("enm").innerText = kroman.parse(mname).split("-").join('').toUpperCase();
+		let mapContainer = document.getElementById('map');
+		let mapOption = {
+			center: new kakao.maps.LatLng(37.4864987317089, 127.020663860591), //지도의 중심좌표.
+			level: 7 //지도의 레벨(확대, 축소 정도)
+		}
+		let map = new kakao.maps.Map(mapContainer, mapOption);
+		let polyLine;
+		let markers = [];
+		//map.addOverlayMapTypeId(kakao.maps.MapTypeId.TERRAIN);  
+	</script>
+</body>
+</html>
