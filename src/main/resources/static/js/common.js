@@ -28,20 +28,6 @@ function deleteAjax(url, callBack){
 	xhttp.send();
 }
 
-function logout(){
-	getAjax("/ch/users/x", function(){
-		alert(this.response);
-		location.href = "/ch";
-	})
-}
-
-function likeClick(mcode, uid){
-	var url = "/ch/users/dib/"+mcode + "/" + uid;
-	putAjax(url, "", function(){
-		alert("좋아요를 누르셨습니다");
-	})
-}
-
 function enterKey(event){
 	// 엔터키가 눌렸을 때
 	if (event.keyCode == 13) {

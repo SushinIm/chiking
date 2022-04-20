@@ -1,13 +1,15 @@
 <div id="header">
     <div class="hd_wd">
 		<div th:if="${session.ssui == null}" class="ic_on">
-            <a href="javascript:alert('ÇöÀç Áö¿øÇÏÁö ¾Ê´Â ±â´ÉÀÔ´Ï´Ù.');"><img th:src="@{/img/ic_/love.png}"></a>
-            <a href="/ch/users"><img th:src="@{/img/ic_/user.png}"></a>
+            <a href="javascript:alert('í˜„ìž¬ ì§€ì›í•˜ì§€ ì•ŠëŠ” ê¸°ëŠ¥ìž…ë‹ˆë‹¤.');"><img th:src="@{/img/ic_/love.png}"></a>
+            <!--<a href="/ch/users"><img th:src="@{/img/ic_/user.png}"></a>-->
+            <a href="javascript:alert('í˜„ìž¬ ì§€ì›í•˜ì§€ ì•ŠëŠ” ê¸°ëŠ¥ìž…ë‹ˆë‹¤.');"><img th:src="@{/img/ic_/user.png}"></a>
 		</div>
 		<div th:unless="${session.ssui == null}" class="ic_off">
-            <a href="javascript:alert('ÇöÀç Áö¿øÇÏÁö ¾Ê´Â ±â´ÉÀÔ´Ï´Ù.');"><img th:src="@{/img/ic_/love.png}"></a>
-            <a href="#" onclick="logout()"><img th:src="@{/img/ic_/lock.png}"></a>
-            <a href="/ch/my-page"><img th:src="@{/img/ic_/user.png}"></a>
+            <a href="javascript:alert('í˜„ìž¬ ì§€ì›í•˜ì§€ ì•ŠëŠ” ê¸°ëŠ¥ìž…ë‹ˆë‹¤.');"><img th:src="@{/img/ic_/love.png}"></a>
+            <a href="javascript:alert('í˜„ìž¬ ì§€ì›í•˜ì§€ ì•ŠëŠ” ê¸°ëŠ¥ìž…ë‹ˆë‹¤.');"><img th:src="@{/img/ic_/lock.png}"></a>
+            <!--<a href="#" onclick="logout()"><img th:src="@{/img/ic_/lock.png}"></a>-->
+            <a href="javascript:alert('í˜„ìž¬ ì§€ì›í•˜ì§€ ì•ŠëŠ” ê¸°ëŠ¥ìž…ë‹ˆë‹¤.');"><img th:src="@{/img/ic_/user.png}"></a>
 		</div>
     </div>    
 </div>
