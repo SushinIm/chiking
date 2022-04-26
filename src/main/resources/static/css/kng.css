@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.page_box2 button{
+	border: 0;
+	width:120px;
+	height:36px;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#klogin{
+	background-color: #fee500;
+	float: left;
+}
+#nlogin{
+	background-color: #03C75A;
+	float: center;
+}
