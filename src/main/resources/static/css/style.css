@@ -52,7 +52,7 @@ ul{
 }
 .hd_wd{
     margin: auto;
-    width: 1620px;
+    padding-right: 8%;
 }
 #header .ic_on{
     padding: 30px 0;
@@ -131,7 +131,7 @@ ul{
     bottom: 0;
 }
 #footer .ft_wd{
-    width: 1620px;
+    width: 84%;
     margin: auto;
 }
 #footer .ft_wd .ft_text{
