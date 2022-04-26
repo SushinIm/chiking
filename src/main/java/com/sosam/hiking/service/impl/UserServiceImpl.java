@@ -1,4 +1,4 @@
-package com.sosam.service.impl;
+package com.sosam.hiking.service.impl;
 
 import java.util.Optional;
 
@@ -10,9 +10,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sosam.model.User;
-import com.sosam.model.UserRepo;
-import com.sosam.service.UserService;
+import com.sosam.hiking.model.User;
+import com.sosam.hiking.model.UserRepo;
+import com.sosam.hiking.service.UserService;
 
 @Service("userService")
 public class UserServiceImpl implements UserService{

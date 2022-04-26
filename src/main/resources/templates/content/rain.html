@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+	<link th:href="@{/css/style_list.css}" rel="stylesheet">
+	<link th:href="@{/css/statistics.css}" rel="stylesheet">
+	
+	<script type="text/javascript" th:src="@{/js/common.js}"></script>
+    <title>강우 통계</title>
+</head>
+<body>
+    <div id="main">
+		<div th:replace="fragments/header"></div>
+		<div id="wrap">
+			<div id="contents">
+				<div id="graphs">
+					<h1>지역별 강우 관련 기초 통계 2021.02 ~ 2022.04</h1>
+	                <table>
+	                	<tr>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/rn_cprn.png}" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/rn_mean.png}" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/rn_days.png}" /></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3">
+	                			<p>경남, 강원에 강우량 총합이 크지만 비오는 날 평균 강우량은 지역별 큰차이가 나타나지 않는다고 판단된다.</p>
+	                			<p>(참고) 1) 강우량은 무게식 강우량을 활용하였고, 2) 시간당 무게식 강우량 >1mm 인 경우 비온다고 처리했다.</p>
+								<p>출처 : 기상청 대표블로그 https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kma_131&logNo=220036296353</p>
+	                		</td>
+	                	</tr>
+	                </table>
+	                <hr />
+	                <table>
+	                	<tr>
+	                		<td colspan="3"><img class="oneDiv" th:src="@{/img/graphs/rn_rf_fi.png}" /></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3">
+	                			<p>RandomForestRegressor 모듈을 활용하여 강우 예측시에 중요한 역할을 하는 변수들을 나열한 것이다.</p>
+	                			<p>2m 습도 > 기압 > 지면온도 >… 순으로 예측에 중요한 역할을 한다.</p>
+	                		</td>
+	                	</tr>
+	                </table>
+				</div>
+            </div>
+        </div>
+		<div th:replace="fragments/footer"></div>
+	</div>
+</body>
+</html>

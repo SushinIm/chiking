@@ -28,6 +28,13 @@ function deleteAjax(url, callBack){
 	xhttp.send();
 }
 
+function logout(){
+	getAjax("/ch/users/x", function(){
+		alert(this.response);
+		location.href = "/ch";
+	})
+}
+
 function enterKey(event){
 	// 엔터키가 눌렸을 때
 	if (event.keyCode == 13) {

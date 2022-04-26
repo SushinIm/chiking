@@ -1,11 +1,11 @@
-package com.sosam.service;
+package com.sosam.hiking.service;
 
 import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import com.sosam.model.User;
+import com.sosam.hiking.model.User;
 
 public interface UserService {
 	

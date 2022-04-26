@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+	<link th:href="@{/css/style_list.css}" rel="stylesheet">
+	<link th:href="@{/css/statistics.css}" rel="stylesheet">
+	
+	<script type="text/javascript" th:src="@{/js/common.js}"></script>
+    <title>산불 통계</title>
+</head>
+<body>
+    <div id="main">
+		<div th:replace="fragments/header"></div>
+		<div id="wrap">
+			<div id="contents">
+				<div id="graphs">
+					<h1>지역별 산불 관련 기초 통계  2021.04 ~ 2022.04</h1>
+	                <table>
+	                	<tr>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_area.png}" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_cnt.png}" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_mean.png}" /></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3">
+	                			<p>수도권에 발생 건수가 많은 반면 건당 피해면적은 강원도, 경상도 지역에 집중 되어있다.</p>
+	                			<p>동고서저의 한반도 지형과 소방서 및 소방인력의 분포 검토 등 지역별 불균형한 분포가 나타나는 원인을 분석할 필요가 있다고 보인다.</p>
+	                		</td>
+	                	</tr>
+	                </table>
+	                <hr />
+	                <table class="causes">
+	                	<tr>
+	                		<th colspan="2">화재 원인</th>
+	                		<th colspan="2">실화 원인</th>
+	                	</tr>
+	                	<tr>
+	                		<th>화재 원인</th>
+	                		<th>COUNT</th>
+	                		<th>실화 원인</th>
+	                		<th>COUNT</th>
+	                	</tr>
+	                	<tr>
+	                		<td>기타</td>
+	                		<td>343</td>
+	                		<td>입산자실화</td>
+	                		<td>172</td>
+	                	</tr>
+	                	<tr>
+	                		<td>실화</td>
+	                		<td>298</td>
+	                		<td>담뱃불실화</td>
+	                		<td>55</td>
+	                	</tr>
+	                	<tr>
+	                		<td>원인미상</td>
+	                		<td>140</td>
+	                		<td>입산자실화추정</td>
+	                		<td>35</td>
+	                	</tr>
+	                	<tr>
+	                		<td>소각</td>
+	                		<td>111</td>
+	                		<td>작업장실화</td>
+	                		<td>17</td>
+	                	</tr>
+	                	<tr>
+	                		<td>방화</td>
+	                		<td>3</td>
+	                		<td>성묘객실화</td>
+	                		<td>10</td>
+	                	</tr>
+	                	<tr>
+	                		<td>조사중</td>
+	                		<td>1</td>
+	                		<td>건축물실화</td>
+	                		<td>4</td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td>도로변실화추정</td>
+	                		<td>1</td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td>등산객실화</td>
+	                		<td>1</td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td>산나물채취객실화</td>
+	                		<td>1</td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td>야영객실화추정</td>
+	                		<td>1</td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td>폭죽실화</td>
+	                		<td>1</td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="2"><img class="twoDiv" th:src="@{/img/graphs/fc_a.png}" /></td>
+	                		<td colspan="2"><img class="twoDiv" th:src="@{/img/graphs/fc_b.png}" /></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="4">
+	                			<p>산불발생원인 대분류 중 기타를 제외하고 실화가 가장 높다.</p>
+	                			<p>산불 원인 중 실화를 구체적으로 살펴보면 입산자 실화와 입산자 실화추정이 높은 만큼 등산객에게 산불 위험 홍보가 절실한 실정이다.</p>
+	                		</td>
+	                	</tr>
+	                </table>
+	                <hr />
+	                <table>
+	                	<tr>
+	                		<td colspan="3"><img class="oneDiv" th:src="@{/img/graphs/fr_rf_fi.png}" /></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3">
+	                			<p>RandomForestRegressor 모듈을 활용하여 산불 예측시에 중요한 역할을 하는 변수들을 나열한 것다.</p>
+	                			<p>지면온도 > 2m습도 > 기압 > 10m기온 … 순으로 예측에 중요한 역할을 한다.</p>
+	                		</td>
+	                	</tr>
+	                </table>
+				</div>
+            </div>
+        </div>
+		<div th:replace="fragments/footer"></div>
+	</div>
+</body>
+</html>

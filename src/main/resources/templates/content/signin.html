@@ -43,13 +43,9 @@
 							<button type="button" id="naverIdLogin" style="display: none;"><img th:src="@{/img/loginbtn/naver_login.png}"></button>
 							<button id="nlogin"><img th:src="@{/img/loginbtn/btn_naver.png}" style="max-height: 36px; margin-left: 10px;"></button>
 							
-							<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
 							<button type="button" class="g-signin2" data-onsuccess="onSignIn" style="float: right; border: 0;"><img th:src="@{/img/loginbtn/google_login.png}" width="150"></button>
-							<!-- <button type="button" id="klogout" style="float: left;"><img th:src="@{/img/loginbtn/kakao_login.png}" width="140" height="40"></button> -->
-							<!-- <button type="button" id="nlogout" style="float: center;"><img th:src="@{/img/loginbtn/naver_login.png}" width="140" height="40"></button> -->
 						</div>
 			            <div class="page_line"></div>
-			            <!-- <a href="/ch/newcomer" class="toLeft">회원가입</a> -->
 			            <a href="/ch/id-pw" class="toRight">아이디 / 비밀번호 찾기</a>
 			       </div>
 		       </div>
@@ -73,17 +69,10 @@
 			var btnNaverLogin = document.getElementById("naverIdLogin").firstChild;
 				btnNaverLogin.click();
 		}); 
-		/*
-		$(document).on("click", "#naverLogin", function(){ 
-			var btnNaverLogin = document.getElementById("naverIdLogin").firstChild;
-			btnNaverLogin.click();
-		});
-		*/
 		
 		naverLogin.getLoginStatus(function(status) {
 			if (status) {
 				const nickName = naverLogin.user.getNickName();
-
 				if (confirm("회원가입을 하시겠습니까?")) {
 					alert("회원가입 페이지로 이동하겠습니다.");
 					naverLogin.logout();
@@ -96,17 +85,9 @@
 
 				return;
 			}
-
 		});
-		
-	
 		function onSignIn(googleUser) {
 			var profile = googleUser.getBasicProfile();
-			console.log('ID: ' + profile.getId());
-			console.log('Name: ' + profile.getName());
-			console.log('Image URL: ' + profile.getImageUrl());
-			console.log('Email: ' + profile.getEmail());
-
 			if (confirm("회원가입을 하시겠습니까?")) {
 				signOut();
 				alert("회원가입 페이지로 이동하겠습니다.");

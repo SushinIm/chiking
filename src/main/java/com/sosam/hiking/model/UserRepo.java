@@ -1,4 +1,4 @@
-package com.sosam.model;
+package com.sosam.hiking.model;
 
 import java.util.Optional;
 

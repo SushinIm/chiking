@@ -1,4 +1,4 @@
-package com.sosam.controller;
+package com.sosam.hiking.controller;
 
 import java.util.Optional;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sosam.model.User;
-import com.sosam.service.UserService;
+import com.sosam.hiking.model.User;
+import com.sosam.hiking.service.UserService;
 
 @RestController
 @RequestMapping("/ch/users")
