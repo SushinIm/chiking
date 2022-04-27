@@ -99,10 +99,10 @@
 		/*<![CDATA[*/
 			const uinfo = [[${session.ssui}]];
 		/*]]>*/
-			if(uinfo.uloc > 0){
+			if(uinfo.uloc >= 0){
 				document.querySelectorAll(".addr li")[uinfo.uloc].classList.add("on");
 			}
-			if(uinfo.uheight > 0){
+			if(uinfo.uheight >= 0){
 				document.querySelectorAll(".height li")[uinfo.uheight].classList.add("on");
 			}
 			listSearch();
