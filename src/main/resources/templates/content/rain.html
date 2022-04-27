@@ -45,6 +45,64 @@
 	                		</td>
 	                	</tr>
 	                </table>
+	                <hr />
+	                <table>
+	                	<tr><td colspan="3"><h3>Catboost로 강우 예측</h3></td></tr>
+	                	<tr>
+	                		<td colspan="3"><p>1. 데이터 전처리 - 라벨링 결과 및 분할 데이터셋</p></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/data_rn.png}" alt="데이터셋" /></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td>훈련데이터셋</td>
+	                		<td>525574</td>
+	                	</tr><tr>
+	                		<td>테스트데이터셋</td>
+	                		<td>218990</td>
+	                	</tr><tr>
+	                		<td>검증용데이터셋</td>
+	                		<td>131394</td>
+	                	</tr>
+	                	
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td colspan="3"><p>2. Catboost로 머신러닝 및 예측 결과 확인</p></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3">
+	                			<p>1) Catboost 선택 이유: RandomForest의 낮은 성능, XGBoost, LightGBM의 과적합 문제 해결</p>
+	                			<p>2) 과정: train, eval set으로 학습,예측,평가 </p>
+	                		</td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/fire_param.png}" alt="변수" /></td>
+	                		<td colspan="3"><p>기본적인 catboostclassifier 변수</p></td>
+	                		
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/auc_rn.png}" alt="auc"/></td>
+	                		<td colspan="3"><p>평가 - auc </p></td>
+	                	</tr>
+	                	
+	                	<tr>
+	                		<td colspan="3"><p>3) 머신러닝 후 기상조건 별 실제값(rain)과 예측값(expect) 확인 </p></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/result_rn.png}" alt="rain"/></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td>기본 Catboost 예측정확도</td>
+	                		<td>0.904899</td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td colspan="3"><p>4. 결론: 산불에 비해 예측 정확도는 떨어지지만 향후 파라미터 조정을 통해 높여 나갈 필요가 있다.</p></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                </table>
 				</div>
             </div>
         </div>

@@ -134,6 +134,89 @@
 	                		</td>
 	                	</tr>
 	                </table>
+	                <hr />
+	                <tr><td colspan="3">　</td></tr>
+	                <tr><td colspan="3">　</td></tr>
+	                <tr><td colspan="3">　</td></tr>
+	                <table>
+	                	<tr><td colspan="3"><h3>Catboost로 산불 예측</h3></td></tr>
+	                	<tr>
+	                		<td colspan="3"><p>1. 데이터 전처리 - 라벨링 결과 및 분할 데이터셋</p></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/data_fire.png}" alt="데이터셋" /></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/dataset_fire.png}" alt="데이터분할" /></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td>훈련데이터셋</td>
+	                		<td>416981</td>
+	                	</tr><tr>
+	                		<td>테스트데이터셋</td>
+	                		<td>173743</td>
+	                	</tr><tr>
+	                		<td>검증용데이터셋</td>
+	                		<td>104246</td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td colspan="3"><p>2. Catboost로 학습 및 CV 평가</p></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3">
+	                			<p>1) Catboost 선택 이유: RandomForest의 낮은 성능, XGBoost, LightGBM의 과적합 문제 해결</p>
+	                			<p>2) 과정: train, eval set으로 학습,예측,평가 -> 교차검증 </p>
+	                		</td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/fire_param.png}" alt="변수" /></td>
+	                		<td colspan="3"><p>기본적인 catboostclassifier 변수</p></td>
+	                		
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/auc_fire.png}" alt="auc"/></td>
+	                		<td colspan="3"><p>평가 - auc </p></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/cv_fire.png}" alt="cv"/></td>
+	                		<td colspan="3"><p>교차검증 결과 </p></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td colspan="3"><p>3. 튜닝 및 예측정확도 비교</p></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3">
+	                			<p>1) Hyperopt로 베이지안 최적화 진행</p>
+	                			<p>2) 기본, 교차검증 후 모델성능, 튜닝 후 결과 및 정확도 비교</p>
+	                		</td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/hyperopt_f.png}" alt="tuning"/></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><p>3) tuning 후 기상조건 별 실제값과 예측값 확인 </p></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/tuning_fire.png}" alt="tuning"/></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td>기본 Catboost 예측정확도</td>
+	                		<td>0.9581</td>
+	                	</tr>
+	                	<tr>
+	                		<td>베이지안 최적화 후 예측정확도</td>
+	                		<td>0.957385</td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td colspan="3"><p>4. 결론: 현재 조건 하에서 기본적인 CatBoostClassifier를 사용하여 산불 예측함이 타당하다.</p></td>
+	                	</tr>
+	                </table>
+	                
 				</div>
             </div>
         </div>
