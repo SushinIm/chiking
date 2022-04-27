@@ -44,62 +44,101 @@
 	                			<p>2m 습도 > 기압 > 지면온도 >… 순으로 예측에 중요한 역할을 한다.</p>
 	                		</td>
 	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
 	                </table>
+	                	<tr><td colspan="3">　</td></tr>
 	                <hr />
+	                	<tr><td colspan="3">　</td></tr>
+	                	
 	                <table>
-	                	<tr><td colspan="3"><h3>Catboost로 강우 예측</h3></td></tr>
 	                	<tr>
-	                		<td colspan="3"><p>1. 데이터 전처리 - 라벨링 결과 및 분할 데이터셋</p></td>
+	                		<td colspan="4">
+	                			<h2>Catboost로 산불 예측</h3><br>	                			
+	                		</td>	                			                		
 	                	</tr>
 	                	<tr>
-	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/data_rn.png}" alt="데이터셋" /></td>
+	                		<td colspan="2"><p>1. 데이터 전처리 - 라벨링 결과 및 분할 데이터셋.</p></td>
+	                		<td colspan="2"></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="4"><img class="oneDiv" th:src="@{/img/graphs/data_rn.png}" alt="데이터셋" /></td>
 	                	</tr>
 	                	<tr><td colspan="3">　</td></tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<table>
+	                	<tr>
+	                		<th colspan="2">데이터셋 분할</th>
+	                		<th colspan="2"></th>
+	                	</tr>
+	                	<tr>
+	                		<th>데이터셋 종류</th>
+	                		<th></th>
+	                		<th>COUNT</th>
+	                		<th></th>
+	                	</tr>
+	        			<tr><td colspan="3">　</td></tr>
 	                	<tr>
 	                		<td>훈련데이터셋</td>
+	                		<td></td>
 	                		<td>525574</td>
-	                	</tr><tr>
-	                		<td>테스트데이터셋</td>
-	                		<td>218990</td>
-	                	</tr><tr>
-	                		<td>검증용데이터셋</td>
-	                		<td>131394</td>
+	                		<td></td>
 	                	</tr>
-	                	
+	                	<tr>
+	                		<td>테스트데이터셋</td>
+	                		<td></td>
+	                		<td>218990</td>
+	                		<td></td>
+	                	</tr>
+	                	<tr>
+	                		<td>검증용데이터셋</td>
+	                		<td></td>
+	                		<td>131394</td>
+	                		<td></td>
+	                	</tr>
+                	</table>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr><td colspan="3">　</td></tr>
 	                	<tr><td colspan="3">　</td></tr>
 	                	<tr>
-	                		<td colspan="3"><p>2. Catboost로 머신러닝 및 예측 결과 확인</p></td>
+	                		<td colspan="4"><p>2. Catboost로 머신러닝 및 예측 결과 확인</p></td>
 	                	</tr>
 	                	<tr>
-	                		<td colspan="3">
+	                		<td colspan="4">
 	                			<p>1) Catboost 선택 이유: RandomForest의 낮은 성능, XGBoost, LightGBM의 과적합 문제 해결</p>
-	                			<p>2) 과정: train, eval set으로 학습,예측,평가 </p>
+	                			<p>2) 과정: train, eval set으로 학습,예측,평가 -> 교차검증 </p>
 	                		</td>
 	                	</tr>
 	                	<tr>
-	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/fire_param.png}" alt="변수" /></td>
-	                		<td colspan="3"><p>기본적인 catboostclassifier 변수</p></td>
-	                		
+	                		<td colspan="2"><img class="twoDiv" th:src="@{/img/graphs/fire_param.png}" alt="변수" /></td>
+	                		<td colspan="2"><img class="twoDiv" th:src="@{/img/graphs/auc_rn.png}" alt="auc"/></td>	                		
 	                	</tr>
 	                	<tr>
-	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/auc_rn.png}" alt="auc"/></td>
-	                		<td colspan="3"><p>평가 - auc </p></td>
+	                		<td colspan="2"><p>기본적인 catboostclassifier 변수</p></td>
+	                		<td colspan="2"><p>기본적인 catboostclassifier AUC 곡선</p></td>
 	                	</tr>
 	                	
+	                	
+	                	
 	                	<tr>
-	                		<td colspan="3"><p>3) 머신러닝 후 기상조건 별 실제값(rain)과 예측값(expect) 확인 </p></td>
+	                		<td colspan="4"><p>3) 머신러닝 후 기상조건 별 실제값(rain)과 예측값(expect) 확인 </p></td>
 	                	</tr>
 	                	<tr>
-	                		<td colspan="3"><img class="finDiv" th:src="@{/img/graphs/result_rn.png}" alt="rain"/></td>
+	                		<td colspan="4"><img class="ㅐㅜㄷDiv" th:src="@{/img/graphs/result_rn.png}" alt="rain"/></td>
 	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
 	                	<tr><td colspan="3">　</td></tr>
 	                	<tr>
 	                		<td>기본 Catboost 예측정확도</td>
 	                		<td>0.904899</td>
+	                		<td></td>
+	                		<td></td>
 	                	</tr>
 	                	<tr><td colspan="3">　</td></tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr><td colspan="3">　</td></tr>
 	                	<tr>
-	                		<td colspan="3"><p>4. 결론: 산불에 비해 예측 정확도는 떨어지지만 향후 파라미터 조정을 통해 높여 나갈 필요가 있다.</p></td>
+	                		<td colspan="4"><h3>4. 결론: 산불에 비해 예측 정확도는 떨어지지만 향후 파라미터 조정을 통해 높여 나갈 필요가 있다.</h3></td>
 	                	</tr>
 	                	<tr><td colspan="3">　</td></tr>
 	                </table>
