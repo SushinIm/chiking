@@ -57,10 +57,10 @@
 		const naverLogin = new naver.LoginWithNaverId(
 		{
 			clientId: "qEDuuNaNcMY_XMTrbmXy",
-			callbackUrl: "http://localhost/ch/users",
+			callbackUrl: "http://ec2-13-124-251-213.ap-northeast-2.compute.amazonaws.com/ch/users",
 			isPopup: false,
 			loginButton: { color: "green", type: 2, height: 40 }
-		}); 
+		});
 	
 		//네이버로그인
 		naverLogin.init();
