@@ -34,29 +34,6 @@
 						<option value="1601~2000" th:selected="${session.ssui.uheight == '1601~2000'}">1601~2000</option>
 					</select>
 					<div class="arrowDiv ui heightArrow"></div>
-					<select id="udiff">
-						<option value="" th:selected="${session.ssui.udiff == null or session.ssui.udiff == ''}">선호 난이도</option>
-						<option value="쉬움" th:selected="${session.ssui.udiff == '쉬움'}">쉬움</option>
-						<option value="보통" th:selected="${session.ssui.udiff == '보통'}">보통</option>
-						<option value="어려움" th:selected="${session.ssui.udiff == '어려움'}">어려움</option>
-					</select>
-					<div class="arrowDiv ui diffArrow"></div>
-					<select id="utime">
-						<option value="" th:selected="${session.ssui.udiff == null or session.ssui.udiff == ''}">선호 산행시간</option>
-						<option value="1~30" th:selected="${session.ssui.udiff == '1~30'}">1~30</option>
-						<option value="31~60" th:selected="${session.ssui.udiff == '31~60'}">31~60</option>
-						<option value="61~90" th:selected="${session.ssui.udiff == '61~90'}">61~90</option>
-						<option value="91~120" th:selected="${session.ssui.udiff == '91~120'}">91~120</option>
-						<option value="121~150" th:selected="${session.ssui.udiff == '121~150'}">121~150</option>
-						<option value="151~180" th:selected="${session.ssui.udiff == '151~180'}">151~180</option>
-						<option value="181~210" th:selected="${session.ssui.udiff == '181~210'}">181~210</option>
-						<option value="211~240" th:selected="${session.ssui.udiff == '211~240'}">211~240</option>
-						<option value="241~270" th:selected="${session.ssui.udiff == '241~270'}">241~270</option>
-						<option value="271~300" th:selected="${session.ssui.udiff == '271~300'}">271~300</option>
-						<option value="301~330" th:selected="${session.ssui.udiff == '301~330'}">301~330</option>
-						<option value="331~360" th:selected="${session.ssui.udiff == '331~360'}">331~360</option>
-					</select>
-					<div class="arrowDiv ui timeArrow"></div>
 					<select id="uloc">
 						<option value="" th:selected="${session.ssui.uloc == null or session.ssui.uloc == ''}">전국</option>
 						<option value="서울" th:selected="${session.ssui.uloc == '서울'}">서울</option>

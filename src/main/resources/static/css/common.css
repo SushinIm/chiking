@@ -93,14 +93,6 @@ select{
 	top :388px;
 	right: 15px;
 }
-.su.diffArrow {
-	top :454px;
-	right: 15px;
-}
-.su.timeArrow {
-	top :520px;
-	right: 15px;
-}
 .su.locArrow {
 	top :586px;
 	right: 15px;
@@ -108,14 +100,6 @@ select{
 
 .ui.heightArrow {
 	top :158px;
-	right: 15px;
-}
-.ui.diffArrow {
-	top :224px;
-	right: 15px;
-}
-.ui.timeArrow {
-	top :290px;
 	right: 15px;
 }
 .ui.locArrow {

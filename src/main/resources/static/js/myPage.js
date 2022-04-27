@@ -36,8 +36,6 @@ window.onload = function(){
 		const uid = document.getElementById("uid").value;
 		const uname = document.getElementById("uname").value;
 		const uheight = document.getElementById("uheight").value;
-		const udiff = document.getElementById("udiff").value;
-		const utime = document.getElementById("utime").value;
 		const uloc = document.getElementById("uloc").value;
 		const upw = document.getElementById("upw");
 		
@@ -45,8 +43,6 @@ window.onload = function(){
 		let data = "uid=" + uid;
 		data += "&uname=" + uname;
 		data += "&uheight=" + uheight;
-		data += "&udiff=" + udiff;
-		data += "&utime=" + utime;
 		data += "&uloc=" + uloc;
 		if(document.getElementById("pwChkFlag").value != "0"){
 			if(upw.value.length > 0 && upw.value != undefined){

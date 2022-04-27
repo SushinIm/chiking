@@ -4,8 +4,6 @@ window.onload = function(){
 		const upw = document.getElementById("upw").value;
 		const uname = document.getElementById("uname").value;
 		const uheight = document.getElementById("uheight").value;
-		const udiff = document.getElementById("udiff").value;
-		const utime = document.getElementById("utime").value;
 		const uloc = document.getElementById("uloc").value;
 		
 		if(uid.length > 0 && uid != undefined){
@@ -17,8 +15,6 @@ window.onload = function(){
 						data += "&upw=" + upw;
 						data += "&uname=" + uname;
 						data += "&uheight=" + uheight;
-						data += "&udiff=" + udiff;
-						data += "&utime=" + utime;
 						data += "&uloc=" + uloc;
 						postAjax(url, data, function(){
 							const res = this.response;
