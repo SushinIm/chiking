@@ -90,7 +90,7 @@ ul{
     height: 50px;
 }
 #contents .sc .bar{
-    width: 100%;
+    width: 95%;
     height: 100%;
     padding-left: 30px;
     border-radius: 500px;
@@ -104,7 +104,7 @@ ul{
 #contents .sc .sc_ic{
     position: absolute;
     top: 10px;
-    right: 25px;
+    right: 5%;
 }
 /* 버튼 */
 #contents .bt{
@@ -115,13 +115,14 @@ ul{
     padding: 10px 20px;
     background-color: #F5F5F5;
     border: none;
-    cursor: pointer;
     font-size: 15px;
     margin-right: 20px;
+    width: 80px;
 }
-#contents .bt .tableau{
-    margin: 0;
+.basic_1:last-child {
+    margin-right: 0px;
 }
+
 /* 푸터 */
 #footer{
     width: 100%;

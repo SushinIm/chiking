@@ -16,6 +16,11 @@ public class MainController {
 		return "content/main";
 	}
 
+	@GetMapping("/ch/infos")
+	public String infos() {
+		return "content/hundred";
+	}
+	
 	@GetMapping("/ch/rain")
 	public String rain() {
 		return "content/rain";

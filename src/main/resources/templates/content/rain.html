@@ -19,10 +19,11 @@
 					<h1>지역별 강우 관련 기초 통계 2021.02 ~ 2022.04</h1>
 	                <table>
 	                	<tr>
-	                		<td><img class="threeDiv" th:src="@{/img/graphs/rn_cprn.png}" /></td>
-	                		<td><img class="threeDiv" th:src="@{/img/graphs/rn_mean.png}" /></td>
-	                		<td><img class="threeDiv" th:src="@{/img/graphs/rn_days.png}" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/rn_cprn.png}" alt="강우량 합계" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/rn_mean.png}" alt="평균 강우량" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/rn_days.png}" alt="강우 일수" /></td>
 	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
 	                	<tr>
 	                		<td colspan="3">
 	                			<p>경남, 강원에 강우량 총합이 크지만 비오는 날 평균 강우량은 지역별 큰차이가 나타나지 않는다고 판단된다.</p>
@@ -34,8 +35,9 @@
 	                <hr />
 	                <table>
 	                	<tr>
-	                		<td colspan="3"><img class="oneDiv" th:src="@{/img/graphs/rn_rf_fi.png}" /></td>
+	                		<td colspan="3"><img class="oneDiv" th:src="@{/img/graphs/rn_rf_fi.png}" alt="강우 연관도" /></td>
 	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
 	                	<tr>
 	                		<td colspan="3">
 	                			<p>RandomForestRegressor 모듈을 활용하여 강우 예측시에 중요한 역할을 하는 변수들을 나열한 것이다.</p>

@@ -19,10 +19,11 @@
 					<h1>지역별 산불 관련 기초 통계  2021.04 ~ 2022.04</h1>
 	                <table>
 	                	<tr>
-	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_area.png}" /></td>
-	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_cnt.png}" /></td>
-	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_mean.png}" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_area.png}" alt="총 피해면적" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_cnt.png}" alt="산불 건수" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_mean.png}" alt="평균 피해면적" /></td>
 	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
 	                	<tr>
 	                		<td colspan="3">
 	                			<p>수도권에 발생 건수가 많은 반면 건당 피해면적은 강원도, 경상도 지역에 집중 되어있다.</p>
@@ -112,6 +113,7 @@
 	                		<td colspan="2"><img class="twoDiv" th:src="@{/img/graphs/fc_a.png}" /></td>
 	                		<td colspan="2"><img class="twoDiv" th:src="@{/img/graphs/fc_b.png}" /></td>
 	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
 	                	<tr>
 	                		<td colspan="4">
 	                			<p>산불발생원인 대분류 중 기타를 제외하고 실화가 가장 높다.</p>
@@ -122,8 +124,9 @@
 	                <hr />
 	                <table>
 	                	<tr>
-	                		<td colspan="3"><img class="oneDiv" th:src="@{/img/graphs/fr_rf_fi.png}" /></td>
+	                		<td colspan="3"><img class="oneDiv" th:src="@{/img/graphs/fr_rf_fi.png}" alt="산불 연관도" /></td>
 	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
 	                	<tr>
 	                		<td colspan="3">
 	                			<p>RandomForestRegressor 모듈을 활용하여 산불 예측시에 중요한 역할을 하는 변수들을 나열한 것다.</p>
