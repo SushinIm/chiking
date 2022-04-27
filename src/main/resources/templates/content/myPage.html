@@ -26,32 +26,32 @@
 					<input type="text" id="uname" placeholder="* 이름" th:value="${session.ssui.uname}">
 					
 					<select id="uheight">
-						<option value="" th:selected="${session.ssui.uheight==null or session.ssui.uheight == ''}">선호 고도</option>
-						<option value="1~500" th:selected="${session.ssui.uheight == '1~500'}">1~500</option>
-						<option value="501~800" th:selected="${session.ssui.uheight == '501~800'}">501~800</option>
-						<option value="801~1200" th:selected="${session.ssui.uheight == '801~1200'}">801~1200</option>
-						<option value="1201~1600" th:selected="${session.ssui.uheight == '1201~1600'}">1201~1600</option>
-						<option value="1601~2000" th:selected="${session.ssui.uheight == '1601~2000'}">1601~2000</option>
+						<option value="-1" th:selected="${session.ssui.uheight==-1}">선호 고도</option>
+						<option value="0" th:selected="${session.ssui.uheight == 0}">1~500</option>
+						<option value="1" th:selected="${session.ssui.uheight == 1}">501~800</option>
+						<option value="2" th:selected="${session.ssui.uheight == 2}">801~1200</option>
+						<option value="3" th:selected="${session.ssui.uheight == 3}">1201~1600</option>
+						<option value="4" th:selected="${session.ssui.uheight == 4}">1601~2000</option>
 					</select>
 					<div class="arrowDiv ui heightArrow"></div>
 					<select id="uloc">
-						<option value="" th:selected="${session.ssui.uloc == null or session.ssui.uloc == ''}">전국</option>
-						<option value="서울" th:selected="${session.ssui.uloc == '서울'}">서울</option>
-						<option value="인천" th:selected="${session.ssui.uloc == '인천'}">인천</option>
-						<option value="경기" th:selected="${session.ssui.uloc == '경기'}">경기</option>
-						<option value="강원" th:selected="${session.ssui.uloc == '강원'}">강원</option>
-						<option value="충북" th:selected="${session.ssui.uloc == '충북'}">충북</option>
-						<option value="충남" th:selected="${session.ssui.uloc == '충남'}">충남</option>
-						<option value="대전" th:selected="${session.ssui.uloc == '대전'}">대전</option>
-						<option value="전북" th:selected="${session.ssui.uloc == '전북'}">전북</option>
-						<option value="전남" th:selected="${session.ssui.uloc == '전남'}">전남</option>
-						<option value="광주" th:selected="${session.ssui.uloc == '광주'}">광주</option>
-						<option value="대구" th:selected="${session.ssui.uloc == '대구'}">대구</option>
-						<option value="경북" th:selected="${session.ssui.uloc == '경북'}">경북</option>
-						<option value="경남" th:selected="${session.ssui.uloc == '경남'}">경남</option>
-						<option value="울산" th:selected="${session.ssui.uloc == '울산'}">울산</option>
-						<option value="부산" th:selected="${session.ssui.uloc == '부산'}">부산</option>
-						<option value="제주" th:selected="${session.ssui.uloc == '제주'}">제주</option>
+						<option value="-1" th:selected="${session.ssui.uloc==-1}">전국</option>
+						<option value="0" th:selected="${session.ssui.uloc == 0}">서울</option>
+						<option value="1" th:selected="${session.ssui.uloc == 1}">인천</option>
+						<option value="2" th:selected="${session.ssui.uloc == 2}">경기</option>
+						<option value="3" th:selected="${session.ssui.uloc == 3}">강원</option>
+						<option value="4" th:selected="${session.ssui.uloc == 4}">충북</option>
+						<option value="5" th:selected="${session.ssui.uloc == 5}">충남</option>
+						<option value="6" th:selected="${session.ssui.uloc == 6}">대전</option>
+						<option value="7" th:selected="${session.ssui.uloc == 7}">전북</option>
+						<option value="8" th:selected="${session.ssui.uloc == 8}">전남</option>
+						<option value="9" th:selected="${session.ssui.uloc == 9}">광주</option>
+						<option value="10" th:selected="${session.ssui.uloc == 10}">대구</option>
+						<option value="11" th:selected="${session.ssui.uloc == 11}">경북</option>
+						<option value="12" th:selected="${session.ssui.uloc == 12}">경남</option>
+						<option value="13" th:selected="${session.ssui.uloc == 13}">울산</option>
+						<option value="14" th:selected="${session.ssui.uloc == 14}">부산</option>
+						<option value="15" th:selected="${session.ssui.uloc == 15}">제주</option>
 					</select>
 					<div class="arrowDiv ui locArrow"></div>
 					<input type="password" id="upw" placeholder="새 비밀번호를 입력하세요" class="none"/>

@@ -59,14 +59,14 @@ function formatter(result) {
 	
 }
 
-function search(){
-	let url = "/ch/search/mountains?keyword=";
+function listSearch(){
+	let url = "/ch/search/mountains";
 	let keyword = document.getElementById("searchBar").value;
 	let mntnaddr = document.getElementsByClassName("addr")[0].getElementsByClassName("on")[0];
 	let mntnhigh = document.getElementsByClassName("height")[0].getElementsByClassName("on")[0];
 	let routes = document.getElementsByClassName("routes")[0].getElementsByClassName("on")[0];
 	
-	url += (keyword != undefined) ? keyword : "";
+	url += (keyword != undefined) ? "?keyword="+keyword : "";
 	
 	if(mntnaddr != undefined){
 		url += "&mntnaddr=" + realAddr(mntnaddr.innerText);
@@ -136,11 +136,11 @@ window.onload = function(){
 	
 	document.getElementById("searchBar").addEventListener("keydown", function(event){
 		if(event.keyCode == 13){
-			search();
+			listSearch();
 		}
 	});
 	
-	document.getElementById("search").addEventListener("click", search);
+	document.getElementById("search").addEventListener("click", listSearch);
 	
-	search();
+	listSearch();
 }

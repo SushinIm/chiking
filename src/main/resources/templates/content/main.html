@@ -23,10 +23,10 @@
 	                <input type="image" class="sc_ic" id="search" th:src="@{/img/ic_/sc.png}">
 	                </div>
 	                <div class="bt">
-	                    <a class="basic_1 dont">간편 검색</a>
+						<a th:if="${session.ssui != null}"class="basic_1" href="/ch/lists/simple">간편 검색</a>
 	                    <a class="basic_1" href="/ch/fire">산불 통계</a>
 	                    <a class="basic_1" href="/ch/rain">강우 통계</a>
-	                    <a class="basic_1" href="/ch/infos">산 정보 지표</a>
+						<a class="basic_1" href="/ch/infos">산 정보 지표</a>
 	                </div>
 	            </div>
 	        </div>
