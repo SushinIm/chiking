@@ -15,4 +15,19 @@ public class MainController {
 	public String home() {
 		return "content/main";
 	}
+
+	@GetMapping("/ch/infos")
+	public String infos() {
+		return "content/hundred";
+	}
+	
+	@GetMapping("/ch/rain")
+	public String rain() {
+		return "content/rain";
+	}
+
+	@GetMapping("/ch/fire")
+	public String fire() {
+		return "content/fire";
+	}
 }

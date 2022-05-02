@@ -16,8 +16,6 @@ public class User {
 	private String uid;
 	private String upw;
 	private String uname;
-	private String uheight;
-	private String udiff;
-	private String utime;
-	private String uloc;
+	private int uheight;
+	private int uloc;
 }

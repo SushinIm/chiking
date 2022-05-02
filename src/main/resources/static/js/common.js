@@ -35,30 +35,18 @@ function logout(){
 	})
 }
 
-function likeClick(mcode, uid){
-	var url = "/ch/users/dib/"+mcode + "/" + uid;
-	putAjax(url, "", function(){
-		alert("좋아요를 누르셨습니다");
-	})
-}
-
-function enterKey(event){
+function enterSearch(event){
 	// 엔터키가 눌렸을 때
 	if (event.keyCode == 13) {
-		let url = "/ch/lists?keyword=";
-		const keyword = document.getElementById("searchBar").value;
-		
-		url += (keyword != undefined) ? keyword : "";
-		
-		location.href = url;
+		search();
 	}
 }
 
-function headerSearch(){
-	let url = "/ch/lists?keyword=";
+function search(){
+	let url = "/ch/lists/normal";
 	const keyword = document.getElementById("searchBar").value;
 	
-	url += (keyword != undefined) ? keyword : "";
+	url += (keyword != "") ? "?keyword="+keyword : "";
 	
 	location.href = url;
 }

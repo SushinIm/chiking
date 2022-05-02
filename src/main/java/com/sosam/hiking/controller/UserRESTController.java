@@ -29,7 +29,7 @@ public class UserRESTController {
 	@GetMapping("/{uid}")
 	public ResponseEntity<String> checkId(@PathVariable String uid) {
 		Optional<User> user = userService.checkId(uid);
-		if(user.isEmpty()) {
+		if(!user.isPresent()) {
 			return ResponseEntity.ok("s");
 		}else if(user.isPresent()){
 			return ResponseEntity.ok("f");

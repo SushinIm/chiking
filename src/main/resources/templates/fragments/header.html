@@ -5,9 +5,8 @@
                 <a href="/ch"><img th:src="@{/img/ic_/logo_mini.png}"></a>
             </h1>
             <div class="sc_list">
-                <input type="text" class="bar_list" onkeydown="enterKey(event)" id="searchBar" th:value="${keyword}" placeholder="입력없이 검색시 전체결과를 볼 수 있습니다.">
-                <input type="image" class="sc_ic_list" onclick="headerSearch()" id="search" th:src="@{/img/ic_/sc_mini.png}">
-                <!-- <a href="#" class="filter">�긽�꽭�븘�꽣</a> -->
+                <input type="text" class="bar_list" onkeydown="enterSearch(event)" id="searchBar" th:value="${keyword}" placeholder="입력없이 검색시 전체결과를 볼 수 있습니다.">
+                <input type="image" class="sc_ic_list" onclick="search()" id="search" th:src="@{/img/ic_/sc_mini.png}">
             </div>
         </div>
         <div class="hd_right fright">

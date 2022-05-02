@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+	<link th:href="@{/css/style_list.css}" rel="stylesheet">
+	<link th:href="@{/css/statistics.css}" rel="stylesheet">
+	
+	<script type="text/javascript" th:src="@{/js/common.js}"></script>
+    <title>산불 통계</title>
+</head>
+<body>
+    <div id="main">
+		<div th:replace="fragments/header"></div>
+		<div id="wrap">
+			<div id="contents">
+				<div id="graphs">
+					<h1>지역별 산불 관련 기초 통계  2021.04 ~ 2022.04</h1>
+	                <table>
+	                	<tr>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_area.png}" alt="총 피해면적" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_cnt.png}" alt="산불 건수" /></td>
+	                		<td><img class="threeDiv" th:src="@{/img/graphs/fr_mean.png}" alt="평균 피해면적" /></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td colspan="3">
+	                			<p>수도권에 발생 건수가 많은 반면 건당 피해면적은 강원도, 경상도 지역에 집중 되어있다.</p>
+	                			<p>동고서저의 한반도 지형과 소방서 및 소방인력의 분포 검토 등 지역별 불균형한 분포가 나타나는 원인을 분석할 필요가 있다고 보인다.</p>
+	                		</td>
+	                	</tr>
+	                </table>
+	                <hr />
+	                <table class="causes">
+	                	<tr>
+	                		<th colspan="2">화재 원인</th>
+	                		<th colspan="2">실화 원인</th>
+	                	</tr>
+	                	<tr>
+	                		<th>화재 원인</th>
+	                		<th>COUNT</th>
+	                		<th>실화 원인</th>
+	                		<th>COUNT</th>
+	                	</tr>
+	                	<tr>
+	                		<td>기타</td>
+	                		<td>343</td>
+	                		<td>입산자실화</td>
+	                		<td>172</td>
+	                	</tr>
+	                	<tr>
+	                		<td>실화</td>
+	                		<td>298</td>
+	                		<td>담뱃불실화</td>
+	                		<td>55</td>
+	                	</tr>
+	                	<tr>
+	                		<td>원인미상</td>
+	                		<td>140</td>
+	                		<td>입산자실화추정</td>
+	                		<td>35</td>
+	                	</tr>
+	                	<tr>
+	                		<td>소각</td>
+	                		<td>111</td>
+	                		<td>작업장실화</td>
+	                		<td>17</td>
+	                	</tr>
+	                	<tr>
+	                		<td>방화</td>
+	                		<td>3</td>
+	                		<td>성묘객실화</td>
+	                		<td>10</td>
+	                	</tr>
+	                	<tr>
+	                		<td>조사중</td>
+	                		<td>1</td>
+	                		<td>건축물실화</td>
+	                		<td>4</td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td>도로변실화추정</td>
+	                		<td>1</td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td>등산객실화</td>
+	                		<td>1</td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td>산나물채취객실화</td>
+	                		<td>1</td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td>야영객실화추정</td>
+	                		<td>1</td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td>폭죽실화</td>
+	                		<td>1</td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="2"><img class="twoDiv" th:src="@{/img/graphs/fc_a.png}" /></td>
+	                		<td colspan="2"><img class="twoDiv" th:src="@{/img/graphs/fc_b.png}" /></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td colspan="4">
+	                			<p>산불발생원인 대분류 중 기타를 제외하고 실화가 가장 높다.</p>
+	                			<p>산불 원인 중 실화를 구체적으로 살펴보면 입산자 실화와 입산자 실화추정이 높은 만큼 등산객에게 산불 위험 홍보가 절실한 실정이다.</p>
+	                		</td>
+	                	</tr>
+	                </table>
+	                <hr />
+	                <table>
+	                	<tr>
+	                		<td colspan="3"><img class="oneDiv" th:src="@{/img/graphs/fr_rf_fi.png}" alt="산불 연관도" /></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td colspan="3">
+	                			<p>RandomForestRegressor 모듈을 활용하여 산불 예측시에 중요한 역할을 하는 변수들을 나열한 것다.</p>
+	                			<p>지면온도 > 2m습도 > 기압 > 10m기온 … 순으로 예측에 중요한 역할을 한다.</p>
+	                		</td>
+	                	</tr>
+	                </table>
+	                <hr />
+	                <tr><td colspan="3">　</td></tr>
+	                <tr><td colspan="3">　</td></tr>
+	                <tr><td colspan="3">　</td></tr>
+	                
+                <table class="catboost">
+	                	<tr>
+	                		<td colspan="4">
+	                			<h2>Catboost로 산불 예측</h3><br>	                			
+	                		</td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="2">
+	                			<p>1. 데이터 전처리 - 라벨링 결과 및 분할 데이터셋.</p>
+	                		</td>
+	                		<td colspan="2"> </td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="4"><img class="oneDiv" th:src="@{/img/graphs/data_fire.png}" alt="데이터셋" /></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	
+                	<table>
+	                	<tr>
+	                		<th colspan="3">데이터셋 분할</th>
+	                		
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<th>데이터셋 종류</th>
+	                		<th></th>
+	                		<th>COUNT</th>
+	                		
+	                	</tr>
+	        
+	                	<tr>
+	                		<td>훈련데이터셋</td>
+	                		<td></td>
+	                		<td>416981</td>	                		
+	                	</tr>
+	                	<tr>
+	                		<td>테스트데이터셋</td>
+	                		<td></td>
+	                		<td>173743</td>
+	                		
+	                	</tr>
+	                	<tr>
+	                		<td>검증용데이터셋</td>
+	                		<td></td>
+	                		<td>104246</td>	                		
+	                	</tr>
+                	</table>
+                	<br><br>
+                	
+	                <table>
+	                	<tr>
+	                		<td colspan="4"><p>2. Catboost로 학습 및 CV 평가</p></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td colspan="4">
+	                			<p>1) Catboost 선택 이유: RandomForest의 낮은 성능, XGBoost, LightGBM의 과적합 문제 해결</p>
+	                			<p>2) 과정: train, eval set으로 학습,예측,평가 -> 교차검증 </p>	
+	                		</td>	                		
+	                	</tr>
+	                
+	                	<tr>
+	                		<td colspan="2"><img class="twoDiv" th:src="@{/img/graphs/fire_param.png}" alt="변수" /></td>
+	                		<td>basic parameters</td>
+	                		<td></td>>	                		
+	                	</tr>
+	                	<tr>
+	                		<td colspan="2"></td>
+	                		<td colspan="2"></td>	       
+	                		<td colspan="2"></td>         		
+	                	</tr>
+	                	<tr>
+	                		<td colspan="2"><img class="twoDiv" th:src="@{/img/graphs/auc_fire.png}" alt="auc"/></td>	 
+	                		<td colspan="2"><img class="twoDiv" th:src="@{/img/graphs/cv_fire.png}" alt="cv"/></td>	  
+	                	</tr>
+	                	<tr>
+	                		<td colspan="2">적합 후 모델 성능 확인 - AUC</td>
+	                		<td colspan="2"> 교차검증 결과 </td>
+	                	</tr>
+	                	
+                	</table>                		
+	              
+	                	<tr><td colspan="3">　</td></tr>
+	                	
+	                <table>
+	                	<tr>
+	                		<td colspan="4"><p>3. 튜닝 및 예측정확도 비교</p></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="4">
+	                			<p>1) Hyperopt로 베이지안 최적화 진행</p>
+	                			<p>2) 기본, 교차검증 후 모델성능, 튜닝 후 결과 및 정확도 비교</p>
+	                		</td>
+	                	</tr>
+	                		                	
+	                	<tr>
+	                		<td colspan="3"><img class="oneDiv" th:src="@{/img/graphs/hyperopt_f.png}" alt="tuning"/></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td colspan="2"><p>3) tuning 후 기상조건 별 실제값과 예측값 확인 </p></td>
+	                		<td colspan="2"></td>
+	                	</tr>
+	                	<tr>
+	                		<td colspan="4"><img class="oneDiv" th:src="@{/img/graphs/tuning_fire.png}" alt="tuning"/></td>
+	                	</tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr><td colspan="3">　</td></tr>
+                	<table>
+                		<tr>
+	                		<th colspan="3">모델 정확도 비교</th>
+	                
+	                	</tr>
+                		<tr>
+	                		<td>기본 Catboost 예측정확도</td>
+	                		<td></td>
+	                		<td>0.9581</td>	                		
+	                	</tr>
+	                	<tr>
+	                		<td>베이지안 최적화 후 예측정확도</td>
+	                		<td></td>
+	                		<td>0.957385</td>	                		
+	                	</tr>                	
+                	</table>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr><td colspan="3">　</td></tr>
+	                	<tr>
+	                		<td colspan="3"><h3>4. 결론: 현재 조건 하에서 기본적인 CatBoostClassifier를 사용하여 산불 예측함이 타당하다.</h3></td>
+	                	</tr>
+	                </table>
+	                
+				</div>
+            </div>
+        </div>
+		<div th:replace="fragments/footer"></div>
+	</div>
+</body>
+</html>
