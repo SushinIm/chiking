@@ -1,0 +1,3644 @@
+[
+    {
+        "routeid": "RT001001",
+        "routename": "가리산_001",
+        "mntnid": "MT001",
+        "distance": 3.3
+    },
+    {
+        "routeid": "RT001002",
+        "routename": "가리산_002",
+        "mntnid": "MT001",
+        "distance": 6.5
+    },
+    {
+        "routeid": "RT002001",
+        "routename": "가리왕산_001",
+        "mntnid": "MT002",
+        "distance": 9.8
+    },
+    {
+        "routeid": "RT002002",
+        "routename": "가리왕산_002",
+        "mntnid": "MT002",
+        "distance": 10.8
+    },
+    {
+        "routeid": "RT003001",
+        "routename": "가야산_001",
+        "mntnid": "MT003",
+        "distance": 5.0
+    },
+    {
+        "routeid": "RT003002",
+        "routename": "가야산_002",
+        "mntnid": "MT003",
+        "distance": 2.3
+    },
+    {
+        "routeid": "RT003003",
+        "routename": "가야산_003",
+        "mntnid": "MT003",
+        "distance": 6.3
+    },
+    {
+        "routeid": "RT003004",
+        "routename": "가야산_004",
+        "mntnid": "MT003",
+        "distance": 2.9
+    },
+    {
+        "routeid": "RT003005",
+        "routename": "가야산_005",
+        "mntnid": "MT003",
+        "distance": 4.5
+    },
+    {
+        "routeid": "RT004001",
+        "routename": "가지산_001",
+        "mntnid": "MT004",
+        "distance": 9.1
+    },
+    {
+        "routeid": "RT004002",
+        "routename": "가지산_002",
+        "mntnid": "MT004",
+        "distance": 14.2
+    },
+    {
+        "routeid": "RT004003",
+        "routename": "가지산_003",
+        "mntnid": "MT004",
+        "distance": 12.6
+    },
+    {
+        "routeid": "RT004004",
+        "routename": "가지산_004",
+        "mntnid": "MT004",
+        "distance": 11.9
+    },
+    {
+        "routeid": "RT005001",
+        "routename": "감악산_001",
+        "mntnid": "MT005",
+        "distance": 5.5
+    },
+    {
+        "routeid": "RT005002",
+        "routename": "감악산_002",
+        "mntnid": "MT005",
+        "distance": 8.9
+    },
+    {
+        "routeid": "RT005003",
+        "routename": "감악산_003",
+        "mntnid": "MT005",
+        "distance": 11.1
+    },
+    {
+        "routeid": "RT005004",
+        "routename": "감악산_004",
+        "mntnid": "MT005",
+        "distance": 7.5
+    },
+    {
+        "routeid": "RT005005",
+        "routename": "감악산_005",
+        "mntnid": "MT005",
+        "distance": 7.6
+    },
+    {
+        "routeid": "RT005006",
+        "routename": "감악산_006",
+        "mntnid": "MT005",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT005007",
+        "routename": "감악산_007",
+        "mntnid": "MT005",
+        "distance": 6.7
+    },
+    {
+        "routeid": "RT005008",
+        "routename": "감악산_008",
+        "mntnid": "MT005",
+        "distance": 6.1
+    },
+    {
+        "routeid": "RT005009",
+        "routename": "감악산_009",
+        "mntnid": "MT005",
+        "distance": 5.5
+    },
+    {
+        "routeid": "RT006001",
+        "routename": "강천산_001",
+        "mntnid": "MT006",
+        "distance": 6.6
+    },
+    {
+        "routeid": "RT006002",
+        "routename": "강천산_002",
+        "mntnid": "MT006",
+        "distance": 7.3
+    },
+    {
+        "routeid": "RT006003",
+        "routename": "강천산_003",
+        "mntnid": "MT006",
+        "distance": 10.8
+    },
+    {
+        "routeid": "RT006004",
+        "routename": "강천산_004",
+        "mntnid": "MT006",
+        "distance": 11.0
+    },
+    {
+        "routeid": "RT006005",
+        "routename": "강천산_005",
+        "mntnid": "MT006",
+        "distance": 10.7
+    },
+    {
+        "routeid": "RT007001",
+        "routename": "계룡산_001",
+        "mntnid": "MT007",
+        "distance": 5.6
+    },
+    {
+        "routeid": "RT007002",
+        "routename": "계룡산_002",
+        "mntnid": "MT007",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT007003",
+        "routename": "계룡산_003",
+        "mntnid": "MT007",
+        "distance": 8.0
+    },
+    {
+        "routeid": "RT007004",
+        "routename": "계룡산_004",
+        "mntnid": "MT007",
+        "distance": 3.9
+    },
+    {
+        "routeid": "RT007005",
+        "routename": "계룡산_005",
+        "mntnid": "MT007",
+        "distance": 3.1
+    },
+    {
+        "routeid": "RT008001",
+        "routename": "계방산_001",
+        "mntnid": "MT008",
+        "distance": 4.7
+    },
+    {
+        "routeid": "RT008002",
+        "routename": "계방산_002",
+        "mntnid": "MT008",
+        "distance": 4.1
+    },
+    {
+        "routeid": "RT009001",
+        "routename": "공작산_001",
+        "mntnid": "MT009",
+        "distance": 8.2
+    },
+    {
+        "routeid": "RT009002",
+        "routename": "공작산_002",
+        "mntnid": "MT009",
+        "distance": 12.8
+    },
+    {
+        "routeid": "RT009003",
+        "routename": "공작산_003",
+        "mntnid": "MT009",
+        "distance": 13.9
+    },
+    {
+        "routeid": "RT009004",
+        "routename": "공작산_004",
+        "mntnid": "MT009",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT009005",
+        "routename": "공작산_005",
+        "mntnid": "MT009",
+        "distance": 8.5
+    },
+    {
+        "routeid": "RT009006",
+        "routename": "공작산_006",
+        "mntnid": "MT009",
+        "distance": 12.9
+    },
+    {
+        "routeid": "RT009007",
+        "routename": "공작산_007",
+        "mntnid": "MT009",
+        "distance": 11.2
+    },
+    {
+        "routeid": "RT009008",
+        "routename": "공작산_008",
+        "mntnid": "MT009",
+        "distance": 10.4
+    },
+    {
+        "routeid": "RT009009",
+        "routename": "공작산_009",
+        "mntnid": "MT009",
+        "distance": 9.0
+    },
+    {
+        "routeid": "RT009010",
+        "routename": "공작산_010",
+        "mntnid": "MT009",
+        "distance": 11.5
+    },
+    {
+        "routeid": "RT010001",
+        "routename": "관악산_001",
+        "mntnid": "MT010",
+        "distance": 8.9
+    },
+    {
+        "routeid": "RT010002",
+        "routename": "관악산_002",
+        "mntnid": "MT010",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT010003",
+        "routename": "관악산_003",
+        "mntnid": "MT010",
+        "distance": 10.8
+    },
+    {
+        "routeid": "RT010004",
+        "routename": "관악산_004",
+        "mntnid": "MT010",
+        "distance": 9.5
+    },
+    {
+        "routeid": "RT010005",
+        "routename": "관악산_005",
+        "mntnid": "MT010",
+        "distance": 6.4
+    },
+    {
+        "routeid": "RT010006",
+        "routename": "관악산_006",
+        "mntnid": "MT010",
+        "distance": 9.1
+    },
+    {
+        "routeid": "RT010007",
+        "routename": "관악산_007",
+        "mntnid": "MT010",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT010008",
+        "routename": "관악산_008",
+        "mntnid": "MT010",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT010009",
+        "routename": "관악산_009",
+        "mntnid": "MT010",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT010010",
+        "routename": "관악산_010",
+        "mntnid": "MT010",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT010011",
+        "routename": "관악산_011",
+        "mntnid": "MT010",
+        "distance": 7.4
+    },
+    {
+        "routeid": "RT010012",
+        "routename": "관악산_012",
+        "mntnid": "MT010",
+        "distance": 8.7
+    },
+    {
+        "routeid": "RT010013",
+        "routename": "관악산_013",
+        "mntnid": "MT010",
+        "distance": 8.8
+    },
+    {
+        "routeid": "RT010014",
+        "routename": "관악산_014",
+        "mntnid": "MT010",
+        "distance": 11.0
+    },
+    {
+        "routeid": "RT010015",
+        "routename": "관악산_015",
+        "mntnid": "MT010",
+        "distance": 22.5
+    },
+    {
+        "routeid": "RT010016",
+        "routename": "관악산_016",
+        "mntnid": "MT010",
+        "distance": 11.1
+    },
+    {
+        "routeid": "RT010017",
+        "routename": "관악산_017",
+        "mntnid": "MT010",
+        "distance": 14.1
+    },
+    {
+        "routeid": "RT010018",
+        "routename": "관악산_018",
+        "mntnid": "MT010",
+        "distance": 11.6
+    },
+    {
+        "routeid": "RT010019",
+        "routename": "관악산_019",
+        "mntnid": "MT010",
+        "distance": 7.8
+    },
+    {
+        "routeid": "RT010020",
+        "routename": "관악산_020",
+        "mntnid": "MT010",
+        "distance": 11.2
+    },
+    {
+        "routeid": "RT010021",
+        "routename": "관악산_021",
+        "mntnid": "MT010",
+        "distance": 11.3
+    },
+    {
+        "routeid": "RT011001",
+        "routename": "구병산_001",
+        "mntnid": "MT011",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT012001",
+        "routename": "금산_001",
+        "mntnid": "MT012",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT013001",
+        "routename": "금수산_001",
+        "mntnid": "MT013",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT013002",
+        "routename": "금수산_002",
+        "mntnid": "MT013",
+        "distance": 5.0
+    },
+    {
+        "routeid": "RT013003",
+        "routename": "금수산_003",
+        "mntnid": "MT013",
+        "distance": 14.0
+    },
+    {
+        "routeid": "RT013004",
+        "routename": "금수산_004",
+        "mntnid": "MT013",
+        "distance": 3.4
+    },
+    {
+        "routeid": "RT013005",
+        "routename": "금수산_005",
+        "mntnid": "MT013",
+        "distance": 3.2
+    },
+    {
+        "routeid": "RT013006",
+        "routename": "금수산_006",
+        "mntnid": "MT013",
+        "distance": 3.6
+    },
+    {
+        "routeid": "RT014001",
+        "routename": "금오산_001",
+        "mntnid": "MT014",
+        "distance": 9.2
+    },
+    {
+        "routeid": "RT014002",
+        "routename": "금오산_002",
+        "mntnid": "MT014",
+        "distance": 6.5
+    },
+    {
+        "routeid": "RT014003",
+        "routename": "금오산_003",
+        "mntnid": "MT014",
+        "distance": 6.6
+    },
+    {
+        "routeid": "RT014004",
+        "routename": "금오산_004",
+        "mntnid": "MT014",
+        "distance": 9.2
+    },
+    {
+        "routeid": "RT014005",
+        "routename": "금오산_005",
+        "mntnid": "MT014",
+        "distance": 7.0
+    },
+    {
+        "routeid": "RT014006",
+        "routename": "금오산_006",
+        "mntnid": "MT014",
+        "distance": 7.4
+    },
+    {
+        "routeid": "RT014007",
+        "routename": "금오산_007",
+        "mntnid": "MT014",
+        "distance": 10.0
+    },
+    {
+        "routeid": "RT014008",
+        "routename": "금오산_008",
+        "mntnid": "MT014",
+        "distance": 8.5
+    },
+    {
+        "routeid": "RT014009",
+        "routename": "금오산_009",
+        "mntnid": "MT014",
+        "distance": 7.9
+    },
+    {
+        "routeid": "RT014010",
+        "routename": "금오산_010",
+        "mntnid": "MT014",
+        "distance": 10.9
+    },
+    {
+        "routeid": "RT014011",
+        "routename": "금오산_011",
+        "mntnid": "MT014",
+        "distance": 10.0
+    },
+    {
+        "routeid": "RT014012",
+        "routename": "금오산_012",
+        "mntnid": "MT014",
+        "distance": 8.6
+    },
+    {
+        "routeid": "RT014013",
+        "routename": "금오산_013",
+        "mntnid": "MT014",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT014014",
+        "routename": "금오산_014",
+        "mntnid": "MT014",
+        "distance": 10.3
+    },
+    {
+        "routeid": "RT014015",
+        "routename": "금오산_015",
+        "mntnid": "MT014",
+        "distance": 8.7
+    },
+    {
+        "routeid": "RT015001",
+        "routename": "금정산_001",
+        "mntnid": "MT015",
+        "distance": 9.9
+    },
+    {
+        "routeid": "RT015002",
+        "routename": "금정산_002",
+        "mntnid": "MT015",
+        "distance": 10.5
+    },
+    {
+        "routeid": "RT015003",
+        "routename": "금정산_003",
+        "mntnid": "MT015",
+        "distance": 7.8
+    },
+    {
+        "routeid": "RT015004",
+        "routename": "금정산_004",
+        "mntnid": "MT015",
+        "distance": 8.0
+    },
+    {
+        "routeid": "RT015005",
+        "routename": "금정산_005",
+        "mntnid": "MT015",
+        "distance": 6.3
+    },
+    {
+        "routeid": "RT015006",
+        "routename": "금정산_006",
+        "mntnid": "MT015",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT015007",
+        "routename": "금정산_007",
+        "mntnid": "MT015",
+        "distance": 12.9
+    },
+    {
+        "routeid": "RT015008",
+        "routename": "금정산_008",
+        "mntnid": "MT015",
+        "distance": 6.1
+    },
+    {
+        "routeid": "RT015009",
+        "routename": "금정산_009",
+        "mntnid": "MT015",
+        "distance": 6.4
+    },
+    {
+        "routeid": "RT015010",
+        "routename": "금정산_010",
+        "mntnid": "MT015",
+        "distance": 6.7
+    },
+    {
+        "routeid": "RT015011",
+        "routename": "금정산_011",
+        "mntnid": "MT015",
+        "distance": 7.0
+    },
+    {
+        "routeid": "RT015012",
+        "routename": "금정산_012",
+        "mntnid": "MT015",
+        "distance": 7.4
+    },
+    {
+        "routeid": "RT015013",
+        "routename": "금정산_013",
+        "mntnid": "MT015",
+        "distance": 7.9
+    },
+    {
+        "routeid": "RT015014",
+        "routename": "금정산_014",
+        "mntnid": "MT015",
+        "distance": 6.3
+    },
+    {
+        "routeid": "RT015015",
+        "routename": "금정산_015",
+        "mntnid": "MT015",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT015016",
+        "routename": "금정산_016",
+        "mntnid": "MT015",
+        "distance": 8.7
+    },
+    {
+        "routeid": "RT015017",
+        "routename": "금정산_017",
+        "mntnid": "MT015",
+        "distance": 10.1
+    },
+    {
+        "routeid": "RT015018",
+        "routename": "금정산_018",
+        "mntnid": "MT015",
+        "distance": 6.0
+    },
+    {
+        "routeid": "RT015019",
+        "routename": "금정산_019",
+        "mntnid": "MT015",
+        "distance": 4.9
+    },
+    {
+        "routeid": "RT015020",
+        "routename": "금정산_020",
+        "mntnid": "MT015",
+        "distance": 5.6
+    },
+    {
+        "routeid": "RT015021",
+        "routename": "금정산_021",
+        "mntnid": "MT015",
+        "distance": 8.5
+    },
+    {
+        "routeid": "RT015022",
+        "routename": "금정산_022",
+        "mntnid": "MT015",
+        "distance": 6.4
+    },
+    {
+        "routeid": "RT015023",
+        "routename": "금정산_023",
+        "mntnid": "MT015",
+        "distance": 5.2
+    },
+    {
+        "routeid": "RT015024",
+        "routename": "금정산_024",
+        "mntnid": "MT015",
+        "distance": 7.3
+    },
+    {
+        "routeid": "RT015025",
+        "routename": "금정산_025",
+        "mntnid": "MT015",
+        "distance": 8.7
+    },
+    {
+        "routeid": "RT015026",
+        "routename": "금정산_026",
+        "mntnid": "MT015",
+        "distance": 5.9
+    },
+    {
+        "routeid": "RT015027",
+        "routename": "금정산_027",
+        "mntnid": "MT015",
+        "distance": 7.6
+    },
+    {
+        "routeid": "RT015028",
+        "routename": "금정산_028",
+        "mntnid": "MT015",
+        "distance": 10.1
+    },
+    {
+        "routeid": "RT015029",
+        "routename": "금정산_029",
+        "mntnid": "MT015",
+        "distance": 7.4
+    },
+    {
+        "routeid": "RT015030",
+        "routename": "금정산_030",
+        "mntnid": "MT015",
+        "distance": 12.6
+    },
+    {
+        "routeid": "RT015031",
+        "routename": "금정산_031",
+        "mntnid": "MT015",
+        "distance": 11.4
+    },
+    {
+        "routeid": "RT015032",
+        "routename": "금정산_032",
+        "mntnid": "MT015",
+        "distance": 13.8
+    },
+    {
+        "routeid": "RT015033",
+        "routename": "금정산_033",
+        "mntnid": "MT015",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT015034",
+        "routename": "금정산_034",
+        "mntnid": "MT015",
+        "distance": 10.2
+    },
+    {
+        "routeid": "RT015035",
+        "routename": "금정산_035",
+        "mntnid": "MT015",
+        "distance": 11.6
+    },
+    {
+        "routeid": "RT015036",
+        "routename": "금정산_036",
+        "mntnid": "MT015",
+        "distance": 9.9
+    },
+    {
+        "routeid": "RT015037",
+        "routename": "금정산_037",
+        "mntnid": "MT015",
+        "distance": 15.2
+    },
+    {
+        "routeid": "RT016001",
+        "routename": "깃대봉_001",
+        "mntnid": "MT016",
+        "distance": 5.1
+    },
+    {
+        "routeid": "RT017001",
+        "routename": "남산_001",
+        "mntnid": "MT017",
+        "distance": 9.4
+    },
+    {
+        "routeid": "RT017002",
+        "routename": "남산_002",
+        "mntnid": "MT017",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT017003",
+        "routename": "남산_003",
+        "mntnid": "MT017",
+        "distance": 7.0
+    },
+    {
+        "routeid": "RT017004",
+        "routename": "남산_004",
+        "mntnid": "MT017",
+        "distance": 6.3
+    },
+    {
+        "routeid": "RT017005",
+        "routename": "남산_005",
+        "mntnid": "MT017",
+        "distance": 8.8
+    },
+    {
+        "routeid": "RT018001",
+        "routename": "내연산_001",
+        "mntnid": "MT018",
+        "distance": 11.5
+    },
+    {
+        "routeid": "RT018002",
+        "routename": "내연산_002",
+        "mntnid": "MT018",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT018003",
+        "routename": "내연산_003",
+        "mntnid": "MT018",
+        "distance": 11.0
+    },
+    {
+        "routeid": "RT018004",
+        "routename": "내연산_004",
+        "mntnid": "MT018",
+        "distance": 8.0
+    },
+    {
+        "routeid": "RT018005",
+        "routename": "내연산_005",
+        "mntnid": "MT018",
+        "distance": 6.3
+    },
+    {
+        "routeid": "RT019001",
+        "routename": "내장산_001",
+        "mntnid": "MT019",
+        "distance": 8.9
+    },
+    {
+        "routeid": "RT019002",
+        "routename": "내장산_002",
+        "mntnid": "MT019",
+        "distance": 13.2
+    },
+    {
+        "routeid": "RT019003",
+        "routename": "내장산_003",
+        "mntnid": "MT019",
+        "distance": 16.2
+    },
+    {
+        "routeid": "RT019004",
+        "routename": "내장산_004",
+        "mntnid": "MT019",
+        "distance": 7.3
+    },
+    {
+        "routeid": "RT020001",
+        "routename": "대둔산_001",
+        "mntnid": "MT020",
+        "distance": 5.6
+    },
+    {
+        "routeid": "RT021001",
+        "routename": "대암산_001",
+        "mntnid": "MT021",
+        "distance": 28.7
+    },
+    {
+        "routeid": "RT022001",
+        "routename": "대야산_001",
+        "mntnid": "MT022",
+        "distance": 8.6
+    },
+    {
+        "routeid": "RT022002",
+        "routename": "대야산_002",
+        "mntnid": "MT022",
+        "distance": 13.2
+    },
+    {
+        "routeid": "RT022003",
+        "routename": "대야산_003",
+        "mntnid": "MT022",
+        "distance": 8.6
+    },
+    {
+        "routeid": "RT023001",
+        "routename": "덕숭산_001",
+        "mntnid": "MT023",
+        "distance": 5.6
+    },
+    {
+        "routeid": "RT023002",
+        "routename": "덕숭산_002",
+        "mntnid": "MT023",
+        "distance": 4.8
+    },
+    {
+        "routeid": "RT023003",
+        "routename": "덕숭산_003",
+        "mntnid": "MT023",
+        "distance": 9.7
+    },
+    {
+        "routeid": "RT023004",
+        "routename": "덕숭산_004",
+        "mntnid": "MT023",
+        "distance": 0.5
+    },
+    {
+        "routeid": "RT024001",
+        "routename": "덕유산_001",
+        "mntnid": "MT024",
+        "distance": 8.2
+    },
+    {
+        "routeid": "RT024002",
+        "routename": "덕유산_002",
+        "mntnid": "MT024",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT024003",
+        "routename": "덕유산_003",
+        "mntnid": "MT024",
+        "distance": 7.5
+    },
+    {
+        "routeid": "RT024004",
+        "routename": "덕유산_004",
+        "mntnid": "MT024",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT024005",
+        "routename": "덕유산_005",
+        "mntnid": "MT024",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT024006",
+        "routename": "덕유산_006",
+        "mntnid": "MT024",
+        "distance": 6.1
+    },
+    {
+        "routeid": "RT024007",
+        "routename": "덕유산_007",
+        "mntnid": "MT024",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT024008",
+        "routename": "덕유산_008",
+        "mntnid": "MT024",
+        "distance": 6.3
+    },
+    {
+        "routeid": "RT024009",
+        "routename": "덕유산_009",
+        "mntnid": "MT024",
+        "distance": 10.0
+    },
+    {
+        "routeid": "RT024010",
+        "routename": "덕유산_010",
+        "mntnid": "MT024",
+        "distance": 9.4
+    },
+    {
+        "routeid": "RT025001",
+        "routename": "덕항산_001",
+        "mntnid": "MT025",
+        "distance": 5.2
+    },
+    {
+        "routeid": "RT025002",
+        "routename": "덕항산_002",
+        "mntnid": "MT025",
+        "distance": 6.2
+    },
+    {
+        "routeid": "RT026001",
+        "routename": "도락산_001",
+        "mntnid": "MT026",
+        "distance": 6.6
+    },
+    {
+        "routeid": "RT027001",
+        "routename": "도봉산_001",
+        "mntnid": "MT027",
+        "distance": 3.8
+    },
+    {
+        "routeid": "RT027002",
+        "routename": "도봉산_002",
+        "mntnid": "MT027",
+        "distance": 4.2
+    },
+    {
+        "routeid": "RT027003",
+        "routename": "도봉산_003",
+        "mntnid": "MT027",
+        "distance": 12.6
+    },
+    {
+        "routeid": "RT027004",
+        "routename": "도봉산_004",
+        "mntnid": "MT027",
+        "distance": 5.9
+    },
+    {
+        "routeid": "RT027005",
+        "routename": "도봉산_005",
+        "mntnid": "MT027",
+        "distance": 8.9
+    },
+    {
+        "routeid": "RT027006",
+        "routename": "도봉산_006",
+        "mntnid": "MT027",
+        "distance": 10.7
+    },
+    {
+        "routeid": "RT027007",
+        "routename": "도봉산_007",
+        "mntnid": "MT027",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT027008",
+        "routename": "도봉산_008",
+        "mntnid": "MT027",
+        "distance": 8.2
+    },
+    {
+        "routeid": "RT027009",
+        "routename": "도봉산_009",
+        "mntnid": "MT027",
+        "distance": 9.4
+    },
+    {
+        "routeid": "RT027010",
+        "routename": "도봉산_010",
+        "mntnid": "MT027",
+        "distance": 8.1
+    },
+    {
+        "routeid": "RT027011",
+        "routename": "도봉산_011",
+        "mntnid": "MT027",
+        "distance": 10.7
+    },
+    {
+        "routeid": "RT027012",
+        "routename": "도봉산_012",
+        "mntnid": "MT027",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT027013",
+        "routename": "도봉산_013",
+        "mntnid": "MT027",
+        "distance": 9.3
+    },
+    {
+        "routeid": "RT027014",
+        "routename": "도봉산_014",
+        "mntnid": "MT027",
+        "distance": 6.6
+    },
+    {
+        "routeid": "RT027015",
+        "routename": "도봉산_015",
+        "mntnid": "MT027",
+        "distance": 7.9
+    },
+    {
+        "routeid": "RT027016",
+        "routename": "도봉산_016",
+        "mntnid": "MT027",
+        "distance": 7.2
+    },
+    {
+        "routeid": "RT027017",
+        "routename": "도봉산_017",
+        "mntnid": "MT027",
+        "distance": 11.2
+    },
+    {
+        "routeid": "RT027018",
+        "routename": "도봉산_018",
+        "mntnid": "MT027",
+        "distance": 6.1
+    },
+    {
+        "routeid": "RT027019",
+        "routename": "도봉산_019",
+        "mntnid": "MT027",
+        "distance": 5.1
+    },
+    {
+        "routeid": "RT028001",
+        "routename": "두륜산_001",
+        "mntnid": "MT028",
+        "distance": 11.4
+    },
+    {
+        "routeid": "RT028002",
+        "routename": "두륜산_002",
+        "mntnid": "MT028",
+        "distance": 9.3
+    },
+    {
+        "routeid": "RT028003",
+        "routename": "두륜산_003",
+        "mntnid": "MT028",
+        "distance": 5.2
+    },
+    {
+        "routeid": "RT028004",
+        "routename": "두륜산_004",
+        "mntnid": "MT028",
+        "distance": 6.0
+    },
+    {
+        "routeid": "RT029001",
+        "routename": "두타산_001",
+        "mntnid": "MT029",
+        "distance": 6.2
+    },
+    {
+        "routeid": "RT029002",
+        "routename": "두타산_002",
+        "mntnid": "MT029",
+        "distance": 9.2
+    },
+    {
+        "routeid": "RT029003",
+        "routename": "두타산_003",
+        "mntnid": "MT029",
+        "distance": 6.2
+    },
+    {
+        "routeid": "RT029004",
+        "routename": "두타산_004",
+        "mntnid": "MT029",
+        "distance": 13.7
+    },
+    {
+        "routeid": "RT030001",
+        "routename": "마니산_001",
+        "mntnid": "MT030",
+        "distance": 6.1
+    },
+    {
+        "routeid": "RT030002",
+        "routename": "마니산_002",
+        "mntnid": "MT030",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT030003",
+        "routename": "마니산_003",
+        "mntnid": "MT030",
+        "distance": 3.2
+    },
+    {
+        "routeid": "RT031001",
+        "routename": "마이산_001",
+        "mntnid": "MT031",
+        "distance": 6.1
+    },
+    {
+        "routeid": "RT031002",
+        "routename": "마이산_002",
+        "mntnid": "MT031",
+        "distance": 7.5
+    },
+    {
+        "routeid": "RT031003",
+        "routename": "마이산_003",
+        "mntnid": "MT031",
+        "distance": 7.6
+    },
+    {
+        "routeid": "RT031004",
+        "routename": "마이산_004",
+        "mntnid": "MT031",
+        "distance": 10.2
+    },
+    {
+        "routeid": "RT031005",
+        "routename": "마이산_005",
+        "mntnid": "MT031",
+        "distance": 4.0
+    },
+    {
+        "routeid": "RT031006",
+        "routename": "마이산_006",
+        "mntnid": "MT031",
+        "distance": 2.3
+    },
+    {
+        "routeid": "RT032001",
+        "routename": "명성산_001",
+        "mntnid": "MT032",
+        "distance": 8.6
+    },
+    {
+        "routeid": "RT033001",
+        "routename": "명지산_001",
+        "mntnid": "MT033",
+        "distance": 11.9
+    },
+    {
+        "routeid": "RT033002",
+        "routename": "명지산_002",
+        "mntnid": "MT033",
+        "distance": 9.0
+    },
+    {
+        "routeid": "RT033003",
+        "routename": "명지산_003",
+        "mntnid": "MT033",
+        "distance": 6.7
+    },
+    {
+        "routeid": "RT033004",
+        "routename": "명지산_004",
+        "mntnid": "MT033",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT034001",
+        "routename": "모악산_001",
+        "mntnid": "MT034",
+        "distance": 7.6
+    },
+    {
+        "routeid": "RT034002",
+        "routename": "모악산_002",
+        "mntnid": "MT034",
+        "distance": 4.5
+    },
+    {
+        "routeid": "RT034003",
+        "routename": "모악산_003",
+        "mntnid": "MT034",
+        "distance": 2.4
+    },
+    {
+        "routeid": "RT035001",
+        "routename": "무등산_001",
+        "mntnid": "MT035",
+        "distance": 6.6
+    },
+    {
+        "routeid": "RT035002",
+        "routename": "무등산_002",
+        "mntnid": "MT035",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT035003",
+        "routename": "무등산_003",
+        "mntnid": "MT035",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT035004",
+        "routename": "무등산_004",
+        "mntnid": "MT035",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT035005",
+        "routename": "무등산_005",
+        "mntnid": "MT035",
+        "distance": 5.5
+    },
+    {
+        "routeid": "RT035006",
+        "routename": "무등산_006",
+        "mntnid": "MT035",
+        "distance": 9.4
+    },
+    {
+        "routeid": "RT035007",
+        "routename": "무등산_007",
+        "mntnid": "MT035",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT035008",
+        "routename": "무등산_008",
+        "mntnid": "MT035",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT035009",
+        "routename": "무등산_009",
+        "mntnid": "MT035",
+        "distance": 8.6
+    },
+    {
+        "routeid": "RT035010",
+        "routename": "무등산_010",
+        "mntnid": "MT035",
+        "distance": 7.2
+    },
+    {
+        "routeid": "RT035011",
+        "routename": "무등산_011",
+        "mntnid": "MT035",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT035012",
+        "routename": "무등산_012",
+        "mntnid": "MT035",
+        "distance": 9.3
+    },
+    {
+        "routeid": "RT035013",
+        "routename": "무등산_013",
+        "mntnid": "MT035",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT035014",
+        "routename": "무등산_014",
+        "mntnid": "MT035",
+        "distance": 8.8
+    },
+    {
+        "routeid": "RT035015",
+        "routename": "무등산_015",
+        "mntnid": "MT035",
+        "distance": 8.0
+    },
+    {
+        "routeid": "RT035016",
+        "routename": "무등산_016",
+        "mntnid": "MT035",
+        "distance": 8.2
+    },
+    {
+        "routeid": "RT035017",
+        "routename": "무등산_017",
+        "mntnid": "MT035",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT035018",
+        "routename": "무등산_018",
+        "mntnid": "MT035",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT035019",
+        "routename": "무등산_019",
+        "mntnid": "MT035",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT035020",
+        "routename": "무등산_020",
+        "mntnid": "MT035",
+        "distance": 5.7
+    },
+    {
+        "routeid": "RT035021",
+        "routename": "무등산_021",
+        "mntnid": "MT035",
+        "distance": 9.4
+    },
+    {
+        "routeid": "RT035022",
+        "routename": "무등산_022",
+        "mntnid": "MT035",
+        "distance": 6.2
+    },
+    {
+        "routeid": "RT035023",
+        "routename": "무등산_023",
+        "mntnid": "MT035",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT035024",
+        "routename": "무등산_024",
+        "mntnid": "MT035",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT035025",
+        "routename": "무등산_025",
+        "mntnid": "MT035",
+        "distance": 8.6
+    },
+    {
+        "routeid": "RT035026",
+        "routename": "무등산_026",
+        "mntnid": "MT035",
+        "distance": 7.4
+    },
+    {
+        "routeid": "RT035027",
+        "routename": "무등산_027",
+        "mntnid": "MT035",
+        "distance": 5.4
+    },
+    {
+        "routeid": "RT035028",
+        "routename": "무등산_028",
+        "mntnid": "MT035",
+        "distance": 15.8
+    },
+    {
+        "routeid": "RT035029",
+        "routename": "무등산_029",
+        "mntnid": "MT035",
+        "distance": 18.7
+    },
+    {
+        "routeid": "RT035030",
+        "routename": "무등산_030",
+        "mntnid": "MT035",
+        "distance": 11.7
+    },
+    {
+        "routeid": "RT035031",
+        "routename": "무등산_031",
+        "mntnid": "MT035",
+        "distance": 18.7
+    },
+    {
+        "routeid": "RT036001",
+        "routename": "무학산_001",
+        "mntnid": "MT036",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT036002",
+        "routename": "무학산_002",
+        "mntnid": "MT036",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT036003",
+        "routename": "무학산_003",
+        "mntnid": "MT036",
+        "distance": 9.8
+    },
+    {
+        "routeid": "RT036004",
+        "routename": "무학산_004",
+        "mntnid": "MT036",
+        "distance": 9.5
+    },
+    {
+        "routeid": "RT036005",
+        "routename": "무학산_005",
+        "mntnid": "MT036",
+        "distance": 8.1
+    },
+    {
+        "routeid": "RT036006",
+        "routename": "무학산_006",
+        "mntnid": "MT036",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT037001",
+        "routename": "미륵산_001",
+        "mntnid": "MT037",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT037002",
+        "routename": "미륵산_002",
+        "mntnid": "MT037",
+        "distance": 8.2
+    },
+    {
+        "routeid": "RT037003",
+        "routename": "미륵산_003",
+        "mntnid": "MT037",
+        "distance": 9.4
+    },
+    {
+        "routeid": "RT037004",
+        "routename": "미륵산_004",
+        "mntnid": "MT037",
+        "distance": 7.3
+    },
+    {
+        "routeid": "RT037005",
+        "routename": "미륵산_005",
+        "mntnid": "MT037",
+        "distance": 8.5
+    },
+    {
+        "routeid": "RT037006",
+        "routename": "미륵산_006",
+        "mntnid": "MT037",
+        "distance": 7.4
+    },
+    {
+        "routeid": "RT038001",
+        "routename": "민주지산_001",
+        "mntnid": "MT038",
+        "distance": 10.0
+    },
+    {
+        "routeid": "RT038002",
+        "routename": "민주지산_002",
+        "mntnid": "MT038",
+        "distance": 11.6
+    },
+    {
+        "routeid": "RT038003",
+        "routename": "민주지산_003",
+        "mntnid": "MT038",
+        "distance": 8.8
+    },
+    {
+        "routeid": "RT039001",
+        "routename": "방장산_001",
+        "mntnid": "MT039",
+        "distance": 10.1
+    },
+    {
+        "routeid": "RT039002",
+        "routename": "방장산_002",
+        "mntnid": "MT039",
+        "distance": 6.0
+    },
+    {
+        "routeid": "RT039003",
+        "routename": "방장산_003",
+        "mntnid": "MT039",
+        "distance": 8.6
+    },
+    {
+        "routeid": "RT040001",
+        "routename": "방태산_001",
+        "mntnid": "MT040",
+        "distance": 9.8
+    },
+    {
+        "routeid": "RT041001",
+        "routename": "백덕산_001",
+        "mntnid": "MT041",
+        "distance": 4.5
+    },
+    {
+        "routeid": "RT041002",
+        "routename": "백덕산_002",
+        "mntnid": "MT041",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT041003",
+        "routename": "백덕산_003",
+        "mntnid": "MT041",
+        "distance": 11.2
+    },
+    {
+        "routeid": "RT041004",
+        "routename": "백덕산_004",
+        "mntnid": "MT041",
+        "distance": 8.2
+    },
+    {
+        "routeid": "RT042001",
+        "routename": "백암산_001",
+        "mntnid": "MT042",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT042002",
+        "routename": "백암산_002",
+        "mntnid": "MT042",
+        "distance": 9.0
+    },
+    {
+        "routeid": "RT042003",
+        "routename": "백암산_003",
+        "mntnid": "MT042",
+        "distance": 8.2
+    },
+    {
+        "routeid": "RT042004",
+        "routename": "백암산_004",
+        "mntnid": "MT042",
+        "distance": 10.1
+    },
+    {
+        "routeid": "RT043001",
+        "routename": "백운산(광양)_001",
+        "mntnid": "MT043",
+        "distance": 8.9
+    },
+    {
+        "routeid": "RT043002",
+        "routename": "백운산(광양)_002",
+        "mntnid": "MT043",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT043003",
+        "routename": "백운산(광양)_003",
+        "mntnid": "MT043",
+        "distance": 13.4
+    },
+    {
+        "routeid": "RT043004",
+        "routename": "백운산(광양)_004",
+        "mntnid": "MT043",
+        "distance": 14.2
+    },
+    {
+        "routeid": "RT043005",
+        "routename": "백운산(광양)_005",
+        "mntnid": "MT043",
+        "distance": 11.8
+    },
+    {
+        "routeid": "RT043006",
+        "routename": "백운산(광양)_006",
+        "mntnid": "MT043",
+        "distance": 7.6
+    },
+    {
+        "routeid": "RT043007",
+        "routename": "백운산(광양)_007",
+        "mntnid": "MT043",
+        "distance": 21.9
+    },
+    {
+        "routeid": "RT043008",
+        "routename": "백운산(광양)_008",
+        "mntnid": "MT043",
+        "distance": 8.5
+    },
+    {
+        "routeid": "RT044001",
+        "routename": "백운산(정선)_001",
+        "mntnid": "MT044",
+        "distance": 10.6
+    },
+    {
+        "routeid": "RT044002",
+        "routename": "백운산(정선)_002",
+        "mntnid": "MT044",
+        "distance": 8.2
+    },
+    {
+        "routeid": "RT045001",
+        "routename": "백운산(포천)_001",
+        "mntnid": "MT045",
+        "distance": 8.0
+    },
+    {
+        "routeid": "RT045002",
+        "routename": "백운산(포천)_002",
+        "mntnid": "MT045",
+        "distance": 10.0
+    },
+    {
+        "routeid": "RT045003",
+        "routename": "백운산(포천)_003",
+        "mntnid": "MT045",
+        "distance": 3.0
+    },
+    {
+        "routeid": "RT045004",
+        "routename": "백운산(포천)_004",
+        "mntnid": "MT045",
+        "distance": 12.1
+    },
+    {
+        "routeid": "RT045005",
+        "routename": "백운산(포천)_005",
+        "mntnid": "MT045",
+        "distance": 11.8
+    },
+    {
+        "routeid": "RT045006",
+        "routename": "백운산(포천)_006",
+        "mntnid": "MT045",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT046001",
+        "routename": "변산_001",
+        "mntnid": "MT046",
+        "distance": 7.3
+    },
+    {
+        "routeid": "RT046002",
+        "routename": "변산_002",
+        "mntnid": "MT046",
+        "distance": 7.8
+    },
+    {
+        "routeid": "RT046003",
+        "routename": "변산_003",
+        "mntnid": "MT046",
+        "distance": 9.4
+    },
+    {
+        "routeid": "RT046004",
+        "routename": "변산_004",
+        "mntnid": "MT046",
+        "distance": 5.7
+    },
+    {
+        "routeid": "RT046005",
+        "routename": "변산_005",
+        "mntnid": "MT046",
+        "distance": 11.2
+    },
+    {
+        "routeid": "RT047001",
+        "routename": "북한산_001",
+        "mntnid": "MT047",
+        "distance": 9.2
+    },
+    {
+        "routeid": "RT047002",
+        "routename": "북한산_002",
+        "mntnid": "MT047",
+        "distance": 4.2
+    },
+    {
+        "routeid": "RT047003",
+        "routename": "북한산_003",
+        "mntnid": "MT047",
+        "distance": 1.7
+    },
+    {
+        "routeid": "RT047004",
+        "routename": "북한산_004",
+        "mntnid": "MT047",
+        "distance": 2.5
+    },
+    {
+        "routeid": "RT047005",
+        "routename": "북한산_005",
+        "mntnid": "MT047",
+        "distance": 5.8
+    },
+    {
+        "routeid": "RT047006",
+        "routename": "북한산_006",
+        "mntnid": "MT047",
+        "distance": 6.9
+    },
+    {
+        "routeid": "RT047007",
+        "routename": "북한산_007",
+        "mntnid": "MT047",
+        "distance": 9.7
+    },
+    {
+        "routeid": "RT047008",
+        "routename": "북한산_008",
+        "mntnid": "MT047",
+        "distance": 7.2
+    },
+    {
+        "routeid": "RT047009",
+        "routename": "북한산_009",
+        "mntnid": "MT047",
+        "distance": 10.0
+    },
+    {
+        "routeid": "RT047010",
+        "routename": "북한산_010",
+        "mntnid": "MT047",
+        "distance": 8.1
+    },
+    {
+        "routeid": "RT047011",
+        "routename": "북한산_011",
+        "mntnid": "MT047",
+        "distance": 5.9
+    },
+    {
+        "routeid": "RT047012",
+        "routename": "북한산_012",
+        "mntnid": "MT047",
+        "distance": 7.8
+    },
+    {
+        "routeid": "RT047013",
+        "routename": "북한산_013",
+        "mntnid": "MT047",
+        "distance": 7.2
+    },
+    {
+        "routeid": "RT047014",
+        "routename": "북한산_014",
+        "mntnid": "MT047",
+        "distance": 12.0
+    },
+    {
+        "routeid": "RT047015",
+        "routename": "북한산_015",
+        "mntnid": "MT047",
+        "distance": 6.7
+    },
+    {
+        "routeid": "RT047016",
+        "routename": "북한산_016",
+        "mntnid": "MT047",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT047017",
+        "routename": "북한산_017",
+        "mntnid": "MT047",
+        "distance": 9.3
+    },
+    {
+        "routeid": "RT047018",
+        "routename": "북한산_018",
+        "mntnid": "MT047",
+        "distance": 6.4
+    },
+    {
+        "routeid": "RT047019",
+        "routename": "북한산_019",
+        "mntnid": "MT047",
+        "distance": 9.7
+    },
+    {
+        "routeid": "RT047020",
+        "routename": "북한산_020",
+        "mntnid": "MT047",
+        "distance": 7.8
+    },
+    {
+        "routeid": "RT047021",
+        "routename": "북한산_021",
+        "mntnid": "MT047",
+        "distance": 7.8
+    },
+    {
+        "routeid": "RT047022",
+        "routename": "북한산_022",
+        "mntnid": "MT047",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT047023",
+        "routename": "북한산_023",
+        "mntnid": "MT047",
+        "distance": 8.9
+    },
+    {
+        "routeid": "RT047024",
+        "routename": "북한산_024",
+        "mntnid": "MT047",
+        "distance": 9.9
+    },
+    {
+        "routeid": "RT047025",
+        "routename": "북한산_025",
+        "mntnid": "MT047",
+        "distance": 7.6
+    },
+    {
+        "routeid": "RT047026",
+        "routename": "북한산_026",
+        "mntnid": "MT047",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT047027",
+        "routename": "북한산_027",
+        "mntnid": "MT047",
+        "distance": 8.9
+    },
+    {
+        "routeid": "RT047028",
+        "routename": "북한산_028",
+        "mntnid": "MT047",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT047029",
+        "routename": "북한산_029",
+        "mntnid": "MT047",
+        "distance": 2.4
+    },
+    {
+        "routeid": "RT047030",
+        "routename": "북한산_030",
+        "mntnid": "MT047",
+        "distance": 6.4
+    },
+    {
+        "routeid": "RT047031",
+        "routename": "북한산_031",
+        "mntnid": "MT047",
+        "distance": 21.9
+    },
+    {
+        "routeid": "RT047032",
+        "routename": "북한산_032",
+        "mntnid": "MT047",
+        "distance": 14.6
+    },
+    {
+        "routeid": "RT047033",
+        "routename": "북한산_033",
+        "mntnid": "MT047",
+        "distance": 5.8
+    },
+    {
+        "routeid": "RT047034",
+        "routename": "북한산_034",
+        "mntnid": "MT047",
+        "distance": 9.0
+    },
+    {
+        "routeid": "RT047035",
+        "routename": "북한산_035",
+        "mntnid": "MT047",
+        "distance": 9.0
+    },
+    {
+        "routeid": "RT047036",
+        "routename": "북한산_036",
+        "mntnid": "MT047",
+        "distance": 7.2
+    },
+    {
+        "routeid": "RT048001",
+        "routename": "비슬산_001",
+        "mntnid": "MT048",
+        "distance": 9.4
+    },
+    {
+        "routeid": "RT048002",
+        "routename": "비슬산_002",
+        "mntnid": "MT048",
+        "distance": 11.6
+    },
+    {
+        "routeid": "RT048003",
+        "routename": "비슬산_003",
+        "mntnid": "MT048",
+        "distance": 5.8
+    },
+    {
+        "routeid": "RT048004",
+        "routename": "비슬산_004",
+        "mntnid": "MT048",
+        "distance": 9.6
+    },
+    {
+        "routeid": "RT048005",
+        "routename": "비슬산_005",
+        "mntnid": "MT048",
+        "distance": 10.5
+    },
+    {
+        "routeid": "RT049001",
+        "routename": "삼악산_001",
+        "mntnid": "MT049",
+        "distance": 10.4
+    },
+    {
+        "routeid": "RT049002",
+        "routename": "삼악산_002",
+        "mntnid": "MT049",
+        "distance": 7.6
+    },
+    {
+        "routeid": "RT049003",
+        "routename": "삼악산_003",
+        "mntnid": "MT049",
+        "distance": 4.7
+    },
+    {
+        "routeid": "RT049004",
+        "routename": "삼악산_004",
+        "mntnid": "MT049",
+        "distance": 25.9
+    },
+    {
+        "routeid": "RT049005",
+        "routename": "삼악산_005",
+        "mntnid": "MT049",
+        "distance": 11.6
+    },
+    {
+        "routeid": "RT049006",
+        "routename": "삼악산_006",
+        "mntnid": "MT049",
+        "distance": 12.1
+    },
+    {
+        "routeid": "RT049007",
+        "routename": "삼악산_007",
+        "mntnid": "MT049",
+        "distance": 12.4
+    },
+    {
+        "routeid": "RT049008",
+        "routename": "삼악산_008",
+        "mntnid": "MT049",
+        "distance": 11.0
+    },
+    {
+        "routeid": "RT049009",
+        "routename": "삼악산_009",
+        "mntnid": "MT049",
+        "distance": 12.6
+    },
+    {
+        "routeid": "RT049010",
+        "routename": "삼악산_010",
+        "mntnid": "MT049",
+        "distance": 17.7
+    },
+    {
+        "routeid": "RT049011",
+        "routename": "삼악산_011",
+        "mntnid": "MT049",
+        "distance": 34.3
+    },
+    {
+        "routeid": "RT049012",
+        "routename": "삼악산_012",
+        "mntnid": "MT049",
+        "distance": 17.0
+    },
+    {
+        "routeid": "RT049013",
+        "routename": "삼악산_013",
+        "mntnid": "MT049",
+        "distance": 14.2
+    },
+    {
+        "routeid": "RT049014",
+        "routename": "삼악산_014",
+        "mntnid": "MT049",
+        "distance": 18.6
+    },
+    {
+        "routeid": "RT049015",
+        "routename": "삼악산_015",
+        "mntnid": "MT049",
+        "distance": 10.7
+    },
+    {
+        "routeid": "RT049016",
+        "routename": "삼악산_016",
+        "mntnid": "MT049",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT049017",
+        "routename": "삼악산_017",
+        "mntnid": "MT049",
+        "distance": 8.7
+    },
+    {
+        "routeid": "RT050001",
+        "routename": "서대산_001",
+        "mntnid": "MT050",
+        "distance": 4.7
+    },
+    {
+        "routeid": "RT050002",
+        "routename": "서대산_002",
+        "mntnid": "MT050",
+        "distance": 2.3
+    },
+    {
+        "routeid": "RT050003",
+        "routename": "서대산_003",
+        "mntnid": "MT050",
+        "distance": 6.3
+    },
+    {
+        "routeid": "RT050004",
+        "routename": "서대산_004",
+        "mntnid": "MT050",
+        "distance": 7.2
+    },
+    {
+        "routeid": "RT050005",
+        "routename": "서대산_005",
+        "mntnid": "MT050",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT051001",
+        "routename": "선운산_001",
+        "mntnid": "MT051",
+        "distance": 5.8
+    },
+    {
+        "routeid": "RT051002",
+        "routename": "선운산_002",
+        "mntnid": "MT051",
+        "distance": 18.2
+    },
+    {
+        "routeid": "RT051003",
+        "routename": "선운산_003",
+        "mntnid": "MT051",
+        "distance": 9.9
+    },
+    {
+        "routeid": "RT051004",
+        "routename": "선운산_004",
+        "mntnid": "MT051",
+        "distance": 18.9
+    },
+    {
+        "routeid": "RT051005",
+        "routename": "선운산_005",
+        "mntnid": "MT051",
+        "distance": 9.7
+    },
+    {
+        "routeid": "RT052001",
+        "routename": "설악산_001",
+        "mntnid": "MT052",
+        "distance": 4.6
+    },
+    {
+        "routeid": "RT052002",
+        "routename": "설악산_002",
+        "mntnid": "MT052",
+        "distance": 5.1
+    },
+    {
+        "routeid": "RT052003",
+        "routename": "설악산_003",
+        "mntnid": "MT052",
+        "distance": 5.8
+    },
+    {
+        "routeid": "RT052004",
+        "routename": "설악산_004",
+        "mntnid": "MT052",
+        "distance": 8.5
+    },
+    {
+        "routeid": "RT052005",
+        "routename": "설악산_005",
+        "mntnid": "MT052",
+        "distance": 16.1
+    },
+    {
+        "routeid": "RT052006",
+        "routename": "설악산_006",
+        "mntnid": "MT052",
+        "distance": 2.1
+    },
+    {
+        "routeid": "RT052007",
+        "routename": "설악산_007",
+        "mntnid": "MT052",
+        "distance": 0.9
+    },
+    {
+        "routeid": "RT052008",
+        "routename": "설악산_008",
+        "mntnid": "MT052",
+        "distance": 10.2
+    },
+    {
+        "routeid": "RT053001",
+        "routename": "성인봉_001",
+        "mntnid": "MT053",
+        "distance": 1.8
+    },
+    {
+        "routeid": "RT053002",
+        "routename": "성인봉_002",
+        "mntnid": "MT053",
+        "distance": 11.0
+    },
+    {
+        "routeid": "RT053003",
+        "routename": "성인봉_003",
+        "mntnid": "MT053",
+        "distance": 2.9
+    },
+    {
+        "routeid": "RT053004",
+        "routename": "성인봉_004",
+        "mntnid": "MT053",
+        "distance": 2.0
+    },
+    {
+        "routeid": "RT054001",
+        "routename": "소백산_001",
+        "mntnid": "MT054",
+        "distance": 7.0
+    },
+    {
+        "routeid": "RT054002",
+        "routename": "소백산_002",
+        "mntnid": "MT054",
+        "distance": 5.5
+    },
+    {
+        "routeid": "RT054003",
+        "routename": "소백산_003",
+        "mntnid": "MT054",
+        "distance": 9.6
+    },
+    {
+        "routeid": "RT054004",
+        "routename": "소백산_004",
+        "mntnid": "MT054",
+        "distance": 2.6
+    },
+    {
+        "routeid": "RT054005",
+        "routename": "소백산_005",
+        "mntnid": "MT054",
+        "distance": 14.3
+    },
+    {
+        "routeid": "RT054006",
+        "routename": "소백산_006",
+        "mntnid": "MT054",
+        "distance": 17.8
+    },
+    {
+        "routeid": "RT054007",
+        "routename": "소백산_007",
+        "mntnid": "MT054",
+        "distance": 5.4
+    },
+    {
+        "routeid": "RT054008",
+        "routename": "소백산_008",
+        "mntnid": "MT054",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT054009",
+        "routename": "소백산_009",
+        "mntnid": "MT054",
+        "distance": 6.9
+    },
+    {
+        "routeid": "RT055001",
+        "routename": "소요산_001",
+        "mntnid": "MT055",
+        "distance": 7.6
+    },
+    {
+        "routeid": "RT055002",
+        "routename": "소요산_002",
+        "mntnid": "MT055",
+        "distance": 3.5
+    },
+    {
+        "routeid": "RT055003",
+        "routename": "소요산_003",
+        "mntnid": "MT055",
+        "distance": 7.4
+    },
+    {
+        "routeid": "RT055004",
+        "routename": "소요산_004",
+        "mntnid": "MT055",
+        "distance": 8.6
+    },
+    {
+        "routeid": "RT055005",
+        "routename": "소요산_005",
+        "mntnid": "MT055",
+        "distance": 5.2
+    },
+    {
+        "routeid": "RT055006",
+        "routename": "소요산_006",
+        "mntnid": "MT055",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT055007",
+        "routename": "소요산_007",
+        "mntnid": "MT055",
+        "distance": 6.4
+    },
+    {
+        "routeid": "RT055008",
+        "routename": "소요산_008",
+        "mntnid": "MT055",
+        "distance": 8.1
+    },
+    {
+        "routeid": "RT056001",
+        "routename": "속리산_001",
+        "mntnid": "MT056",
+        "distance": 15.6
+    },
+    {
+        "routeid": "RT056002",
+        "routename": "속리산_002",
+        "mntnid": "MT056",
+        "distance": 3.0
+    },
+    {
+        "routeid": "RT056003",
+        "routename": "속리산_003",
+        "mntnid": "MT056",
+        "distance": 7.5
+    },
+    {
+        "routeid": "RT057001",
+        "routename": "신불산_001",
+        "mntnid": "MT057",
+        "distance": 3.1
+    },
+    {
+        "routeid": "RT057002",
+        "routename": "신불산_002",
+        "mntnid": "MT057",
+        "distance": 7.5
+    },
+    {
+        "routeid": "RT057003",
+        "routename": "신불산_003",
+        "mntnid": "MT057",
+        "distance": 7.9
+    },
+    {
+        "routeid": "RT057004",
+        "routename": "신불산_004",
+        "mntnid": "MT057",
+        "distance": 9.3
+    },
+    {
+        "routeid": "RT057005",
+        "routename": "신불산_005",
+        "mntnid": "MT057",
+        "distance": 2.9
+    },
+    {
+        "routeid": "RT057006",
+        "routename": "신불산_006",
+        "mntnid": "MT057",
+        "distance": 5.2
+    },
+    {
+        "routeid": "RT057007",
+        "routename": "신불산_007",
+        "mntnid": "MT057",
+        "distance": 12.6
+    },
+    {
+        "routeid": "RT057008",
+        "routename": "신불산_008",
+        "mntnid": "MT057",
+        "distance": 5.5
+    },
+    {
+        "routeid": "RT057009",
+        "routename": "신불산_009",
+        "mntnid": "MT057",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT057010",
+        "routename": "신불산_010",
+        "mntnid": "MT057",
+        "distance": 9.2
+    },
+    {
+        "routeid": "RT057011",
+        "routename": "신불산_011",
+        "mntnid": "MT057",
+        "distance": 9.5
+    },
+    {
+        "routeid": "RT057012",
+        "routename": "신불산_012",
+        "mntnid": "MT057",
+        "distance": 9.5
+    },
+    {
+        "routeid": "RT057013",
+        "routename": "신불산_013",
+        "mntnid": "MT057",
+        "distance": 13.5
+    },
+    {
+        "routeid": "RT057014",
+        "routename": "신불산_014",
+        "mntnid": "MT057",
+        "distance": 17.0
+    },
+    {
+        "routeid": "RT057015",
+        "routename": "신불산_015",
+        "mntnid": "MT057",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT057016",
+        "routename": "신불산_016",
+        "mntnid": "MT057",
+        "distance": 17.0
+    },
+    {
+        "routeid": "RT057017",
+        "routename": "신불산_017",
+        "mntnid": "MT057",
+        "distance": 12.3
+    },
+    {
+        "routeid": "RT058001",
+        "routename": "연화산_001",
+        "mntnid": "MT058",
+        "distance": 8.0
+    },
+    {
+        "routeid": "RT058002",
+        "routename": "연화산_002",
+        "mntnid": "MT058",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT059001",
+        "routename": "오대산_001",
+        "mntnid": "MT059",
+        "distance": 12.0
+    },
+    {
+        "routeid": "RT059002",
+        "routename": "오대산_002",
+        "mntnid": "MT059",
+        "distance": 17.3
+    },
+    {
+        "routeid": "RT059003",
+        "routename": "오대산_003",
+        "mntnid": "MT059",
+        "distance": 13.4
+    },
+    {
+        "routeid": "RT059004",
+        "routename": "오대산_004",
+        "mntnid": "MT059",
+        "distance": 6.5
+    },
+    {
+        "routeid": "RT060001",
+        "routename": "오봉산_001",
+        "mntnid": "MT060",
+        "distance": 6.6
+    },
+    {
+        "routeid": "RT060002",
+        "routename": "오봉산_002",
+        "mntnid": "MT060",
+        "distance": 9.3
+    },
+    {
+        "routeid": "RT061001",
+        "routename": "용문산_001",
+        "mntnid": "MT061",
+        "distance": 9.5
+    },
+    {
+        "routeid": "RT061002",
+        "routename": "용문산_002",
+        "mntnid": "MT061",
+        "distance": 8.9
+    },
+    {
+        "routeid": "RT061003",
+        "routename": "용문산_003",
+        "mntnid": "MT061",
+        "distance": 8.2
+    },
+    {
+        "routeid": "RT061004",
+        "routename": "용문산_004",
+        "mntnid": "MT061",
+        "distance": 11.5
+    },
+    {
+        "routeid": "RT061005",
+        "routename": "용문산_005",
+        "mntnid": "MT061",
+        "distance": 8.8
+    },
+    {
+        "routeid": "RT062001",
+        "routename": "용화산_001",
+        "mntnid": "MT062",
+        "distance": 5.7
+    },
+    {
+        "routeid": "RT062002",
+        "routename": "용화산_002",
+        "mntnid": "MT062",
+        "distance": 5.9
+    },
+    {
+        "routeid": "RT062003",
+        "routename": "용화산_003",
+        "mntnid": "MT062",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT062004",
+        "routename": "용화산_004",
+        "mntnid": "MT062",
+        "distance": 9.0
+    },
+    {
+        "routeid": "RT062005",
+        "routename": "용화산_005",
+        "mntnid": "MT062",
+        "distance": 9.0
+    },
+    {
+        "routeid": "RT062006",
+        "routename": "용화산_006",
+        "mntnid": "MT062",
+        "distance": 9.1
+    },
+    {
+        "routeid": "RT062007",
+        "routename": "용화산_007",
+        "mntnid": "MT062",
+        "distance": 10.2
+    },
+    {
+        "routeid": "RT062008",
+        "routename": "용화산_008",
+        "mntnid": "MT062",
+        "distance": 11.2
+    },
+    {
+        "routeid": "RT063001",
+        "routename": "운문산_001",
+        "mntnid": "MT063",
+        "distance": 7.3
+    },
+    {
+        "routeid": "RT063002",
+        "routename": "운문산_002",
+        "mntnid": "MT063",
+        "distance": 7.6
+    },
+    {
+        "routeid": "RT063003",
+        "routename": "운문산_003",
+        "mntnid": "MT063",
+        "distance": 7.5
+    },
+    {
+        "routeid": "RT063004",
+        "routename": "운문산_004",
+        "mntnid": "MT063",
+        "distance": 8.2
+    },
+    {
+        "routeid": "RT063005",
+        "routename": "운문산_005",
+        "mntnid": "MT063",
+        "distance": 8.9
+    },
+    {
+        "routeid": "RT063006",
+        "routename": "운문산_006",
+        "mntnid": "MT063",
+        "distance": 9.0
+    },
+    {
+        "routeid": "RT063007",
+        "routename": "운문산_007",
+        "mntnid": "MT063",
+        "distance": 10.0
+    },
+    {
+        "routeid": "RT063008",
+        "routename": "운문산_008",
+        "mntnid": "MT063",
+        "distance": 11.4
+    },
+    {
+        "routeid": "RT063009",
+        "routename": "운문산_009",
+        "mntnid": "MT063",
+        "distance": 11.4
+    },
+    {
+        "routeid": "RT064001",
+        "routename": "운악산_001",
+        "mntnid": "MT064",
+        "distance": 6.2
+    },
+    {
+        "routeid": "RT064002",
+        "routename": "운악산_002",
+        "mntnid": "MT064",
+        "distance": 6.6
+    },
+    {
+        "routeid": "RT064003",
+        "routename": "운악산_003",
+        "mntnid": "MT064",
+        "distance": 10.1
+    },
+    {
+        "routeid": "RT064004",
+        "routename": "운악산_004",
+        "mntnid": "MT064",
+        "distance": 10.4
+    },
+    {
+        "routeid": "RT064005",
+        "routename": "운악산_005",
+        "mntnid": "MT064",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT064006",
+        "routename": "운악산_006",
+        "mntnid": "MT064",
+        "distance": 11.9
+    },
+    {
+        "routeid": "RT065001",
+        "routename": "운장산_001",
+        "mntnid": "MT065",
+        "distance": 12.9
+    },
+    {
+        "routeid": "RT066001",
+        "routename": "월악산_001",
+        "mntnid": "MT066",
+        "distance": 5.4
+    },
+    {
+        "routeid": "RT066002",
+        "routename": "월악산_002",
+        "mntnid": "MT066",
+        "distance": 8.9
+    },
+    {
+        "routeid": "RT066003",
+        "routename": "월악산_003",
+        "mntnid": "MT066",
+        "distance": 3.1
+    },
+    {
+        "routeid": "RT066004",
+        "routename": "월악산_004",
+        "mntnid": "MT066",
+        "distance": 4.6
+    },
+    {
+        "routeid": "RT067001",
+        "routename": "월출산_001",
+        "mntnid": "MT067",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT067002",
+        "routename": "월출산_002",
+        "mntnid": "MT067",
+        "distance": 7.3
+    },
+    {
+        "routeid": "RT067003",
+        "routename": "월출산_003",
+        "mntnid": "MT067",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT067004",
+        "routename": "월출산_004",
+        "mntnid": "MT067",
+        "distance": 6.3
+    },
+    {
+        "routeid": "RT067005",
+        "routename": "월출산_005",
+        "mntnid": "MT067",
+        "distance": 9.2
+    },
+    {
+        "routeid": "RT068001",
+        "routename": "유명산_001",
+        "mntnid": "MT068",
+        "distance": 3.2
+    },
+    {
+        "routeid": "RT068002",
+        "routename": "유명산_002",
+        "mntnid": "MT068",
+        "distance": 4.3
+    },
+    {
+        "routeid": "RT068003",
+        "routename": "유명산_003",
+        "mntnid": "MT068",
+        "distance": 3.0
+    },
+    {
+        "routeid": "RT068004",
+        "routename": "유명산_004",
+        "mntnid": "MT068",
+        "distance": 9.9
+    },
+    {
+        "routeid": "RT068005",
+        "routename": "유명산_005",
+        "mntnid": "MT068",
+        "distance": 5.7
+    },
+    {
+        "routeid": "RT068006",
+        "routename": "유명산_006",
+        "mntnid": "MT068",
+        "distance": 11.3
+    },
+    {
+        "routeid": "RT068007",
+        "routename": "유명산_007",
+        "mntnid": "MT068",
+        "distance": 10.2
+    },
+    {
+        "routeid": "RT068008",
+        "routename": "유명산_008",
+        "mntnid": "MT068",
+        "distance": 4.2
+    },
+    {
+        "routeid": "RT069001",
+        "routename": "응봉산_001",
+        "mntnid": "MT069",
+        "distance": 11.4
+    },
+    {
+        "routeid": "RT070001",
+        "routename": "장안산_001",
+        "mntnid": "MT070",
+        "distance": 8.5
+    },
+    {
+        "routeid": "RT071001",
+        "routename": "재약산_001",
+        "mntnid": "MT071",
+        "distance": 13.3
+    },
+    {
+        "routeid": "RT071002",
+        "routename": "재약산_002",
+        "mntnid": "MT071",
+        "distance": 7.6
+    },
+    {
+        "routeid": "RT071003",
+        "routename": "재약산_003",
+        "mntnid": "MT071",
+        "distance": 10.9
+    },
+    {
+        "routeid": "RT071004",
+        "routename": "재약산_004",
+        "mntnid": "MT071",
+        "distance": 7.9
+    },
+    {
+        "routeid": "RT071005",
+        "routename": "재약산_005",
+        "mntnid": "MT071",
+        "distance": 4.3
+    },
+    {
+        "routeid": "RT071006",
+        "routename": "재약산_006",
+        "mntnid": "MT071",
+        "distance": 7.5
+    },
+    {
+        "routeid": "RT071007",
+        "routename": "재약산_007",
+        "mntnid": "MT071",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT071008",
+        "routename": "재약산_008",
+        "mntnid": "MT071",
+        "distance": 6.0
+    },
+    {
+        "routeid": "RT071009",
+        "routename": "재약산_009",
+        "mntnid": "MT071",
+        "distance": 2.6
+    },
+    {
+        "routeid": "RT071010",
+        "routename": "재약산_010",
+        "mntnid": "MT071",
+        "distance": 5.2
+    },
+    {
+        "routeid": "RT071011",
+        "routename": "재약산_011",
+        "mntnid": "MT071",
+        "distance": 6.6
+    },
+    {
+        "routeid": "RT071012",
+        "routename": "재약산_012",
+        "mntnid": "MT071",
+        "distance": 6.3
+    },
+    {
+        "routeid": "RT071013",
+        "routename": "재약산_013",
+        "mntnid": "MT071",
+        "distance": 9.8
+    },
+    {
+        "routeid": "RT071014",
+        "routename": "재약산_014",
+        "mntnid": "MT071",
+        "distance": 7.0
+    },
+    {
+        "routeid": "RT072001",
+        "routename": "적상산_001",
+        "mntnid": "MT072",
+        "distance": 8.0
+    },
+    {
+        "routeid": "RT073001",
+        "routename": "점봉산_001",
+        "mntnid": "MT073",
+        "distance": 5.3
+    },
+    {
+        "routeid": "RT074001",
+        "routename": "조계산_001",
+        "mntnid": "MT074",
+        "distance": 8.1
+    },
+    {
+        "routeid": "RT074002",
+        "routename": "조계산_002",
+        "mntnid": "MT074",
+        "distance": 11.1
+    },
+    {
+        "routeid": "RT075001",
+        "routename": "주왕산_001",
+        "mntnid": "MT075",
+        "distance": 5.8
+    },
+    {
+        "routeid": "RT076001",
+        "routename": "주흘산_001",
+        "mntnid": "MT076",
+        "distance": 15.1
+    },
+    {
+        "routeid": "RT076002",
+        "routename": "주흘산_002",
+        "mntnid": "MT076",
+        "distance": 14.8
+    },
+    {
+        "routeid": "RT076003",
+        "routename": "주흘산_003",
+        "mntnid": "MT076",
+        "distance": 9.0
+    },
+    {
+        "routeid": "RT076004",
+        "routename": "주흘산_004",
+        "mntnid": "MT076",
+        "distance": 4.4
+    },
+    {
+        "routeid": "RT076005",
+        "routename": "주흘산_005",
+        "mntnid": "MT076",
+        "distance": 4.8
+    },
+    {
+        "routeid": "RT076006",
+        "routename": "주흘산_006",
+        "mntnid": "MT076",
+        "distance": 11.7
+    },
+    {
+        "routeid": "RT077001",
+        "routename": "지리산_001",
+        "mntnid": "MT077",
+        "distance": 15.1
+    },
+    {
+        "routeid": "RT077002",
+        "routename": "지리산_002",
+        "mntnid": "MT077",
+        "distance": 7.4
+    },
+    {
+        "routeid": "RT077003",
+        "routename": "지리산_003",
+        "mntnid": "MT077",
+        "distance": 21.3
+    },
+    {
+        "routeid": "RT077004",
+        "routename": "지리산_004",
+        "mntnid": "MT077",
+        "distance": 7.2
+    },
+    {
+        "routeid": "RT077005",
+        "routename": "지리산_005",
+        "mntnid": "MT077",
+        "distance": 12.7
+    },
+    {
+        "routeid": "RT078001",
+        "routename": "지리산(통영)_001",
+        "mntnid": "MT078",
+        "distance": 5.8
+    },
+    {
+        "routeid": "RT079001",
+        "routename": "천관산_001",
+        "mntnid": "MT079",
+        "distance": 6.7
+    },
+    {
+        "routeid": "RT079002",
+        "routename": "천관산_002",
+        "mntnid": "MT079",
+        "distance": 6.0
+    },
+    {
+        "routeid": "RT079003",
+        "routename": "천관산_003",
+        "mntnid": "MT079",
+        "distance": 6.6
+    },
+    {
+        "routeid": "RT079004",
+        "routename": "천관산_004",
+        "mntnid": "MT079",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT079005",
+        "routename": "천관산_005",
+        "mntnid": "MT079",
+        "distance": 11.9
+    },
+    {
+        "routeid": "RT079006",
+        "routename": "천관산_006",
+        "mntnid": "MT079",
+        "distance": 7.9
+    },
+    {
+        "routeid": "RT080001",
+        "routename": "천마산_001",
+        "mntnid": "MT080",
+        "distance": 6.9
+    },
+    {
+        "routeid": "RT080002",
+        "routename": "천마산_002",
+        "mntnid": "MT080",
+        "distance": 6.4
+    },
+    {
+        "routeid": "RT080003",
+        "routename": "천마산_003",
+        "mntnid": "MT080",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT080004",
+        "routename": "천마산_004",
+        "mntnid": "MT080",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT080005",
+        "routename": "천마산_005",
+        "mntnid": "MT080",
+        "distance": 10.7
+    },
+    {
+        "routeid": "RT080006",
+        "routename": "천마산_006",
+        "mntnid": "MT080",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT080007",
+        "routename": "천마산_007",
+        "mntnid": "MT080",
+        "distance": 6.7
+    },
+    {
+        "routeid": "RT081001",
+        "routename": "천성산_001",
+        "mntnid": "MT081",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT081002",
+        "routename": "천성산_002",
+        "mntnid": "MT081",
+        "distance": 8.9
+    },
+    {
+        "routeid": "RT082001",
+        "routename": "천태산_001",
+        "mntnid": "MT082",
+        "distance": 5.9
+    },
+    {
+        "routeid": "RT082002",
+        "routename": "천태산_002",
+        "mntnid": "MT082",
+        "distance": 3.1
+    },
+    {
+        "routeid": "RT083001",
+        "routename": "청량산_001",
+        "mntnid": "MT083",
+        "distance": 4.9
+    },
+    {
+        "routeid": "RT083002",
+        "routename": "청량산_002",
+        "mntnid": "MT083",
+        "distance": 6.7
+    },
+    {
+        "routeid": "RT083003",
+        "routename": "청량산_003",
+        "mntnid": "MT083",
+        "distance": 4.7
+    },
+    {
+        "routeid": "RT084001",
+        "routename": "추월산_001",
+        "mntnid": "MT084",
+        "distance": 5.5
+    },
+    {
+        "routeid": "RT084002",
+        "routename": "추월산_002",
+        "mntnid": "MT084",
+        "distance": 5.9
+    },
+    {
+        "routeid": "RT084003",
+        "routename": "추월산_003",
+        "mntnid": "MT084",
+        "distance": 7.9
+    },
+    {
+        "routeid": "RT084004",
+        "routename": "추월산_004",
+        "mntnid": "MT084",
+        "distance": 2.2
+    },
+    {
+        "routeid": "RT085001",
+        "routename": "축령산_001",
+        "mntnid": "MT085",
+        "distance": 6.1
+    },
+    {
+        "routeid": "RT085002",
+        "routename": "축령산_002",
+        "mntnid": "MT085",
+        "distance": 1.3
+    },
+    {
+        "routeid": "RT085003",
+        "routename": "축령산_003",
+        "mntnid": "MT085",
+        "distance": 8.8
+    },
+    {
+        "routeid": "RT085004",
+        "routename": "축령산_004",
+        "mntnid": "MT085",
+        "distance": 6.9
+    },
+    {
+        "routeid": "RT086001",
+        "routename": "치악산_001",
+        "mntnid": "MT086",
+        "distance": 9.1
+    },
+    {
+        "routeid": "RT086002",
+        "routename": "치악산_002",
+        "mntnid": "MT086",
+        "distance": 11.4
+    },
+    {
+        "routeid": "RT086003",
+        "routename": "치악산_003",
+        "mntnid": "MT086",
+        "distance": 12.4
+    },
+    {
+        "routeid": "RT086004",
+        "routename": "치악산_004",
+        "mntnid": "MT086",
+        "distance": 3.8
+    },
+    {
+        "routeid": "RT086005",
+        "routename": "치악산_005",
+        "mntnid": "MT086",
+        "distance": 10.5
+    },
+    {
+        "routeid": "RT086006",
+        "routename": "치악산_006",
+        "mntnid": "MT086",
+        "distance": 12.6
+    },
+    {
+        "routeid": "RT086007",
+        "routename": "치악산_007",
+        "mntnid": "MT086",
+        "distance": 6.8
+    },
+    {
+        "routeid": "RT087001",
+        "routename": "칠갑산_001",
+        "mntnid": "MT087",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT087002",
+        "routename": "칠갑산_002",
+        "mntnid": "MT087",
+        "distance": 9.0
+    },
+    {
+        "routeid": "RT087003",
+        "routename": "칠갑산_003",
+        "mntnid": "MT087",
+        "distance": 3.8
+    },
+    {
+        "routeid": "RT087004",
+        "routename": "칠갑산_004",
+        "mntnid": "MT087",
+        "distance": 2.6
+    },
+    {
+        "routeid": "RT088001",
+        "routename": "태백산_001",
+        "mntnid": "MT088",
+        "distance": 4.0
+    },
+    {
+        "routeid": "RT088002",
+        "routename": "태백산_002",
+        "mntnid": "MT088",
+        "distance": 9.5
+    },
+    {
+        "routeid": "RT088003",
+        "routename": "태백산_003",
+        "mntnid": "MT088",
+        "distance": 12.7
+    },
+    {
+        "routeid": "RT088004",
+        "routename": "태백산_004",
+        "mntnid": "MT088",
+        "distance": 11.8
+    },
+    {
+        "routeid": "RT088005",
+        "routename": "태백산_005",
+        "mntnid": "MT088",
+        "distance": 6.0
+    },
+    {
+        "routeid": "RT088006",
+        "routename": "태백산_006",
+        "mntnid": "MT088",
+        "distance": 4.0
+    },
+    {
+        "routeid": "RT089001",
+        "routename": "태화산_001",
+        "mntnid": "MT089",
+        "distance": 8.8
+    },
+    {
+        "routeid": "RT089002",
+        "routename": "태화산_002",
+        "mntnid": "MT089",
+        "distance": 9.2
+    },
+    {
+        "routeid": "RT089003",
+        "routename": "태화산_003",
+        "mntnid": "MT089",
+        "distance": 10.0
+    },
+    {
+        "routeid": "RT090001",
+        "routename": "팔공산_001",
+        "mntnid": "MT090",
+        "distance": 8.7
+    },
+    {
+        "routeid": "RT090002",
+        "routename": "팔공산_002",
+        "mntnid": "MT090",
+        "distance": 8.5
+    },
+    {
+        "routeid": "RT090003",
+        "routename": "팔공산_003",
+        "mntnid": "MT090",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT090004",
+        "routename": "팔공산_004",
+        "mntnid": "MT090",
+        "distance": 6.5
+    },
+    {
+        "routeid": "RT090005",
+        "routename": "팔공산_005",
+        "mntnid": "MT090",
+        "distance": 6.4
+    },
+    {
+        "routeid": "RT090006",
+        "routename": "팔공산_006",
+        "mntnid": "MT090",
+        "distance": 10.0
+    },
+    {
+        "routeid": "RT090007",
+        "routename": "팔공산_007",
+        "mntnid": "MT090",
+        "distance": 5.5
+    },
+    {
+        "routeid": "RT090008",
+        "routename": "팔공산_008",
+        "mntnid": "MT090",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT090009",
+        "routename": "팔공산_009",
+        "mntnid": "MT090",
+        "distance": 5.7
+    },
+    {
+        "routeid": "RT090010",
+        "routename": "팔공산_010",
+        "mntnid": "MT090",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT090011",
+        "routename": "팔공산_011",
+        "mntnid": "MT090",
+        "distance": 7.2
+    },
+    {
+        "routeid": "RT090012",
+        "routename": "팔공산_012",
+        "mntnid": "MT090",
+        "distance": 5.1
+    },
+    {
+        "routeid": "RT090013",
+        "routename": "팔공산_013",
+        "mntnid": "MT090",
+        "distance": 6.0
+    },
+    {
+        "routeid": "RT090014",
+        "routename": "팔공산_014",
+        "mntnid": "MT090",
+        "distance": 7.6
+    },
+    {
+        "routeid": "RT090015",
+        "routename": "팔공산_015",
+        "mntnid": "MT090",
+        "distance": 12.4
+    },
+    {
+        "routeid": "RT090016",
+        "routename": "팔공산_016",
+        "mntnid": "MT090",
+        "distance": 0.4
+    },
+    {
+        "routeid": "RT090017",
+        "routename": "팔공산_017",
+        "mntnid": "MT090",
+        "distance": 4.5
+    },
+    {
+        "routeid": "RT090018",
+        "routename": "팔공산_018",
+        "mntnid": "MT090",
+        "distance": 7.9
+    },
+    {
+        "routeid": "RT090019",
+        "routename": "팔공산_019",
+        "mntnid": "MT090",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT090020",
+        "routename": "팔공산_020",
+        "mntnid": "MT090",
+        "distance": 13.0
+    },
+    {
+        "routeid": "RT091001",
+        "routename": "팔봉산_001",
+        "mntnid": "MT091",
+        "distance": 4.1
+    },
+    {
+        "routeid": "RT092001",
+        "routename": "팔영산_001",
+        "mntnid": "MT092",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT092002",
+        "routename": "팔영산_002",
+        "mntnid": "MT092",
+        "distance": 9.3
+    },
+    {
+        "routeid": "RT093001",
+        "routename": "한라산_001",
+        "mntnid": "MT093",
+        "distance": 24.0
+    },
+    {
+        "routeid": "RT093002",
+        "routename": "한라산_002",
+        "mntnid": "MT093",
+        "distance": 15.3
+    },
+    {
+        "routeid": "RT093003",
+        "routename": "한라산_003",
+        "mntnid": "MT093",
+        "distance": 7.9
+    },
+    {
+        "routeid": "RT093004",
+        "routename": "한라산_004",
+        "mntnid": "MT093",
+        "distance": 12.7
+    },
+    {
+        "routeid": "RT093005",
+        "routename": "한라산_005",
+        "mntnid": "MT093",
+        "distance": 10.3
+    },
+    {
+        "routeid": "RT094001",
+        "routename": "화악산_001",
+        "mntnid": "MT094",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT094002",
+        "routename": "화악산_002",
+        "mntnid": "MT094",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT094003",
+        "routename": "화악산_003",
+        "mntnid": "MT094",
+        "distance": 11.1
+    },
+    {
+        "routeid": "RT094004",
+        "routename": "화악산_004",
+        "mntnid": "MT094",
+        "distance": 13.9
+    },
+    {
+        "routeid": "RT094005",
+        "routename": "화악산_005",
+        "mntnid": "MT094",
+        "distance": 13.7
+    },
+    {
+        "routeid": "RT094006",
+        "routename": "화악산_006",
+        "mntnid": "MT094",
+        "distance": 8.3
+    },
+    {
+        "routeid": "RT095001",
+        "routename": "화왕산_001",
+        "mntnid": "MT095",
+        "distance": 6.7
+    },
+    {
+        "routeid": "RT095002",
+        "routename": "화왕산_002",
+        "mntnid": "MT095",
+        "distance": 3.5
+    },
+    {
+        "routeid": "RT095003",
+        "routename": "화왕산_003",
+        "mntnid": "MT095",
+        "distance": 11.1
+    },
+    {
+        "routeid": "RT095004",
+        "routename": "화왕산_004",
+        "mntnid": "MT095",
+        "distance": 9.1
+    },
+    {
+        "routeid": "RT095005",
+        "routename": "화왕산_005",
+        "mntnid": "MT095",
+        "distance": 7.8
+    },
+    {
+        "routeid": "RT096001",
+        "routename": "황매산_001",
+        "mntnid": "MT096",
+        "distance": 8.8
+    },
+    {
+        "routeid": "RT096002",
+        "routename": "황매산_002",
+        "mntnid": "MT096",
+        "distance": 2.4
+    },
+    {
+        "routeid": "RT096003",
+        "routename": "황매산_003",
+        "mntnid": "MT096",
+        "distance": 9.7
+    },
+    {
+        "routeid": "RT096004",
+        "routename": "황매산_004",
+        "mntnid": "MT096",
+        "distance": 5.7
+    },
+    {
+        "routeid": "RT097001",
+        "routename": "황석산_001",
+        "mntnid": "MT097",
+        "distance": 4.7
+    },
+    {
+        "routeid": "RT097002",
+        "routename": "황석산_002",
+        "mntnid": "MT097",
+        "distance": 4.0
+    },
+    {
+        "routeid": "RT097003",
+        "routename": "황석산_003",
+        "mntnid": "MT097",
+        "distance": 7.7
+    },
+    {
+        "routeid": "RT097004",
+        "routename": "황석산_004",
+        "mntnid": "MT097",
+        "distance": 8.0
+    },
+    {
+        "routeid": "RT097005",
+        "routename": "황석산_005",
+        "mntnid": "MT097",
+        "distance": 6.3
+    },
+    {
+        "routeid": "RT097006",
+        "routename": "황석산_006",
+        "mntnid": "MT097",
+        "distance": 11.1
+    },
+    {
+        "routeid": "RT097007",
+        "routename": "황석산_007",
+        "mntnid": "MT097",
+        "distance": 12.8
+    },
+    {
+        "routeid": "RT097008",
+        "routename": "황석산_008",
+        "mntnid": "MT097",
+        "distance": 4.2
+    },
+    {
+        "routeid": "RT097009",
+        "routename": "황석산_009",
+        "mntnid": "MT097",
+        "distance": 11.3
+    },
+    {
+        "routeid": "RT097010",
+        "routename": "황석산_010",
+        "mntnid": "MT097",
+        "distance": 7.1
+    },
+    {
+        "routeid": "RT098001",
+        "routename": "황악산_001",
+        "mntnid": "MT098",
+        "distance": 10.1
+    },
+    {
+        "routeid": "RT098002",
+        "routename": "황악산_002",
+        "mntnid": "MT098",
+        "distance": 6.9
+    },
+    {
+        "routeid": "RT098003",
+        "routename": "황악산_003",
+        "mntnid": "MT098",
+        "distance": 9.8
+    },
+    {
+        "routeid": "RT098004",
+        "routename": "황악산_004",
+        "mntnid": "MT098",
+        "distance": 10.9
+    },
+    {
+        "routeid": "RT098005",
+        "routename": "황악산_005",
+        "mntnid": "MT098",
+        "distance": 7.2
+    },
+    {
+        "routeid": "RT098006",
+        "routename": "황악산_006",
+        "mntnid": "MT098",
+        "distance": 7.5
+    },
+    {
+        "routeid": "RT098007",
+        "routename": "황악산_007",
+        "mntnid": "MT098",
+        "distance": 12.4
+    },
+    {
+        "routeid": "RT098008",
+        "routename": "황악산_008",
+        "mntnid": "MT098",
+        "distance": 10.5
+    },
+    {
+        "routeid": "RT099001",
+        "routename": "황장산_001",
+        "mntnid": "MT099",
+        "distance": 5.7
+    },
+    {
+        "routeid": "RT100001",
+        "routename": "희양산_001",
+        "mntnid": "MT100",
+        "distance": 8.5
+    },
+    {
+        "routeid": "RT100002",
+        "routename": "희양산_002",
+        "mntnid": "MT100",
+        "distance": 8.4
+    },
+    {
+        "routeid": "RT100003",
+        "routename": "희양산_003",
+        "mntnid": "MT100",
+        "distance": 5.9
+    },
+    {
+        "routeid": "RT100004",
+        "routename": "희양산_004",
+        "mntnid": "MT100",
+        "distance": 6.9
+    },
+    {
+        "routeid": "RT100005",
+        "routename": "희양산_005",
+        "mntnid": "MT100",
+        "distance": 5.6
+    },
+    {
+        "routeid": "RT100006",
+        "routename": "희양산_006",
+        "mntnid": "MT100",
+        "distance": 8.7
+    },
+    {
+        "routeid": "RT100007",
+        "routename": "희양산_007",
+        "mntnid": "MT100",
+        "distance": 5.9
+    },
+    {
+        "routeid": "RT100008",
+        "routename": "희양산_008",
+        "mntnid": "MT100",
+        "distance": 14.2
+    }
+]
